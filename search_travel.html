@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/slider_style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/slider.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/common.js"></script>
+    <script src="script/pager.js"></script>
+    <script src="script/verify.js"></script>
+    <script src="script/TSLib.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 以 search_hotel 的CSS為主 search_travel 微調一些部分  -->
+    <div class="main_content product_search search_travel">
+        <div class="container-fluid">
+            <div class="form_title">
+                旅遊行程搜尋<span>子訂單編號：130600000061-1</span>
+            </div>
+            <div class="form_content ">
+                <div class="block_content">
+                    <div class="search_block col-sm-12 col-md-4">
+                        <ul class="nav nav-tabs tabs_style1">
+                            <li class="active"><a data-toggle="tab" href="#TravelSearch">行程搜尋</a></li>
+                            <li><a data-toggle="tab" href="#GroupNoSearch">團號搜尋</a></li>
+                            <li><a data-toggle="tab" href="#ProductNameSearch">名稱搜尋</a></li>
+                            <li><a data-toggle="tab" href="#ProductIdSearch">產編搜尋</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="TravelSearch" class="tab-pane fade active in">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="fill_item">
+                                                <label class="item_title">目的地</label>
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm tooltip_control continent_name" fieldName="ContinentName" placeholder="洲別">
+                                                    <input type="hidden" class="tooltip_control_code" fieldName="ContinentCode">
+                                                </div>
+                                                <div class="tooltip_box tooltip_continent" code="continent" style="display: none;">
+                                                    <ul>
+                                                        <li value="North_east_Asia">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">東北亞</div>
+                                                            </button>
+                                                        </li>
+                                                        <li value="Hong_Kong_and_Macao">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">港澳大陸</div>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="fill_item">
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm tooltip_control country_name" fieldName="CountryName" placeholder="國家">
+                                                    <input type="hidden" class="tooltip_control_code" fieldName="CountryCode">
+                                                </div>
+                                                <div class="tooltip_box tooltip_country" code="country" style="display: none;">
+                                                    <ul>
+                                                        <li value="JP">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">JP</div>
+                                                            </button>
+                                                        </li>
+                                                        <li value="TW">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">TW</div>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="fill_item">
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm tooltip_control city_name" fieldName="CityName" placeholder="城市">
+                                                    <input type="hidden" class="tooltip_control_code" fieldName="CityCode">
+                                                </div>
+                                                <div class="tooltip_box tooltip_city" code="city" style="display: none;">
+                                                    <ul>
+                                                        <li value="Tokyo">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">東京</div>
+                                                            </button>
+                                                        </li>
+                                                        <li value="Osaka">
+                                                            <button class="btn btn_style5">
+                                                                <div class="item_name">大阪</div>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">出團月份</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_input" style="height: 34px;">
+                                                        <input type="text" class="form-control input-sm travel_date" placeholder="選擇出團日期" fieldname="TravelDate" id="dp1517390394698"><span class="glyphicon glyphicon-calendar"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">價格範圍</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm road_name price_range" type="text" fieldName="PriceRange" default = "0">
+                                                        <option minprice="0" maxprice="0" value="0">價格範圍</option>
+                                                        <option minprice="0" maxprice="40000" value="1">四萬元以下</option>
+                                                        <option minprice="40000" maxprice="80000" value="2">四萬元~八萬元</option>
+                                                        <option minprice="80000" maxprice="0" value="3">八萬元以上</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">行程類型</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm tarvel_type" type="text" fieldName="ProductType" default="1"> 
+                                                        <option value="1">團體旅遊</option>
+                                                        <option value="2">主題旅遊</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">產品狀態</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm product_status" type="text" fieldName="ProductStatus" default = "0">
+                                                        <option value="0">不限</option>
+                                                        <option value="1">上架中</option>
+                                                        <option value="2">已下架</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TravelSearch : END -->
+                            <div id="GroupNoSearch" class="tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">行程團號</label>
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm travel_number" fieldName="GroupNo" placeholder="請輸入編號">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">出團月份</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_input" style="height: 34px;">
+                                                        <input type="text" class="form-control input-sm travel_date" placeholder="選擇出團日期" fieldname="TravelDate" id="dp1517390394697"><span class="glyphicon glyphicon-calendar"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ProductNameSearch" class="tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">行程名稱</label>
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm travel_name" fieldName="ProductName" placeholder="請輸入名稱">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">出團月份</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_input" style="height: 34px;">
+                                                        <input type="text" class="form-control input-sm travel_date" placeholder="選擇出團日期" fieldname="TravelDate" id="dp1517390394696"><span class="glyphicon glyphicon-calendar"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="ProductIdSearch" class="tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">產品編號</label>
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm product_number" fieldName="ProductId" placeholder="請輸入編號">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">出團月份</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_input" style="height: 34px;">
+                                                        <input type="text" class="form-control input-sm travel_date" placeholder="選擇出團日期" fieldname="TravelDate" id="dp1517390394695"><span class="glyphicon glyphicon-calendar"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-right bottom_block">
+                            <button class="btn btn-lg btn_style2 btn_clear">清除條件</button>
+                            <button class="btn btn-lg btn_style1 btn_search">搜尋</button>
+                        </div>
+                    </div>
+                    <div class="result_block col-sm-12 col-md-8">
+                        <div class="block_content">
+                            <div class="no_result" style="display:none;">
+                                尚未搜尋到結果
+                            </div>
+                            <div class="result_table">
+                                <table>
+                                    <tr>
+                                        <th class="col-md-2">出團日期</th>
+                                        <th class="col-md-5">行程名稱</th>
+                                        <th class="col-md-2">建議售價</th>
+                                        <th class="col-md-2">旅客人數</th>
+                                        <th class="col-md-1"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            6月1日
+                                        </td>
+                                        <td>
+                                            <div class="list_item_info">
+                                                <div class="info_top"><span>產品編號：123456</span><span>團號：201801230001/CLA-NTX101405BR7F</span></div>
+                                                <div class="info_content">開心FUN東京～迪士尼樂園、多啦A夢館、箱根海盜船、賞味溫泉鄉五日(含稅)</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            TWD $30,000
+                                        </td>
+                                        <td>
+                                            <div class="select_group" style="display: block;">
+                                                <select class="form-control input-sm adult_num">
+                                                    <option value="1">成人1位</option>
+                                                    <option value="2">成人2位</option>
+                                                    <option value="3">成人3位</option>
+                                                    <option value="4">成人4位</option>
+                                                    <option value="5">成人5位</option>
+                                                    <option value="6">成人6位</option>
+                                                    <option value="7">成人7位</option>
+                                                    <option value="8">成人8位</option>
+                                                    <option value="9">成人9位</option>
+                                                    <option value="10">成人10位</option>
+                                                </select>
+                                                <select class="form-control input-sm child_num">
+                                                    <option value="0">小孩0位</option>
+                                                    <option value="1">1位</option>
+                                                    <option value="2">2位</option>
+                                                    <option value="3">3位</option>
+                                                    <option value="4">4位</option>
+                                                    <option value="5">5位</option>
+                                                    <option value="6">6位</option>
+                                                    <option value="7">7位</option>
+                                                    <option value="8">8位</option>
+                                                    <option value="9">9位</option>
+                                                    <option value="10">10位</option>
+                                                </select>
+                                            </div>
+                                            <div class="status_group" style="display: none;">
+                                                <div class="label process_status4">
+                                                    <div>已下架</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="search_travel_booking.html" class="btn btn-lg btn_style1">訂購</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            6月1日
+                                        </td>
+                                        <td>
+                                            <div class="list_item_info">
+                                                <div class="info_top"><span>產品編號：123456</span><span>團號：201801230001/CLA-NTX101405BR7F</span></div>
+                                                <div class="info_content">開心FUN東京～迪士尼樂園、多啦A夢館、箱根海盜船、賞味溫泉鄉五日(含稅)開心FUN東京～迪士尼樂園、多啦A夢館、箱根海盜船、賞味溫泉鄉五日(含稅)</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            TWD $30,000
+                                        </td>
+                                        <td>
+                                            <div class="select_group" style="display: none;">
+                                                <select class="form-control input-sm adult_num">
+                                                    <option value="1">成人1位</option>
+                                                    <option value="2">成人2位</option>
+                                                    <option value="3">成人3位</option>
+                                                    <option value="4">成人4位</option>
+                                                    <option value="5">成人5位</option>
+                                                    <option value="6">成人6位</option>
+                                                    <option value="7">成人7位</option>
+                                                    <option value="8">成人8位</option>
+                                                    <option value="9">成人9位</option>
+                                                    <option value="10">成人10位</option>
+                                                </select>
+                                                <select class="form-control input-sm child_num">
+                                                    <option value="0">小孩0位</option>
+                                                    <option value="1">1位</option>
+                                                    <option value="2">2位</option>
+                                                    <option value="3">3位</option>
+                                                    <option value="4">4位</option>
+                                                    <option value="5">5位</option>
+                                                    <option value="6">6位</option>
+                                                    <option value="7">7位</option>
+                                                    <option value="8">8位</option>
+                                                    <option value="9">9位</option>
+                                                    <option value="10">10位</option>
+                                                </select>
+                                            </div>
+                                            <div class="status_group">
+                                                <div class="label process_status4">
+                                                    <div>已下架</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a href="#" class="btn btn_style1" style="display: none;">訂購</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="block_bottom">
+                            <nav class="pull-right">
+                                <ul class="pagination">
+                                </ul>
+                            </nav>
+                            <div class="result_total pull-right">
+                                第1-10筆，共50筆
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- blcok_content : END -->
+            </div>
+            <!-- form_content build_order -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END -->
+</body>
+<script>
+    $(document).ready(function(){         
+        $('.btn_search').click(function(){
+            var postData = TSLib.getFieldValues('#AreaSearch');
+        });
+
+        $('.btn_search').click(function(){
+            search(1);
+        });
+
+        $('.btn_clear').click(function(){
+            init();
+        });
+
+        init();
+        toolTipInit();
+
+        $('body').click(function(event){
+            if($(event.target).hasClass('tooltip_item') || $(event.target).hasClass('tooltip_control')) {
+                if( $(event.target).hasClass('tooltip_control')) {
+                    if($(event.target).hasClass('tooltip_active')) {
+                    } else { 
+                        $('.tooltip_active').removeClass('tooltip_active');
+                        $(event.target).addClass('tooltip_active');
+
+                        $('.tooltip_box').each(function(){
+                            if($(this).closest('.fill_item').find('.tooltip_control').hasClass('tooltip_active')) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }                               
+                        });
+                    }                       
+                } 
+            } else {              
+                $('.tooltip_active').removeClass('tooltip_active');
+                $('.tooltip_box').hide();   
+            }      
+        });
+    });
+
+    function init() {  
+        TSLib.clearInput('.search_block ');
+    }
+
+    function search(page) {
+        var pageSize = 10;
+        var totalCount = 100;
+        showPager('.result_block .pagination',page,pageSize,totalCount,'javascript:search(<page>)');
+    }
+
+    function toolTipInit(){
+        $('.continent_name').on('focus',function(){
+            $('.tooltip_continent').show();
+        });
+
+        $('.country_name').on('focus',function(){
+            $('.tooltip_country').show();
+        });
+
+        $('.city_name').on('focus',function(){
+            $('.tooltip_city').show();
+        });
+        
+        initToopBox();
+    }
+    
+    function initToopBox() {    
+        $('.tooltip_box li').unbind('click');   
+            
+        $('.tooltip_box li').click(function(){
+            var value = $(this).attr('value');
+            var text = $(this).find('.item_name').html();               
+            $(this).closest('.fill_item').find('.tooltip_control').val(text);
+            $(this).closest('.fill_item').find('.tooltip_control_code').val(value);
+        });
+    }
+</script>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/slider_style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/slider.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/common.js"></script>
+    <script src="script/pager.js"></script>
+    <script src="script/verify.js"></script>
+    <script src="script/TSLib.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_content product_search search_hotel">
+        <div class="container-fluid">
+            <div class="form_title">
+                飯店搜尋<span>子訂單編號：130600000061-1</span>
+            </div>
+            <div class="form_content ">
+                <div class="block_content">
+                    <div class="search_block col-sm-12 col-md-4">
+                        <ul class="nav nav-tabs tabs_style1">
+                            <li class="active"><a data-toggle="tab" href="#AreaSearch">區域搜尋</a></li>
+                            <li><a data-toggle="tab" href="#ProductIdSearch">產品編號搜尋</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="AreaSearch" class="tab-pane active">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="fill_item">
+                                                <label class="item_title">入住日期</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_range">
+                                                        <div class="datepicker_input">
+                                                            <input type="text" class="form-control input-sm start_date" placeholder="起始日期" fieldName="StartDate"><span class="glyphicon glyphicon-calendar"></span>
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="datepicker_input">
+                                                            <input type="text" class="form-control input-sm end_date" placeholder="最後日期" fieldName="EndDate"><span class="glyphicon glyphicon-calendar"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">目的地</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm" name="" id="" fieldName="CountryName" default="">
+                                                        <option value="">選擇國家</option>
+                                                        <option value="AU">澳大利亞</option>
+                                                        <option value="CN">中國</option>
+                                                        <option value="FR">法國</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">&nbsp;</label>
+                                                <div class="item_content">
+                                                    <input type="text" class="form-control input-sm city_name" fieldName="CityName" placeholder="請輸入城市">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">所在地區/路名</label>
+                                                <div class="item_content">
+                                                    <input class="form-control input-sm road_name" type="text" fieldName="RoadName" placeholder="請輸入地區/路名">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">飯店名稱</label>
+                                                <div class="item_content">
+                                                    <input class="form-control input-sm hotel_name" type="text" fieldName="HotelName" placeholder="請輸入飯店">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">成人</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm adult_num" fieldName="AdultNum" default="2">
+                                                        <option value="1">1位</option>
+                                                        <option value="2">2位</option>
+                                                        <option value="3">3位</option>
+                                                        <option value="4">4位</option>
+                                                        <option value="5">5位</option>
+                                                        <option value="6">6位</option>
+                                                        <option value="7">7位</option>
+                                                        <option value="8">8位</option>
+                                                        <option value="9">9位</option>
+                                                        <option value="10">10位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">小孩</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm child_num" fieldName="ChildNum" default="0">
+                                                        <option value="0">0位</option>
+                                                        <option value="1">1位</option>
+                                                        <option value="2">2位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">房數</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm room_num" fieldName="RoomNum" default="1">
+                                                        <option value="1">1間</option>
+                                                        <option value="2">2間</option>
+                                                        <option value="3">3間</option>
+                                                        <option value="4">4間</option>
+                                                        <option value="5">5間</option>
+                                                        <option value="6">6間</option>
+                                                        <option value="7">7間</option>
+                                                        <option value="8">8間</option>
+                                                        <option value="9">9間</option>
+                                                        <option value="10">10間</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AreaSearch : END -->
+                            <div id="ProductIdSearch" class="tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">產品編號</label>
+                                                <div class="item_content">
+                                                    <input class="form-control input-sm" type="text" fieldName="ProductId">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="fill_item">
+                                                <label class="item_title">入住日期</label>
+                                                <div class="item_content">
+                                                    <div class="datepicker_range">
+                                                        <div class="datepicker_input">
+                                                            <input type="text" class="form-control input-sm start_date" placeholder="起始日期" fieldName="StartDate"><span class="glyphicon glyphicon-calendar"></span>
+                                                        </div>
+                                                        <div class="dash">-</div>
+                                                        <div class="datepicker_input">
+                                                            <input type="text" class="form-control input-sm end_date" placeholder="最後日期" fieldName="EndDate"><span class="glyphicon glyphicon-calendar"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">成人</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm adult_num" fieldName="AdultNum" default="2">
+                                                        <option value="1">1位</option>
+                                                        <option value="2">2位</option>
+                                                        <option value="3">3位</option>
+                                                        <option value="4">4位</option>
+                                                        <option value="5">5位</option>
+                                                        <option value="6">6位</option>
+                                                        <option value="7">7位</option>
+                                                        <option value="8">8位</option>
+                                                        <option value="9">9位</option>
+                                                        <option value="10">10位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">小孩</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm child_num" fieldName="ChildNum" default="0">
+                                                        <option value="0">0位</option>
+                                                        <option value="1">1位</option>
+                                                        <option value="2">2位</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="fill_item">
+                                                <label class="item_title">房數</label>
+                                                <div class="item_content">
+                                                    <select class="form-control input-sm room_num" fieldName="RoomNum" default="1">
+                                                        <option value="1">1間</option>
+                                                        <option value="2">2間</option>
+                                                        <option value="3">3間</option>
+                                                        <option value="4">4間</option>
+                                                        <option value="5">5間</option>
+                                                        <option value="6">6間</option>
+                                                        <option value="7">7間</option>
+                                                        <option value="8">8間</option>
+                                                        <option value="9">9間</option>
+                                                        <option value="10">10間</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ProductIdSearch : END -->
+                        <div class="pull-right bottom_block">
+                            <button class="btn btn-lg btn_style2 btn_clear">清除條件</button>
+                            <button class="btn btn-lg btn_style1 btn_search">搜尋</button>
+                        </div>
+                    </div>
+                    <div class="result_block col-sm-12 col-md-8">
+                        <div class="block_top">
+                            <div class="fill_item">
+                                <label class="item_title">住宿類型</label>
+                                <div class="item_content">
+                                    <select class="form-control input-sm" name="" id="" fieldName="ProductType">
+                                        <option value="">不限</option>
+                                        <option value="1">商旅飯店</option>
+                                        <option value="2">溫泉旅館</option>
+                                        <option value="3">民宿</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fill_item">
+                                <label class="item_title">飯店星級</label>
+                                <div class="item_content">
+                                    <select class="form-control input-sm" fieldName="StarRank">
+                                        <option value="">不限</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="fill_item">
+                                <label class="item_title">價格區間：
+                                    <input type="text" id="RangeValue" class="text_show" readonly="">
+                                </label>
+                                <div class="item_content">
+                                    <div class="range_silder_box">
+                                        <div id="SliderRange"></div>
+                                        <input type="hidden" id="minPrice">
+                                        <input type="hidden" id="maxPrice">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block_content">
+                            <div class="no_result" style="display:none;">
+                                尚未搜尋到結果
+                            </div>
+                            <div class="result_table">
+                                <table>
+                                    <tr>
+                                        <th class="col-md-8">飯店</th>
+                                        <th class="col-md-3">最低價格
+                                            <select name="" id="" class="currency" default ="TWD">
+                                                <option value="TWD">TWD</option>
+                                                <option value="JPT">JPY</option>
+                                                <option value="USD">USD</option>
+                                            </select>
+                                        </th>
+                                        <th class="col-md-1"></th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="list_item_info">
+                                                <div class="info_top"><span class="type_mark">商務飯店</span><span>產品編號:123456</span></div>
+                                                <div class="info_content">簡單生活會館</div>
+                                                <div class="info_bottom"><span class="glyphicon glyphicon-map-marker"></span>2 Samsen Road Banglamphu Pranakorn Bangkok 10200 Thailand</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="price">TWD $3,000</span><span>起</span>
+                                        </td>
+                                        <td>
+                                            <a href="search_hotel_room.html" class="btn btn-lg btn_style1">房間列表</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="block_bottom">
+                            <nav class="pull-right">
+                                <ul class="pagination">
+                                </ul>
+                            </nav>
+                            <div class="result_total pull-right">
+                                第1-10筆，共50筆
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- blcok_content : END -->
+            </div>
+            <!-- form_content build_order -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END -->
+</body>
+<script>
+    $(document).ready(function(){         
+        $('.btn_search').click(function(){
+            var postData = TSLib.getFieldValues('#AreaSearch');
+        });
+
+        $('.btn_search').click(function(){
+            search(1);
+        });
+
+        $('.btn_clear').click(function(){
+            init();
+        });
+
+        init();
+        initSlider(3000,6000);
+    });
+
+    function init() {
+        TSLib.clearInput('#AreaSearch');
+        TSLib.clearInput('#ProductIdSearch');
+    }
+
+    function search(page) {
+        var pageSize = 10;
+        var totalCount = 100;
+        showPager('.result_block .pagination',page,pageSize,totalCount,'javascript:search(<page>)');
+        var dataMinPrice = 3000;
+        var dataMaxPrice = 6000;
+        initSlider(dataMinPrice,dataMaxPrice); 
+    }
+
+    function initSlider(dataMinPrice,dataMaxPrice) {
+        $('#SliderRange').slider({
+            range: true,
+            min: dataMinPrice,
+            max: dataMaxPrice,
+            values: [ dataMinPrice, dataMaxPrice ],
+            slide: function(event, ui) {
+                $("#RangeValue").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            },
+            stop: function(event, ui) {
+                filterList(ui.values[0], ui.values[1]);
+            }
+        });            
+        $("#RangeValue").val("$" + $("#SliderRange").slider("values", 0) + " - $" + $("#SliderRange").slider("values", 1));            
+    }
+
+    function filterList(min,max){
+        $('.result_table .price').each(function(){
+            price = numberFormatToInt($(this).text());
+            
+            if (price >= min  && price <= max){
+                $(this).closest('tr').show();
+            }else{
+                $(this).closest('tr').hide();
+            }
+        });         
+    }
+</script>
+
+</html>

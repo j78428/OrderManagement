@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="container-fluid full_width">
+            <div class="top_block">
+                <div class="order_sub_info">
+                    <div class="sub_info_item">
+                        <span>建立時間：</span>2017年12月11日
+                    </div>
+                    <div class="sub_info_item">
+                        <span>建立者：</span>王大明
+                    </div>
+                    <div class="sub_info_item">
+                        <span>來源：</span>46446
+                    </div>
+                    <div class="sub_info_item pull-right">
+                        <span>客服人員：</span>王大明
+                    </div>
+                </div>
+                <div class="order_main_info sub_order_master">
+                    <div class="block_1">
+                        <div class="info_item">
+                            <div class="item_content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="order_types_big type_flight">機票</div>
+                                        </td>
+                                        <td>
+                                            <div class="sub_order_number">130100000031-1</div>
+                                            <div class="product_name">中華航空 TPE-KIX 來回票</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                產品狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>待處理</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                付款狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>待處理</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                付款方式：<span>線上付款</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                請款狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>未請款</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                請款日期：<span>無</span>
+                                            </li>
+                                            <li class="info_item">
+                                                帳單編號：<span>無</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                訂單狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>待處理</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                會計審核：<span>未審核</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_2">
+                        <div class="sub_info_item">
+                            <span>金額小計：</span>$900,000
+                            <div class="icon_help">?</div>
+                            <div class="popup_box">
+                                <ul>
+                                    <li class="info_item">
+                                        優惠價：<span>否</span>
+                                    </li>
+                                    <li class="info_item">
+                                        成本：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        成本利潤：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        刷卡手續費：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        快遞費用：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        罰則：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        罰則利潤：<span>TWD $10,000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- .popup_box : END -->
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂購人：</span>王大明
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂單類型：</span>代訂購
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂購確認：</span>已確認(2018/01/30)
+                        </div>
+                        <div class="sub_info_item">
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#SendConfirmMail" style="display:none;">發送確認信</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#ViewElectronicTicket">電子機票</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#Invoice" style="display:none;">帳單</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#CustomerInvoice">請款</button>
+                            <button class="btn btn-sm btn_style2" data-toggle="modal" data-target="#NoticeAlert">取消訂單</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#PasswordConfirm">下載訂單</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- order_main_info : END -->
+            </div>
+            <!-- .top_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">機票明細</h3>
+                    <div class="info_item">
+                        <span>行程：</span>TPE/KIX/TPE
+                    </div>
+                    <div class="info_item">
+                        <span>票種：</span>BHTWR9U
+                    </div>
+                    <div class="info_item">
+                        <span>效期：</span>1Y
+                    </div>
+                    <div class="info_item">
+                        <span>GDS代碼：</span>6543222
+                    </div>
+                </div>
+                <div class="block_content">
+                    <div class="flight_info">
+                        <div class="fight_departure_date">2017年02月24日</div>
+                        <div class="flight_segment">
+                            <div class="airline">
+                                <div class="airline_name">中華航空</div>
+                                <div class="airline_number tooltip_style" title="航空公司代碼" alt="航空公司代碼" data-toggle="tooltip" data-placement="top">CI2007</div>
+                                <div class="actual_airline">(實際為長榮航空飛行)</div>
+                            </div>
+                            <div class="departure_info">
+                                <div class="time">12:00</div>
+                                <div class="airport">台灣桃園國際機場(TPE)</div>
+                            </div>
+                            <div class="arrival_info">
+                                <div class="time">13:00</div>
+                                <div class="airport">香港國際機場(HKG)</div>
+                            </div>
+                            <div class="other_info">
+                                <div class="info_item">
+                                    <span>航班：</span>TA220
+                                </div>
+                                <div class="info_item">
+                                    <span>艙等：</span>經濟艙(H)
+                                </div>
+                            </div>
+                            <div class="status_info">
+                            </div>
+                        </div>
+                        <!-- .flight_segment : END -->
+                        <div class="flight_segment">
+                            <div class="airline">
+                                <div class="airline_name">中華航空</div>
+                                <div class="airline_number tooltip_style" title="航空公司代碼" alt="航空公司代碼" data-toggle="tooltip" data-placement="top">CI2007</div>
+                                <div class="actual_airline">(實際為長榮航空飛行)</div>
+                            </div>
+                            <div class="departure_info">
+                                <div class="time">13:50</div>
+                                <div class="airport">香港國際機場(HKG)</div>
+                            </div>
+                            <div class="arrival_info">
+                                <div class="time">15:30</div>
+                                <div class="airport">關西國際機場(KIX)</div>
+                            </div>
+                            <div class="other_info">
+                                <div class="info_item">
+                                    <span>航班：</span>TA110
+                                </div>
+                                <div class="info_item">
+                                    <span>艙等：</span>經濟艙(M)
+                                </div>
+                            </div>
+                            <div class="status_info">
+                                <div class="status_group">
+                                    <div class="label process_status4 tooltip_style" title="訂位狀態" alt="訂位狀態" data-toggle="tooltip" data-placement="top">
+                                        <div>候補</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .flight_segment : END -->
+                    </div>
+                    <!-- .flight_info : END -->
+                    <div class="flight_info">
+                        <div class="fight_departure_date">2017年02月25日</div>
+                        <div class="flight_segment">
+                            <div class="airline">
+                                <div class="airline_name">中華航空</div>
+                                <div class="airline_number tooltip_style" title="航空公司代碼" alt="航空公司代碼" data-toggle="tooltip" data-placement="top">CI2007</div>
+                            </div>
+                            <div class="departure_info">
+                                <div class="time">12:00</div>
+                                <div class="airport">關西國際機場(KIX)</div>
+                            </div>
+                            <div class="arrival_info">
+                                <div class="time">13:00</div>
+                                <div class="airport">香港國際機場(HKG)</div>
+                            </div>
+                            <div class="other_info">
+                                <div class="info_item">
+                                    <span>航班：</span>TA220
+                                </div>
+                                <div class="info_item">
+                                    <span>艙等：</span>經濟艙(H)
+                                </div>
+                            </div>
+                            <div class="status_info">
+                            </div>
+                        </div>
+                        <!-- .flight_segment : END -->
+                        <div class="flight_segment">
+                            <div class="airline">
+                                <div class="airline_name">中華航空</div>
+                                <div class="airline_number tooltip_style" title="航空公司代碼" alt="航空公司代碼" data-toggle="tooltip" data-placement="top">CI2007</div>
+                                <div class="actual_airline">(實際為長榮航空飛行)</div>
+                            </div>
+                            <div class="departure_info">
+                                <div class="time">23:50</div>
+                                <div class="airport">香港國際機場(HKG)</div>
+                            </div>
+                            <div class="arrival_info">
+                                <div class="time">01:30
+                                    <span>+1</span>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                2017年02月26日
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                                <div class="airport">台灣桃園國際機場(TPE)</div>
+                            </div>
+                            <div class="other_info">
+                                <div class="info_item">
+                                    <span>航班：</span>TA110
+                                </div>
+                                <div class="info_item">
+                                    <span>艙等：</span>經濟艙(M)
+                                </div>
+                            </div>
+                            <div class="status_info">
+                                <div class="status_group">
+                                    <div class="label process_status4 tooltip_style" title="訂位狀態" alt="訂位狀態" data-toggle="tooltip" data-placement="top">
+                                        <div>候補</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .flight_segment : END -->
+                    </div>
+                    <!-- .flight_info : END -->
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">旅客資料</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th>中文名字</th>
+                            <th>英文名字</th>
+                            <th>稱謂</th>
+                            <th>生日</th>
+                            <th>護照號碼</th>
+                            <th>機票號碼</th>
+                            <th>航空公司會員號碼</th>
+                            <th>旅客需求</th>
+                        </tr>
+                        <tr>
+                            <td>王大明</td>
+                            <td>Da Ming Wang</td>
+                            <td>小姐</td>
+                            <td>1990/02/02</td>
+                            <td>456789123</td>
+                            <td>456789123</td>
+                            <td>456789123</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">聯絡人資料</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th>聯絡人姓名</th>
+                            <th>連絡電話</th>
+                            <th>Email</th>
+                            <th>收據</th>
+                            <th>收據抬頭</th>
+                            <th>統一編號</th>
+                            <th>送件地址</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>王大明</td>
+                            <td>0911456789</td>
+                            <td>a123@mailcom</td>
+                            <td>開立收據</td>
+                            <td>智光往有限公司</td>
+                            <td>54335926</td>
+                            <td>105 台北市松山區松江路101號11樓</td>
+                            <td>
+                                <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#SendConfirmMail" style="display:none;">發送確認信</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">訂單備註</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th style="width: 150px;">建立時間</th>
+                            <th>訊息</th>
+                            <th style="width: 100px;">操作</th>
+                        </tr>
+                        <tr>
+                            <td>2017/02/23 12:55</td>
+                            <td>訊息內容訊息內容訊息內容訊息內容
+                                <div class="reply_block">
+                                    <div class="message_item">
+                                        <div class="message_content">回覆內容回覆內容</div>
+                                        <div class="message_info">
+                                            <div class="date"><span class="glyphicon glyphicon-time"></span> 2017/05/11 16:05</div>
+                                            <div class="respondent"><span class="glyphicon glyphicon-user"></span> 王大明</div>
+                                        </div>
+                                    </div>
+                                    <!-- .message_item : END -->
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn_style3" data-toggle="modal" data-target="#ReplyMessage">回覆</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2017/02/23 12:55</td>
+                            <td>
+                                訊息內容訊息內容訊息內容訊息內容
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn_style3" data-toggle="modal" data-target="#ReplyMessage">回覆</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- .list_table : END -->
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END -->
+    <div class="modal general_modal fade" id="ViewElectronicTicket" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <!-- <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#CouponCN" aria-controls="CouponCN" role="tab" data-toggle="tab">中文</a></li>
+                        <li role="presentation"><a href="#CouponEN" aria-controls="CouponEN" role="tab" data-toggle="tab">英文</a></li>
+                    </ul> -->
+                </div>
+                <div class="modal-body">
+                    <table width="100%" face="微軟正黑體" style="font-size:13px;line-height: 1.42857143;">
+                        <tr>
+                            <td>
+                                <div style="color:#999;font-size:12px;text-align:right;">列印日期: 2018/05/07 10:25:03</div>
+                                <h1 style="color:blue;font-size:14px;text-align:center;margin-top: 10px;margin-bottom: 20px;">ELECTRONIC TICKET PASSENGER ITINERARY/RECEIPT 電子機票/旅客行程收執聯<br>CUSTOMER COPY顧客聯</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width:50%;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Passenger 旅客:</span>KAO/MINGPINGMR</td>
+                                        <td style="width:50%;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Ticket No 機票號碼:</span>6952589157471</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Name Ref 姓名相關備註:</span></td>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Date 日期:</span>07MAY18</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Customer Number 客戶編號:</span></td>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Issuing Airline 開票航空公司:</span>EVA AIRWAYS CORPORATION</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">FOID 證件號碼:</span>RZQPJI</td>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">IATA Number 旅行社IATA號碼:</span>34300453</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Booking Ref 電腦代號:</span></td>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Issued Agent 開票旅行社:</span>0CH8AOA</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Frequent Flyer No 航空公司會員號碼:</span></td>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Tour Code 銷售代碼:</span>FSN011</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <tr style="vertical-align: bottom;">
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">DAY
+                                            <br>日</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">DATE
+                                            <br>日期</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">FLIGHT
+                                            <br>航班</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;"></th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">TIME
+                                            <br>時間</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">CITY/TERMINAL城市/航站
+                                            <br>STOPOVER CITY停留城市</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">CLASS艙等
+                                            <br>STATUS狀態
+                                            <br>STOP 停留</th>
+                                        <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">EQP 機型
+                                            <br>FLYING TIME 飛行時間
+                                            <br>SERVICES 服務</th>
+                                    </tr>
+                                    <tr style="vertical-align: top;">
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">TUE
+                                            <br>二</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">08MAY
+                                            <br>05月08日</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">B7510</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">DEP
+                                            <br>出發</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">0720</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">TAIPEI SONGSHAN,TSA台北松山機場
+                                            <br>TERMINAL 1第一航站</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">ECONOMY經濟艙
+                                            <br>OKOK
+                                            <br>NON-STOP直飛</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">AIRBUS 321
+                                            <br>空中巴士 321
+                                            <br>01HR(小時)50MIN(分鐘)
+                                            <br>MEALS餐點</td>
+                                    </tr>
+                                    <tr style="vertical-align: top;">
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">08MAY
+                                            <br>05月08日</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">ARR
+                                            <br>抵達</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">0910</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">HANGZHOU杭州蕭山國際機場</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8">
+                                            <table style="width:100%;">
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">UNI AIRWAYS CORPORATION 立榮航空 電腦代號:</span>P8TKD6</td>
+                                                    <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">SEAT預選座位:</span></td>
+                                                </tr>
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">FARE BASIS 票價基準:</span>W1ME4G</td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVB 以下日期之前無效:</span>08MAY18</td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVA 以下日期之後無效:</span>08MAY18</td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">BAGGAGE 免費行李數:</span>30K</td>
+                                                </tr>
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" colspan="4" style="padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">UNI AIRWAYS CORPORATION立榮航空:</span>(886 2) 2501-1999 INTL/ (886 2) 2508-6999 DOM</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8">
+                                            <div style="border-bottom:1px solid #CCC;padding-bottom:5px;margin-bottom:5px;"></div>
+                                        </td>
+                                    </tr>
+                                    <tr style="vertical-align: top;">
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">SAT
+                                            <br>六</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">12MAY
+                                            <br>05月12日</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">BR868</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">DEP
+                                            <br>出發</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">1340</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">HONG KONG INTL香港國際機場
+                                            <br>TERMINAL 1第一航站</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">ECONOMY經濟艙
+                                            <br>OKOK
+                                            <br>NON-STOP直飛</td>
+                                        <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">77W
+                                            <br>波音 777-300ER
+                                            <br>01HR(小時)45MIN(分鐘)
+                                            <br>MEALS餐點</td>
+                                    </tr>
+                                    <tr style="vertical-align: top;">
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">12MAY
+                                            <br>05月12日</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">ARR
+                                            <br>抵達</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">1525</td>
+                                        <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">TAIPEI TAOYUAN,TPE台灣桃園國際機場
+                                            <br>TERMINAL 2第二航站</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8">
+                                            <table style="width:100%;">
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">EVA AIRWAYS 長榮航空 電腦代號:</span>P8TKD6</td>
+                                                    <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">SEAT預選座位:</span></td>
+                                                </tr>
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">FARE BASIS 票價基準:</span>S14S</td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVB 以下日期之前無效:</span></td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVA 以下日期之後無效:</span>22MAY18</td>
+                                                    <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">BAGGAGE 免費行李數:</span>30K</td>
+                                                </tr>
+                                                <tr style="vertical-align: top;">
+                                                    <td class="table_content" colspan="4" style="padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">EVA AIRWAYS/EVA AIRWAYS CORPORATION長榮航空:UNI AIRWAYS CORPORATION立榮航空:</span>(852) 2810-9251</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="border-bottom:1px solid #CCC;padding-bottom:15px;margin-bottom:15px;"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Form Of Payment付款方式:</span>INV</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Endorsement/Restriction機票條款:</span>NONEND/-G VLD BR/B7 OPTD FLT NONEND/HKG -S NO COSH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Taxes/fees/charges稅/費/費用:</span>TWD 500TW,TWD 455HK,TWD 342G3,TWD 171I5,TWD 891YQ</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="border-bottom:1px solid #CCC;padding-bottom:15px;margin-bottom:15px;"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Positive identification required for airport check in. 在機場辦理登機手續時，需出示真實身份證明文件Notice 注意事項:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CARRIAGE AND OTHER SERVICES PROVIDED BY THE CARRIER ARE SUBJECT TO CONDITIONS OF CARRIAGE, WHICH ARE HEREBY INCORPORATED BY REFERENCE. THESE CONDITIONS MAY BE OBTAINED FROM THE ISSUING CARRIER. PASSENGERS ON A JOURNEY INVOLVING AN ULTIMATE DESTINATION OR A STOP IN A COUNTRY OTHER THAN THE COUNTRY OF DEPARTURE ARE ADVISED THAT INTERNATIONAL TREATIES KNOWN AS THE MONTREAL CONVENTION, OP ITS PREDECESSOR, THE WARSAW CONVENTION, INCLUDING ITS AMENDMENTS (THE WARSAW CONVENTION SYSTEM), MAY APPLY TO THE ENTIRE JOURNEY, INCLUDING ANY PORTION THERE OF WITHIN A COUNTRY. FOR SUCH PASSENGERS, THE APPLICABLE TREATY, INCLUDING SPECIAL CONTRACTS OF CARRIAGE EMBODIED IN ANY APPLICABLE TARIFFS, GOVERNS AND MAY LIMIT THE LIABILITY OF THE CARRIER. CHECK WITH YOUR CARRIER FOR MORE INFORMATION.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">IATA Ticket Notice:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://www.iatatravelcentre.com/e-ticket-notice/General/English/">http://www.iatatravelcentre.com/e-ticket-notice/General/English/</a>
+                                            <br>(Subject to change without prior notice)</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">寄送</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">下載</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #ViewElectronicTicket .modal : END -->
+    <div class="modal alert_modal fade" id="SendConfirmMail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal_mask"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <p>你正要發送確認信給example@mail.com</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style2" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">確認發送</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #SendConfirmMail .modal : END -->
+    <div class="modal alert_modal fade" id="NoticeAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <p>確定要移除此訂單？
+                        <br>(仍須支付TWD $4,760)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn_style2" data-dismiss="modal">確認</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #NoticeAlert .modal : END -->
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand visible-xs" href="order_list_all.html">全部訂單</a>
+                    <div class="page_list hidden-xs">
+                        <!-- Web use - page nav -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn_style1 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="icon_menu">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </div>
+                            </button>
+                            <a href="" class="btn btn_style1">
+                                付款紀錄
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="order_list_all.html">訂單列表</a></li>
+                                <li><a href="company_credit_history.html">付款紀錄</a></li>
+                                <li><a href="verify_list.html">核覆列表</a></li>
+                                <li><a href="customer_inquiry.html">客服列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- page_list : END -->
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!-- Mobile use - page nav -->
+                    <ul class="nav navbar-nav visible-xs">
+                        <li class="active"><a href="order_list_all.html">全部訂單</a></li>
+                        <li><a href="company_verification.html">付款紀錄</a></li>
+                        <li><a href="customer_inquiry.html">客服列表</a></li>
+                    </ul>
+                    <div class="hidden-xs">
+                        <!-- Web use - 搜尋訂單編號&登出 -->
+                        <div class="member_function pull-right">
+                            <a href="" class="logout">登出</a>
+                            <div class="member_name hidden-xs"><span class="glyphicon glyphicon-user"></span> 帳號10101 /</div>
+                        </div>
+                    </div>
+                    <!-- Mobile use - 搜尋訂單編號&登出 -->
+                    <div class="visible-xs">
+                        <div class="order_search">
+                            <input type="text" placeholder="搜尋公司編號">
+                            <button class="btn btn_style5"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                        <div class="member_function">
+                            <a href="" class="logout">登出</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+    <div class="main_content company_content">
+        <div class="container">
+            <div class="search_form">
+                <h2 class="form_title">查詢公司</h2>
+                <div class="fill_form">
+                    <div class="fill_item">
+                        <div class="item_content">
+                            <input type="text" class="form-control tooltip_style" placeholder="請輸入公司統編">
+                        </div>
+                    </div>
+                </div><!-- .fill_form : END -->
+                <div class="button_group">
+                    <a href="company_credit_history.html" class="btn btn-lg btn_style1">查詢</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .main_content : END -->
+</body>
+
+</html>

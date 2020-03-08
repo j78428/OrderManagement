@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/slider_style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">    
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/slider.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/common.js"></script>
+    <script src="script/pager.js"></script>
+    <script src="script/verify.js"></script>
+    <script src="script/TSLib.js"></script>
+
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_content product_search coupon_booking">
+        <div class="container-fluid">
+            <div class="form_title back_item">
+                <a class="previous_page" href="javascript:history.back(-1)"><span class="glyphicon glyphicon-arrow-left"></span> 返回搜尋結果</a><span>子訂單編號：130600000061-1</span>
+            </div>
+            <div class="form_content ">                
+                <div class="block_content">
+                    <div class="travel_info_block info_block col-sm-12 col-md-4">
+                        <div class="info_box">
+                            <div class="box_title title_lg">
+                                富士山河口湖一日遊
+                            </div>
+                        </div>
+                        <div class="info_box">
+                            <div class="box_content">
+                                <div class="info_item">
+                                    <table>
+                                        <tr>
+                                            <td>預約日期/時間</td>
+                                            <td>2018/06/15 10:00</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>成人票 x 2</td>
+                                            <td><span>TWD $7,400</span></td>
+                                            <td><button class="btn btn-sm btn_style3 btn_remove">移除</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>兒童票 x 1</td>
+                                            <td><span>TWD $1,900</span></td>
+                                            <td><button class="btn btn-sm btn_style3 btn_remove">移除</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>日本郵寄費 - 寄到北海道、九州、沖繩之市區</td>
+                                            <td><span>TWD $300</span></td>
+                                            <td><button class="btn btn-sm btn_style3 btn_remove">移除</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>                      
+                        </div>
+                        <div class="info_box total_price"> 
+                            <div class="box_content">
+                                總金額：<span>$9,600</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking_block col-sm-12 col-md-8" >
+                        <ul class="nav nav-tabs tabs_style2">
+                            <!-- .form_confirm_status.complete  代表填表完成打勾圖案    //  .form_confirm_status.complete.undone   代表尚未填完表單 -->
+                            <li class="passenger_info_li form_confirm_status active">
+                                <a data-toggle="tab" href="#PassengerInfo">使用人</a>
+                            </li>
+                            <li class="contactor_li form_confirm_status">
+                                <a data-toggle="tab" href="#Contactor">收件人</a>                         
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#Remark">備註</a>  
+                            </li>
+                        </ul>
+
+                        <div class="tab-content col-sm-12 col-md-12">
+                            <div id="PassengerInfo" class="passenger_info tab-pane fade in active">
+                                <div class="fill_form">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="passenger_list_block">
+                                            <div class="passenger_item">                                                
+                                                <div class="row">
+                                                    <div class="passenger_type">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>&nbsp;此為成人票使用人
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="fill_item">
+                                                            <label class="item_title"><span>*</span>旅客英文姓名</label>    
+                                                            <div class="item_content">
+                                                                <div class="name_input">
+                                                                    <input id="FirstName" name="FirstName" validName="英文名字" fieldName="FirstName" type="text" class="form-control input-sm tooltip_style require" placeholder="名字" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                    <input id="LastName" name="LastName" validName="英文姓氏" fieldName="LastName"  type="text" class="form-control input-sm tooltip_style require" placeholder="姓氏" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title"><span>*</span>生日</label>    
+                                                            <div class="item_content">
+                                                                <div class="datepicker_input">
+                                                                    <input type="text" class="form-control input-sm adult_birth_date require" placeholder="請輸入生日" validname="生日" fieldname="DateOfBirth" id="dp1517390394740"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div> 
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title">性別</label><div class="item_content">
+                                                                <div class="radio_option_group">
+                                                                    <ul class="option_list">
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender1Male" value="0" name="TicketGender1Type" checked="" fieldname="Gender">
+                                                                            <label for="TicketGender1Male">
+                                                                                <p>男性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender1Female" value="1" name="TicketGender1Type" fieldname="Gender">
+                                                                            <label for="TicketGender1Female">
+                                                                                <p>女性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>  
+                                                </div>                                    
+                                            </div>  
+                                            <div class="passenger_item">                                                
+                                                <div class="row">
+                                                    <div class="passenger_type">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>&nbsp;此為成人票使用人
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="fill_item">
+                                                            <label class="item_title"><span>*</span>旅客英文姓名</label>    
+                                                            <div class="item_content">
+                                                                <div class="name_input">
+                                                                    <input id="FirstName" name="FirstName" validName="英文名字" fieldName="FirstName" type="text" class="form-control input-sm tooltip_style require" placeholder="名字" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                    <input id="LastName" name="LastName" validName="英文姓氏" fieldName="LastName"  type="text" class="form-control input-sm tooltip_style require" placeholder="姓氏" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title"><span>*</span>生日</label>    
+                                                            <div class="item_content">
+                                                                <div class="datepicker_input">
+                                                                    <input type="text" class="form-control input-sm adult_birth_date require" placeholder="請輸入生日" validname="生日" fieldname="DateOfBirth" id="dp1517390394741"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div> 
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title">性別</label><div class="item_content">
+                                                                <div class="radio_option_group">
+                                                                    <ul class="option_list">
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender2Male" value="0" name="TicketGender2Type" checked="" fieldname="Gender">
+                                                                            <label for="TicketGender2Male">
+                                                                                <p>男性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender2Female" value="1" name="TicketGender2Type" fieldname="Gender">
+                                                                            <label for="TicketGender2Female">
+                                                                                <p>女性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>  
+                                                </div>                                    
+                                            </div>
+                                            <div class="passenger_item">                                                
+                                                <div class="row">
+                                                    <div class="passenger_type">
+                                                        <span class="glyphicon glyphicon-info-sign"></span>&nbsp;此為兒童票使用人
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="fill_item">
+                                                            <label class="item_title">旅客英文姓名</label>    
+                                                            <div class="item_content">
+                                                                <div class="name_input">
+                                                                    <input id="FirstName" name="FirstName" validName="英文名字" fieldName="FirstName" type="text" class="form-control input-sm tooltip_style require" placeholder="名字" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                    <input id="LastName" name="LastName" validName="英文姓氏" fieldName="LastName"  type="text" class="form-control input-sm tooltip_style require" placeholder="姓氏" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title"><span>*</span>生日</label>    
+                                                            <div class="item_content">
+                                                                <div class="datepicker_input">
+                                                                    <input type="text" class="form-control input-sm child_birth_date require" placeholder="請輸入生日" validname="生日" fieldname="DateOfBirth" id="dp1517390394742"><span class="glyphicon glyphicon-calendar"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div> 
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-3">
+                                                        <div class="fill_item">
+                                                            <label class="item_title">性別</label><div class="item_content">
+                                                                <div class="radio_option_group">
+                                                                    <ul class="option_list">
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender3Male" value="0" name="TicketGender3Type" checked="" fieldname="Gender">
+                                                                            <label for="TicketGender3Male">
+                                                                                <p>男性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="radio" id="TicketGender3Female" value="1" name="TicketGender3Type" fieldname="Gender">
+                                                                            <label for="TicketGender3Female">
+                                                                                <p>女性</p>
+                                                                            </label>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="error_message">錯誤訊息</div>
+                                                        </div>
+                                                    </div>    
+                                                </div>                                    
+                                            </div>                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Contactor" class="contactor tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="fill_item">
+                                                    <label class="item_title"><span>*</span>Email</label>
+                                                    <div class="item_content">
+                                                        <input id="Email" name="Email" validName="Email" type="text" class="form-control input-sm require verify_email email" fieldName="EMail" placeholder="請輸入Email">
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="fill_item">
+                                                    <label class="item_title"><span>*</span>姓名</label>
+                                                    <div class="item_content">
+                                                        <input id="Name" name="Name" validName="姓名" type="text" class="form-control input-sm tooltip_style require chinese_name" fieldName="ChineseName" placeholder="姓名" data-toggle="tooltip" title="" data-placement="bottom">
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 ">
+                                                <div class="fill_item">
+                                                    <label class="item_title"><span>*</span>連絡電話</label>
+                                                    <div class="item_content">
+                                                        <input id="cellphone" name="cellphone" validName="連絡電話" type="text" class="form-control input-sm require verify_phone contact_phone_number" fieldName="ContactPhoneNumber" placeholder="請輸入連絡電話">
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <div class="fill_item">
+                                                    <label class="item_title">LINE ID</label>
+                                                    <div class="item_content">
+                                                        <input id="LineId" name="LineId" type="text" class="form-control input-sm line_id" fieldName="LineId" placeholder="請輸入LineId">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="fill_item">
+                                                    <label class="item_title"><span>*</span>地址</label>
+                                                    <div class="item_content">
+                                                        <div class="address_input">
+                                                            <select id="address_country" name="address_country" validName="國家" class="form-control  input-sm country_input require nation" fieldName="Nation">
+                                                                <option value="AD">安道爾</option>
+                                                                <option value="ZW">辛巴威</option>
+                                                                <option value="ZZ">其他國家</option>  
+                                                                <option value="TW" selected="">臺灣</option>                      
+                                                            </select>
+                                                            <select id="address_city" name="address_city" validName="縣市" class="form-control input-sm  city_input require address_city_id" fieldName="AddressCityId">
+                                                                <option value="">縣市</option>
+                                                                <option value="1">台北市</option>
+                                                                <option value="2">新北市</option>
+                                                                <option value="3">基隆市</option>
+                                                            </select>
+                                                            <select id="address_zone" name="address_zone" validName="地區" class="form-control input-sm  district_input require address_district_id" fieldName="AddressDistrictId">
+                                                                <option value="">地區</option>
+                                                                <option value="324" data="900">屏東市</option>
+                                                                <option value="325" data="901">三地門鄉</option>
+                                                            </select>
+                                                            <input id="address_zipcode" name="address_zipcode" validName="郵遞區域" type="text" class="form-control input-sm tooltip_style zipcode_input require address_zip_code" fieldName="AddressZipCode" placeholder="郵遞區域" data-toggle="tooltip"  data-placement="bottom">
+                                                            <input id="address" name="address" validName="地址" type="text" class="form-control input-sm  tooltip_style require address" fieldName="Address" placeholder="地址" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>
+                                                </div>                                            
+                                            </div>
+                                        </div>                                    
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="fill_item">
+                                                    <label class="item_title">收據</label>
+                                                    <div class="item_content">
+                                                        <div class="radio_option_group">
+                                                            <ul class="option_list">
+                                                                <li>
+                                                                    <input type="radio" id="NoReceipt" name="ReceiptType" value="0" checked="" fieldName="CreateReceipt">
+                                                                    <label for="NoReceipt">
+                                                                        <p>不須開立收據</p>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="PersonalReceipt" value="1" name="ReceiptType" fieldName="CreateReceipt">
+                                                                    <label for="PersonalReceipt">
+                                                                        <p>個人收據</p>
+                                                                    </label>
+                                                                </li>
+                                                                <li>
+                                                                    <input type="radio" id="CompanyReceipt" value="2" name="ReceiptType" fieldName="CreateReceipt">
+                                                                    <label for="CompanyReceipt">
+                                                                        <p>公司收據</p>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row company_receipt_info" style="display: none;">
+                                            <div class="col-md-4">
+                                                <div class="fill_item">
+                                                    <label class="item_title"><span>*</span>公司抬頭</label>
+                                                    <div class="item_content">
+                                                        <input id="ubn" name="Ubn" type="text" class="form-control input-sm company_name" validName="公司抬頭" fieldName="CompanyName"  maxlength="8" placeholder="請輸入公司抬頭">
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>                                                
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">  
+                                                <div class="fill_item">                                              
+                                                    <label class="item_title"><span>*</span>統一編號</label>
+                                                    <div class="item_content">
+                                                        <input id="ubn" name="Ubn" type="text" class="form-control input-sm verify_number ubn" fieldName="UBN" validName="統一編號" maxlength="8" placeholder="請輸入統一編號">
+                                                    </div>
+                                                    <div class="error_message">錯誤訊息</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="Remark" class="remark tab-pane fade">
+                                <div class="fill_form">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="fill_item">
+                                            <div class="item_content">
+                                                <textarea class="form-control" name="Text1" cols="40" rows="5" placeholder="請輸入備註內容"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block_bottom col-md-12">
+                            <button class="btn btn-lg btn_style3" onclick="window.location='build_order.html';">取消並關閉</button>
+                            <button class="btn btn-lg btn_style1" onclick="nextStep()">完成</button>
+                            <div class="checkbox">
+                                <input type="checkbox" class="check_item input-sm"  id="MainCheckItem" name="MainCheckItem">
+                                <label for="MainCheckItem"><span></span>我已確認訂票資料正確無誤
+                                </label>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- blcok_content : END -->
+                
+            </div>            
+            <!-- form_content : END -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END --> 
+    <div class="booking_screen" style="display: none;">   
+        <div class="booking_status status2">
+            <div class="status_icon"></div>
+            <div class="status title">確認中</div>
+        </div>
+    </div>
+
+    <div class="search_check_modal">         
+        <div class="modal alert_modal fade in" id="NoticeAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;z-index:1051">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_style1 btn_ok" onclick="$('#NoticeAlert').modal('hide')" style="cursor:pointer">確認</button>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!--  NoticeAlert : END -->
+    </div>
+
+
+    <div class="search_remove_check_modal">         
+        <div class="modal alert_modal fade in" id="RemoveCheck" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;z-index:1051">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <p>剩下最後一個商品</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_style1 btn_ok" onclick="$('#RemoveCheck').modal('hide')" style="cursor:pointer">確認</button>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!--  NoticeAlert : END -->
+</body>
+<script>
+$(document).ready(function(){
+    // 公司收據 點選顯示 公司抬頭 公司編號 input欄位
+    $('input[type=radio][name=ReceiptType]').change(function(){
+        if($(this).val() == "2"){
+            $('.company_receipt_info').show();
+            $('.company_receipt_info').find('.item_content input').each(function(){
+                $(this).addClass('require');
+            });
+        }else{
+            $('.company_receipt_info').hide();
+            $('.company_receipt_info').find('.item_content input').each(function(){
+                $(this).removeClass('require');
+            });
+        }
+    });
+        
+    $('.address_district_id').change(function(){
+        var addressZip = $(this).find(':selected').attr('data').split(" ")[0];
+        $('.address_zip_code').val(addressZip);
+    });
+
+    $('.info_item .btn_remove').click(function(){
+        var couponInfoItem = $(this).closest('tr');
+
+        if(!isFinalItem()){
+            couponInfoItem.remove();
+        }else{
+            var removeCheckModal =  $('#RemoveCheck');
+            removeCheckModal.modal('show');
+        }
+    });
+});
+function nextStep(){
+	var error1 = Verify.ValidRequire('#PassengerInfo');
+	var error2 = Verify.ValidRequire('#Contactor');	
+
+    showCheckInfo('.passenger_info_li',error1);
+    showCheckInfo('.contactor_li',error2); 
+
+    if($('#MainCheckItem').prop('checked')){
+		if(error1=='' && error2=='') {
+			$('.booking_screen').show();
+			var postData = TSLib.getPostData('.booking_block');
+		} else{
+            showNotice('請確認資料無誤');
+        }            
+    }else{
+        showNotice('請勾選確認無誤');
+    }
+}
+function isFinalItem(){
+    var itemCount = 0;
+    $('.info_item table tr').each(function(){
+        itemCount ++;
+    });
+    console.log('itemCount',itemCount);
+    if(itemCount == 2){
+        return true;
+    }
+    return false;
+}
+
+
+// 展示用
+$(document).ready(function(){
+
+    $('.info_item .btn_remove').click(function(){
+        var couponInfoItem = $(this).closest('tr');
+        var itemPrice = getPrice(couponInfoItem.find('td').eq(1).text());
+
+        var totalPriceBox = $('.total_price span');
+        var totalPrice = getPrice(totalPriceBox.text());
+
+        var isFinalItemForShow = $('.info_item table').hasClass('finalItem');
+
+        if(!isFinalItem()){
+            totalPriceBox.html(TSLib.numberFormat(totalPrice - itemPrice));
+        }else if(isFinalItem() && !isFinalItemForShow){
+
+            totalPriceBox.html(TSLib.numberFormat(totalPrice - itemPrice));
+            $('.info_item table').addClass('finalItem')
+        }
+    });
+})
+
+function getPrice(productName){
+    return parseInt(productName.replace(/[^0-9]/g,""));
+}
+
+</script>
+</html>

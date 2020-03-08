@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="container-fluid full_width">
+            <div class="top_block">
+                <div class="order_sub_info">
+                    <div class="sub_info_item">
+                        <span>建立時間：</span>2017年12月11日
+                    </div>
+                    <div class="sub_info_item">
+                        <span>建立者：</span>王大明
+                    </div>
+                    <div class="sub_info_item">
+                        <span>來源：</span>46446
+                    </div>
+                    <div class="sub_info_item pull-right">
+                        <span>客服人員：</span>王大明
+                    </div>
+                </div>
+                <div class="order_main_info sub_order_master">
+                    <div class="block_1">
+                        <div class="info_item">
+                            <div class="item_content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="order_types_big type_hotel">飯店</div>
+                                        </td>
+                                        <td>
+                                            <div class="sub_order_number">130100000031-1</div>
+                                            <div class="product_name">關西機場日航飯店 (Hotel Nikko Kansai Airport)</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                產品狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>待處理</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                付款狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>未付款</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                付款方式：<span>線上付款</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                請款狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>未請款</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                請款日期：<span>無</span>
+                                            </li>
+                                            <li class="info_item">
+                                                帳單編號：<span>無</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info_item">
+                            <div class="item_title">
+                                訂單狀態
+                            </div>
+                            <div class="item_content">
+                                <div class="status_group">
+                                    <div class="label process_status1">
+                                        <div>待處理</div>
+                                    </div>
+                                    <div class="popup_box">
+                                        <ul>
+                                            <li class="info_item">
+                                                會計審核：<span>未審核</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- .popup_box : END -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_2">
+                        <div class="sub_info_item">
+                            <span>金額小計：</span>$900,000
+                            <div class="icon_help">?</div>
+                            <div class="popup_box">
+                                <ul>
+                                    <li class="info_item">
+                                        優惠價：<span>否</span>
+                                    </li>
+                                    <li class="info_item">
+                                        成本：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        成本利潤：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        刷卡手續費：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        快遞費用：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        罰則：<span>TWD $10,000</span>
+                                    </li>
+                                    <li class="info_item">
+                                        罰則利潤：<span>TWD $10,000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- .popup_box : END -->
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂購人：</span>王大明
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂單類型：</span>代訂購
+                        </div>
+                        <div class="sub_info_item">
+                            <span>訂購確認：</span>已確認(2018/01/30)
+                        </div>
+                        <div class="sub_info_item">
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#PayLink">我是付款連結</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#SendConfirmMail" style="display:none;">發送確認信</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#ViewCoupon">住宿券</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#Invoice" style="display: none">帳單</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#CustomerInvoice">請款</button>
+                            <button class="btn btn-sm btn_style2" data-toggle="modal" data-target="#NoticeAlert">取消訂單</button>
+                            <button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#PasswordConfirm">下載訂單</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- order_main_info : END -->
+            </div>
+            <!-- .top_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">訂房明細</h3>
+                    <div class="info_item">
+                        <span>供應商：</span>GTA
+                    </div>
+                    <div class="info_item">
+                        <span>供應商訂購編號：</span>19534023
+                    </div>
+                </div>
+                <div class="block_content">
+                    <div class="hotel_info">
+                        <div class="stay_date">
+                            <div class="checkin_date">
+                                02月03日
+                                <div class="year">2017</div>
+                            </div>
+                            <div class="to">到</div>
+                            <div class="checkout_date">
+                                02月05日
+                                <div class="year"></div>
+                            </div>
+                        </div>
+                        <div class="hotel_detail">
+                            <div class="hotel_name">關西機場日航飯店 (Hotel Nikko Kansai Airport)</div>
+                            <div class="room_name">特大雙人房 (King Double Room) x <span class="room_quantity">1間</span></div>
+                            <div class="status_info">
+                                <div class="status_group">
+                                    <div class="label process_status4 tooltip_style" title="房間狀態" alt="房間狀態" data-toggle="tooltip" data-placement="top">
+                                        <div>待確認房型</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_info">
+                                <div class="info_item">
+                                    <span>早餐：</span>有
+                                </div>
+                                <div class="info_item">
+                                    <span>晚餐：</span>---
+                                </div>
+                                <div class="info_item">
+                                    <span>房間特別需求：</span>禁菸房、嬰兒床、相鄰的房間
+                                </div>
+                            </div>
+                        </div>
+                        <div class="memo_info">
+                            <div class="info_item">
+                                <div class="item_title">房間備註(供應商)：</div>
+                                <!-- NOTE: booking前 -->
+                                <div class="item_content">-Any name changed, adding sharer will not be accepted once booking is confirmed. . YES Car park NO.Car park YES FEE: NO.</div>
+                            </div>
+                            <div class="info_item">
+                                <div class="item_title">訂房備註(供應商)：</div>
+                                <!-- NOTE: booking後 -->
+                                <div class="item_content">-Any name changed, adding sharer will not be accepted once booking is confirmed.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .hotel_info : END -->
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">旅客資料</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th>成員</th>
+                            <th>中文名字</th>
+                            <th>英文名字</th>
+                            <th>性別</th>
+                            <th>年齡</th>
+                            <th>旅客需求</th>
+                        </tr>
+                        <tr>
+                            <td>成人</td>
+                            <td>王大明</td>
+                            <td>Da Ming Wang</td>
+                            <td>男性</td>
+                            <td></td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>小孩</td>
+                            <td>王大明</td>
+                            <td>Da Ming Wang</td>
+                            <td>男性</td>
+                            <td>2歲</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">聯絡人資料</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th>聯絡人姓名</th>
+                            <th>連絡電話</th>
+                            <th>Email</th>
+                            <th>收據</th>
+                            <th>收據抬頭</th>
+                            <th>統一編號</th>
+                            <th>送件地址</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>王大明</td>
+                            <td>0911456789</td>
+                            <td>a123@mailcom</td>
+                            <td>開立收據</td>
+                            <td>智光往有限公司</td>
+                            <td>54335926</td>
+                            <td>105 台北市松山區松江路101號11樓</td>
+                            <td><button class="btn btn-sm btn_style1" data-toggle="modal" data-target="#SendConfirmMail" style="display:none;">發送確認信</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">取消條款</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table cancellation_detail">
+                        <tr>
+                            <th>取消時間</th>
+                            <th>費用</th>
+                        </tr>
+                        <tr>
+                            <td>2016/5/18，15時之前</td>
+                            <td>沒有費用</td>
+                        </tr>
+                        <tr>
+                            <td>2016/5/19 ~ 2016/5/31之間</td>
+                            <td>TWD $4,760</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+            <div class="detail_block">
+                <div class="block_header">
+                    <h3 class="block_title">訂單備註</h3>
+                </div>
+                <div class="block_content">
+                    <table class="list_table">
+                        <tr>
+                            <th style="width: 150px;">建立時間</th>
+                            <th>訊息</th>
+                            <th style="width: 100px;">操作</th>
+                        </tr>
+                        <tr>
+                            <td>2017/02/23 12:55</td>
+                            <td>訊息內容訊息內容訊息內容訊息內容
+                                <div class="reply_block">
+                                    <div class="message_item">
+                                        <div class="message_content">回覆內容回覆內容</div>
+                                        <div class="message_info">
+                                            <div class="date"><span class="glyphicon glyphicon-time"></span> 2017/05/11 16:05</div>
+                                            <div class="respondent"><span class="glyphicon glyphicon-user"></span> 王大明</div>
+                                        </div>
+                                    </div>
+                                    <!-- .message_item : END -->
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn_style3" data-toggle="modal" data-target="#ReplyMessage">回覆</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2017/02/23 12:55</td>
+                            <td>
+                                訊息內容訊息內容訊息內容訊息內容
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn_style3" data-toggle="modal" data-target="#ReplyMessage">回覆</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- .list_table : END -->
+                </div>
+            </div>
+            <!-- .detail_block : END -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END -->
+    <div class="modal general_modal fade" id="ViewCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#CouponCN" aria-controls="CouponCN" role="tab" data-toggle="tab">中文</a></li>
+                        <li role="presentation"><a href="#CouponEN" aria-controls="CouponEN" role="tab" data-toggle="tab">英文</a></li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="hotel_coupon_form tab-pane active " id="CouponCN">
+                            <table width="100%" face="微軟正黑體">
+                                <tr>
+                                    <td>
+                                        <div style="border:1px solid #CCC;border-radius:8px;margin-top:5px;">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td style="text-align:left;font-weight:bold;padding:10px 15px;">
+                                                                    <div>住宿券 Hotel Coupon</div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">訂單編號：</div>
+                                                                        <div style="display:inline-block;">130500000057-1</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">訂單密碼：</div>
+                                                                        <div style="display:inline-block;">1234</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">付款狀態：</div>
+                                                                        <div style="display:inline-block;">已付款</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-top:1px solid #CCC;">
+                                                    <td style="width:30%;padding:15px;vertical-align:top;">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div style="font-size:20px;font-weight: bold;margin-bottom:-3px;">7月11日</div>
+                                                                    <div>2016</div>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="images/step_arrow.png" alt="" style="float:left;margin: 0 20px;height: 44px;">
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <div style="font-size:20px;font-weight: bold;margin-bottom:-3px;">7月12日</div>
+                                                                        <div>2016</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width:70%;padding:15px;vertical-align:top;">
+                                                        <div style="font-size:20px;font-weight: bold;margin-bottom:8px;">Simply Life Hotel - 臺北簡單生活會館</div>
+                                                        <div style="color:#666;line-height: 20px;margin-bottom:3px;">
+                                                            <img src="images/area-gray-20px.gif" alt="" style="margin-right:3px;">10,Ln.220,Sec. 4, Chongqing N. Rd. Taipei 111 Taiwan
+                                                        </div>
+                                                        <div style="color:#666;line-height: 20px;margin-bottom:3px;">
+                                                            <img src="images/phone-gray-20px.gif" alt="" style="margin-right:3px;">886-2-88111618
+                                                        </div>
+                                                        <img src="images/hotel_map.jpg" alt="" width="100%" style="margin-top:20px;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-top:1px solid #CCC;">
+                                                    <td style="width:30%;padding:15px;vertical-align:top;">
+                                                        <div style="color:#999;margin-bottom:8px;">旅客(成人)</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <br>
+                                                        <div style="color:#999;margin-bottom:8px;">旅客(小孩)</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                    </td>
+                                                    <td style="width:70%;padding:15px;vertical-align:top;">
+                                                        <table>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;margin-bottom:8px;vertical-align:top;">
+                                                                    入住房型
+                                                                </td>
+                                                                <td style="padding-bottom:8px;vertical-align:top;">
+                                                                    Standard Double x1間
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;margin-bottom:8px;vertical-align:top;">
+                                                                    早餐
+                                                                </td>
+                                                                <td style="padding-bottom:8px;vertical-align:top;">
+                                                                    <div>含早餐</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;vertical-align:top;">
+                                                                    特殊需求
+                                                                </td>
+                                                                <td style="vertical-align:top;">
+                                                                    <div style="margin-bottom:8px;">---</div>
+                                                                    <div style="font-size:12px;color: #666;">※ 所有特殊需求(如：高樓層、非吸菸房、連通房、免費網路等)，包含床型需求(大床、雙床、或正三人房)，僅為需求(RQ/Request)，我們會將您的需求轉達飯店，但實際服務仍依入住當天飯店提供為準。</div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:14px;line-height:24px;">
+                                        <h3 style="font-size:20px;font-weight:bold;padding-top: 15px;">住宿須知</h3>
+                                        <ul class="policy_list" style="padding-left:20px;">
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">本券僅供貴客戶住宿使用，不包含私人消費支出，如：飲料、電話...等費用。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">使用方式：旅客持本住宿券至確認飯店辦理住宿登記，並將住宿券交予飯店櫃檯。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">住宿券請務必攜帶，如忘記住宿券，則務必請旅行社人員先通知旅館，否則可能發生旅館拒絕入住，或收取高額房費，此時無法受理所發生的損失求償</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">日本入住時間一般都為下午15時以後，如要提早入住，須視旅館當日住宿狀況，由櫃台人員全權決定，如無法同意您提早入住時，可要求先將大件行李交由旅館保管並索取收條，等下午回來旅館時再辦理入住。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">超過下午18時以後入住，請撥個電話去旅館找櫃台人員(FRONT DESK)確認並要求旅館幫您保留房間，並記下與您通話者之姓名，否則有可能會被旅館視為NO SHOW無故不到，無法替您保留房間，此時貴客戶將不得要求退費。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">房價不含行李小費，客房服務(如有)小費、床頭小費、請自行斟酌給予。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">房間人數請按照訂房時告知的人數入住，如臨時超過訂房人數同住一間房時，請於抵達旅館後告知旅館。如未告知旅館，發生任何意外將有保險不理賠的風險，並被旅館要求高額房價差額或強迫追加房間的情形。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">住宿後如人數減少，或欲縮短住宿期間，請向飯店取得證明(Alternation Card)。返回台北後向本中心 Tristar Tour 辦理退費，但所退費用須扣10%手續費。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">提前退房或臨時無法住房，絕對會有費用產生，旅館如不同意不收費時，請務必向旅館索取不收費證明(一定要有不收費的字眼與明細)與該值班人員名字，本公司將無法受理任何和旅館人員口頭答應的退款申請，為了您的權益，請特別注意。
+                                                <br>※ 任何有關退款事項，旅客須在住宿完後30天內，檢附旅館出具之相關證明向本公司申請退款，無書面證明或逾時者，本公司 Tristar Tour 數不接受辦理，敬請見諒。客人私下跟飯店的決定，Tristar概不負責。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">變更、取消：
+                                                <ul style="padding-left:20px;">
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">住宿券開立後變更(入住日變更視同取消)：商務飯店每房每晚收取手續費NT $600元，溫泉飯店每人每晚收取手續費NT $600元，變更狀況已飯店回覆為準。</li>
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">開券後修改姓名，每筆訂單須收取手續費NT $150元，若飯店不允許變更姓名，則須取消重訂。</li>
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">取消：全額住宿費用。</li>
+                                                </ul>
+                                            </li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">在一般情況下，本住宿券價格均為優惠價格，但有些旅館每年會有不定期之特別價格於當地出售，而未必會知會本中心，如遇此種情形時，本中心之優惠價格並無法保證一定必須比該旅館之特價更便宜，希望貴客見諒。</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;">本公司之營業時間為每周一 - 五 09:00 - 12:00；13:30 - 18:00(國定假日除外)，如對於飯店住宿有任何變更取消等事宜請注意本公司只於營業時間方能提供服務，周六、日以及國定假日時間恕無法提供服務，請貴客們諒解。</li>
+                                        </ul>
+                                        <br>
+                                        <p style="font-weight:bold;clear:both;">感謝您撥空閱讀旅館注意事項，祝您旅途愉快！！</p>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img src="images/hotel_B2B_QRcode.jpg" height="100"></td>
+                                                <td>
+                                                    <ul>
+                                                        <li>服務專線：(02)2505-3887</li>
+                                                        <li>傳真電話：(02)2503-5119</li>
+                                                        <li>聯絡地址：台北市中山區(104)松江路101號11樓</li>
+                                                        <li>服務時間：每周一 - 五 09:00 - 12:00；13:30 - 18:00(國定假日除外)</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="hotel_coupon_form tab-pane" id="CouponEN">
+                            <table width="100%" face="微軟正黑體">
+                                <tr>
+                                    <td>
+                                        <div style="border:1px solid #CCC;border-radius:8px;margin-top:5px;">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td style="text-align:left;font-weight:bold;padding:10px 15px;">
+                                                                    <div>Hotel Coupon</div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">Booking No.</div>
+                                                                        <div style="display:inline-block;">130500000057-1</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">Password：</div>
+                                                                        <div style="display:inline-block;">1234</div>
+                                                                    </div>
+                                                                </td>
+                                                                <td style="text-align:right;padding:10px 15px;">
+                                                                    <div>
+                                                                        <div style="color:#999;display:inline-block;">Payment Status：</div>
+                                                                        <div style="display:inline-block;">Paid</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-top:1px solid #CCC;">
+                                                    <td style="width:30%;padding:15px;vertical-align:top;">
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div style="font-size:20px;font-weight: bold;margin-bottom:-3px;">11 JUL</div>
+                                                                    <div>2016</div>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="images/step_arrow.png" alt="" style="float:left;margin: 0 20px;height: 44px;">
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <div style="font-size:20px;font-weight: bold;margin-bottom:-3px;">12 JUL</div>
+                                                                        <div>2016</div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td style="width:70%;padding:15px;vertical-align:top;">
+                                                        <div style="font-size:20px;font-weight: bold;margin-bottom:8px;">Simply Life Hotel - 臺北簡單生活會館</div>
+                                                        <div style="color:#666;line-height: 20px;margin-bottom:3px;">
+                                                            <img src="images/area-gray-20px.gif" alt="" style="margin-right:3px;">10,Ln.220,Sec. 4, Chongqing N. Rd. Taipei 111 Taiwan
+                                                        </div>
+                                                        <div style="color:#666;line-height: 20px;margin-bottom:3px;">
+                                                            <img src="images/phone-gray-20px.gif" alt="" style="margin-right:3px;">886-2-88111618
+                                                        </div>
+                                                        <img src="images/hotel_map.jpg" alt="" width="100%" style="margin-top:20px;">
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-top:1px solid #CCC;">
+                                                    <td style="width:30%;padding:15px;vertical-align:top;">
+                                                        <div style="color:#999;margin-bottom:8px;">Guest Name(Adult)</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <br>
+                                                        <div style="color:#999;margin-bottom:8px;">Guest Name(Child)</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                        <div style="margin-bottom:5px;">Mr. Liou Neil</div>
+                                                    </td>
+                                                    <td style="width:70%;padding:15px;vertical-align:top;">
+                                                        <table>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;margin-bottom:8px;vertical-align:top;">
+                                                                    Room Type
+                                                                </td>
+                                                                <td style="padding-bottom:8px;vertical-align:top;">
+                                                                    Standard Double x1 Room
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;margin-bottom:8px;vertical-align:top;">
+                                                                    Breakfast
+                                                                </td>
+                                                                <td style="padding-bottom:8px;vertical-align:top;">
+                                                                    <div>含早餐</div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="color:#999;width:100px;vertical-align:top;">
+                                                                    Remark
+                                                                </td>
+                                                                <td style="vertical-align:top;">
+                                                                    <div style="margin-bottom:8px;">---</div>
+                                                                    <div style="font-size:12px;color: #666;">※ All Special Requests (e.g., floors, non-smoking rooms,connecting rooms, free wi-fi). Also including the type of room (e.g., King size double room, twin room, triple), we would help you all pass to the hotels, but the real situation is still depending on the service of the hotel you have booked.</div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size:14px;line-height:24px;">
+                                        <h3 style="font-size:20px;font-weight:bold;padding-top: 15px;">Accommodations regulation</h3>
+                                        <ul class="policy_list" style="padding-left:20px;">
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">This Accommodation Voucher can only be used by the honorable hotel guest for staying in the hotel, not including other private cost, e.g., beverage, phone calls.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">The way of using: the hotel guest have to get this Accommodation Voucher to the hotel to be checked in, and give this Accommodation Voucher to the hotel counter.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">The hotel guest must remember to bring Accommodation Voucher to the hotel, if you forget to bring the Accommodation Voucher, please inform the travel agency personnel to tell the hotel first; otherwise, it might be happened that the hotel doesn’t allow the hotel guest to be checked in, or they may charge more expensive fee, then we couldn’t help you and accept the claim.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">Most check-in time in Japan would after 3 p.m., if the hotel guest want to check-in early, you might have to see the living situation of the hotel on that date, the right of decision belongs to the hotel counter staff. If the hotel doesn’t allow it, we advised you to request the hotel to keep your luggage until you get back and check-in in the evening.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">If you have to check-in after 6 p.m., please make a phone call to tell the front desk of the hotel to keep the reservation for you, and remember the name of helping staff, or you may be regarded “no show” by the hotel and cancel your reservation, then the hotel guest couldn’t request for claim.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">The price of room doesn’t including the tips for luggage, room service. If the hotel charge this kind of extra fee, please give it by your willing.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">The numbers of people living in a room according to the reservation information, if the guest has a temporary situation that you need to increase people, please inform the hotel when you arrive. If the you doesn’t tell the hotel first, then you may have to take the risk of not receiving the compensation by the insurance when accident happen, and the hotel would also have right to charge you higher price of room, or ask the guest to book more rooms.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">If the numbers of living people is fewer, or the hotel guest want to shorten the booking period, please get the Alternation Card from the hotel. After you get back to Taipei, please let us (Tristar Tour) know, and apply for rebate, and we would charge the 10% service charge.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">The hotel have right to ask for fee when the hotel guest need to check-out early or shorten the living period temporarily. If the hotel have permission of not charging the fee, the guest must request for the paper proof of not charging. (there must be words of "not charging" and price details on the paper) The name of the hotel staff should be on the paper as well. We (Tristar Tour) can’t accept and hear the case of any verbal permission of refund application between the customer and the hotel staff. For your benefit, please mind this carefully.
+                                                <br>※ Any application for rebate have to be conducted in 30 days after the check-in date. Please provide related proof of the hotel to apply for rebate. If the honorable customer doesn’t have paper proof or the prescriptive application time is over, we (Tristar Tour) have right to not accept and hear the case, please understand it. The customer have any consensus or decision together with the hotel, Tristar wouldn’t have any responsibility for it.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">Change, Cancel:
+                                                <ul style="padding-left:20px;">
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">The Accommodation Voucher change (the change of check-in date is regarded as cancel): Commercial hotel may ask the service charge for 600 NTD each room/ one night, the hot spring hotel may ask the service charge for 600 NTD each room/ one night. The real change situation depends on the hotel.</li>
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">Change the name of the Accommodation Voucher, each voucher would ask the customer for 150 NTD service charge, if the hotel doesn’t allow it, then the customer needs to cancel and rebook room.</li>
+                                                    <li style="list-style-type:upper-latin;line-height: 22px;">Cancel: Full cost of accommodation.</li>
+                                                </ul>
+                                            </li>
+                                            <li style="list-style-type:decimal;line-height: 22px;margin-bottom:8px;">Generally, the price on this Accommodation Voucher will be discounted price, but sometimes certain hotels may release special discounted price to the local, and these hotels might not inform us (Tristar Tour). If it happen, the price we (Tristar Tour) supply may not be cheaper, and we hope the honorable customer understand it.</li>
+                                            <li style="list-style-type:decimal;line-height: 22px;">Our regular hours of operation are from 9 a.m. to 12 p.m. in the morning, 1:30 p.m. to 6 p.m. in the afternoon each day, Monday to Friday is opening. (not including national holidays) If the customer need to change or cancel any reservation of hotel, please connect us during the opreation hours, we don’t supply any service on Sat., Sun. or national holidays, please understand it.</li>
+                                        </ul>
+                                        <br>
+                                        <p style="font-weight:bold;clear:both;">We appreciate you very much for reading notice for use, and sincerely wish you have a wonderful journey!!</p>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td><img src="images/hotel_B2B_QRcode.jpg" height="100"></td>
+                                                <td>
+                                                    <ul>
+                                                        <li style="list-style-type:none;">Service Line: (02) 2505-3887</li>
+                                                        <li style="list-style-type:none;">Fax: (02) 2503-5119</li>
+                                                        <li style="list-style-type:none;">Contact Address: 11 / F, 101 Songjiang Road, Zhongshan District, Taipei City</li>
+                                                        <li style="list-style-type:none;">Service Hours: Every Monday - Friday 09:00 - 12:00; 13:30 - 18:00 (except national holidays)</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">寄送</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">下載</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #ViewCoupon .modal : END -->
+    <div class="modal general_modal fade" id="Invoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">&nbsp;</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="100%" face="微軟正黑體">
+                        <tbody>
+                            <tr>
+                                <td style="border-bottom:1px solid #CCC;">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2" style="padding:8px;width:70%;">
+                                                    <div style="font-size:34px;font-weight:bold;letter-spacing:2px;">請款帳單</div>
+                                                    <div style="letter-spacing:2px;">福泰旅行社股份有限公司</div>
+                                                </td>
+                                                <td style="padding:8px;width:30%;vertical-align: bottom;">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="padding: 0 6px;">帳單編號：</td>
+                                                            <td style="padding: 0 6px;">A130100000031-1</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 0 6px;">請款日期：</td>
+                                                            <td style="padding: 0 6px;">2017/06/03</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:50%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">客戶</div>
+                                                    <div style="margin-bottom:3px;">香港商戈爾有限公司</div>
+                                                    <div style="margin-bottom:3px;">台北市中山區松江路101號11樓</div>
+                                                </td>
+                                                <td style="width:25%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">統一編號</div>
+                                                    <div style="margin-bottom:3px;">54335926</div>
+                                                </td>
+                                                <td style="width:25%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">連絡電話</div>
+                                                    <div style="margin-bottom:3px;">0355811457</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr style="border-top: 1px solid #999;border-bottom: 1px solid #999;">
+                                                <th style="padding:5px 8px;width:50px;">項次</th>
+                                                <th style="padding:5px 8px;width:150px;">訂單編號</th>
+                                                <th style="padding:5px 8px;">內容</th>
+                                                <th style="padding:5px 8px;width:120px;">金額</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;">1</td>
+                                                <td style="padding:10px 8px;height:41px;">130100000031-1</td>
+                                                <td style="padding:10px 8px;">關西機場日航飯店 (Hotel Nikko Kansai Airport)</td>
+                                                <td style="padding:10px 8px;">$1,923</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <table width="100%">
+                                                        <tbody>
+                                                            <tr style="border-top:1px solid #CCC;">
+                                                                <td colspan="2" style="padding:6px 8px;vertical-align: top;">
+                                                                    <div style="color:#999;margin-bottom:5px;">備註</div>
+                                                                    <div style="margin-bottom:5px;">---</div>
+                                                                </td>
+                                                                <td style="width:210px;">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="padding:6px;width:90px;text-align:right;letter-spacing: 2px;">
+                                                                                    <div style="color:#999;">總價</div>
+                                                                                </td>
+                                                                                <td style="padding:6px;width:120px;">
+                                                                                    <div>$25,000</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="background:#333;color:#FFF;font-size:15px;">
+                                                                                <td style="padding:6px 8px;text-align:right;letter-spacing: 2px;">
+                                                                                    <div style="font-weight:bold;">應收餘額</div>
+                                                                                </td>
+                                                                                <td style="padding:6px 8px;width:120px;">
+                                                                                    <div style="font-weight:bold;">$25,000</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">會計</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">承辦</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">業務</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;text-align:center;"><img src="images/barcode.jpg" style=""></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="font-size:12px;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 8px 8px 8px 0px;">TEL: 02-2509-2828</td>
+                                                <td style="padding: 8px;">FAX: 02-2503-5119</td>
+                                                <td style="padding: 8px;">Email: emily.chang@tristar.com.tw</td>
+                                                <td style="padding: 8px;">地址: 台北市中山區松江路101號11樓</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">寄送</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">下載</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #Invoice .modal : END -->
+    <div class="modal general_modal fade" id="CustomerInvoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">&nbsp;</h4>
+                </div>
+                <div class="modal-body">
+                    <table width="100%" face="微軟正黑體">
+                        <tbody>
+                            <tr>
+                                <td style="border-bottom:1px solid #CCC;">
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2" style="padding:8px;width:70%;">
+                                                    <div style="font-size:34px;font-weight:bold;letter-spacing:2px;">客戶請款單</div>
+                                                    <div style="letter-spacing:2px;">福泰旅行社股份有限公司</div>
+                                                </td>
+                                                <td style="padding:8px;width:30%;vertical-align: bottom;">
+                                                    <table>
+                                                        <tr>
+                                                            <td style="padding: 0 6px;">帳單編號：</td>
+                                                            <td style="padding: 0 6px;">---</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="padding: 0 6px;">請款日期：</td>
+                                                            <td style="padding: 0 6px;">---</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:50%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">客戶</div>
+                                                    <div style="margin-bottom:3px;">香港商戈爾有限公司</div>
+                                                    <div style="margin-bottom:3px;">台北市中山區松江路101號11樓</div>
+                                                </td>
+                                                <td style="width:25%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">統一編號</div>
+                                                    <div style="margin-bottom:3px;">54335926</div>
+                                                </td>
+                                                <td style="width:25%;padding:8px;vertical-align: top;">
+                                                    <div style="color:#999;font-size:13px;margin-bottom:3px;">連絡電話</div>
+                                                    <div style="margin-bottom:3px;">0355811457</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr style="border-top: 1px solid #999;border-bottom: 1px solid #999;">
+                                                <th style="padding:5px 8px;width:50px;">項次</th>
+                                                <th style="padding:5px 8px;width:150px;">訂單編號</th>
+                                                <th style="padding:5px 8px;">內容</th>
+                                                <th style="padding:5px 8px;width:120px;">金額</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;">1</td>
+                                                <td style="padding:10px 8px;height:41px;">130100000031-1</td>
+                                                <td style="padding:10px 8px;">關西機場日航飯店 (Hotel Nikko Kansai Airport)</td>
+                                                <td style="padding:10px 8px;">$1,923</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;height:41px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                                <td style="padding:10px 8px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <table width="100%">
+                                                        <tbody>
+                                                            <tr style="border-top:1px solid #CCC;">
+                                                                <td colspan="2" style="padding:6px 8px;vertical-align: top;">
+                                                                    <div style="color:#999;margin-bottom:5px;">備註</div>
+                                                                    <div style="margin-bottom:5px;">---</div>
+                                                                </td>
+                                                                <td style="width:210px;">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="padding:6px;width:90px;text-align:right;letter-spacing: 2px;">
+                                                                                    <div style="color:#999;">總價</div>
+                                                                                </td>
+                                                                                <td style="padding:6px;width:120px;">
+                                                                                    <div>$25,000</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr style="background:#333;color:#FFF;font-size:15px;">
+                                                                                <td style="padding:6px 8px;text-align:right;letter-spacing: 2px;">
+                                                                                    <div style="font-weight:bold;">應收餘額</div>
+                                                                                </td>
+                                                                                <td style="padding:6px 8px;width:120px;">
+                                                                                    <div style="font-weight:bold;">$25,000</div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">會計</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">承辦</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;vertical-align: top;">業務</td>
+                                                <td style="padding: 8px;width: 25%;border: 1px solid #999;height: 70px;text-align:center;"><img src="images/barcode.jpg" style=""></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="font-size:12px;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 8px 8px 8px 0px;">TEL: 02-2509-2828</td>
+                                                <td style="padding: 8px;">FAX: 02-2503-5119</td>
+                                                <td style="padding: 8px;">Email: emily.chang@tristar.com.tw</td>
+                                                <td style="padding: 8px;">地址: 台北市中山區松江路101號11樓</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style3" data-toggle="modal" data-target="#SettingDate"> 預設請款日期</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">寄送</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">下載</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #CustomerInvoice .modal : END -->
+    <div class="modal general_modal fade" id="ReplyMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">&nbsp;</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fill_form">
+                        <div class="fill_item">
+                            <div class="item_content">
+                                <textarea class="form-control" rows="10" placeholder="請輸入..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">確認回覆</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #ReplyMessage .modal : END -->
+    <div class="modal alert_modal fade" id="SettingDate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <h4 class="form_title">設定請款日期</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <input type="text" class="form-control" placeholder="選擇日期">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .fill_form : END -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-lg btn_style2" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-lg btn_style1" data-dismiss="modal">確認</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #SettingDate : END -->
+    <div class="modal alert_modal fade" id="PasswordConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <h4 class="form_title">密碼驗證</h4>
+                    <div class="fill_form">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                <div class="fill_item">
+                                    <div class="item_content">
+                                        <input type="password" class="form-control tooltip_style" placeholder="請輸入密碼" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="" value="">
+                                    </div>
+                                    <div class="error_message">錯誤訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .fill_form : END -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-lg btn_style2" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-lg btn_style1" data-dismiss="modal">確認</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #PasswordConfirm : END -->    
+    <div class="modal alert_modal fade" id="SendConfirmMail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal_mask"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <p>你正要發送確認信給example@mail.com</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style2" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">確認發送</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #SendConfirmMail .modal : END -->
+    <div class="modal alert_modal fade" id="NoticeAlert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal_mask"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <p>確定要移除此訂單？
+                        <br>(仍須支付TWD $4,760)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn_style1" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn_style2" data-dismiss="modal">確認</button>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #NoticeAlert .modal : END -->
+    <div class="modal alert_modal fade" id="PayLink" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="form_title">選擇付款方式</h4>
+                   <button type="button" class="btn btn_style1" data-dismiss="modal">點我前往付款</button>
+                   <button type="button" class="btn btn_style1" data-dismiss="modal">寄送連結給顧客</button>
+                </div>
+                <div class="modal-footer">
+                    <div class="info_item">手機掃描QR Code付款
+                    <img src="images/hotel_B2B_QRcode.jpg" height="200"></div>
+                </div>
+            </div>
+            <!-- .modal-content : END -->
+        </div>
+    </div>
+    <!-- #PayLink .modal : END -->
+
+</body>
+
+</html>

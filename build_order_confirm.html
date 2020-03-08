@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="container">
+            <div class="form_content build_order_confirm">
+                <h2 class="form_title">確認訂單資料</h2>
+                <div class="function_group">
+                    <a href="download_view.html" target="_blank"  class="btn btn_style3"><span class="glyphicon glyphicon-download"></span> 下載</a>
+                    <button class="btn btn_style3" data-toggle="modal" data-target="#SendOrder"><span class="glyphicon glyphicon-send"></span> 寄出</button>
+                </div>
+                <div class="fill_form">
+                    <div class="order_item col-xs-12 col-sm-12 col-md-12">
+                        <div class="order_header">
+                            <h3 class="order_number">主訂單編號：130600000061</h3>
+                        </div>
+                        <div class="order_content">
+                            <table>
+                                <tr>
+                                    <td>130600000061-1</td>
+                                    <td>飯店</td>
+                                    <td>簡單生活會館</td>
+                                    <td>訂單金額：$3,000</td>
+                                    <td>請款日期：2018/06/01</td>
+                                </tr>
+                                <tr>
+                                    <td>130600000061-2</td>
+                                    <td>飯店</td>
+                                    <td>簡單生活會館</td>
+                                    <td>訂單金額：$3,000</td>
+                                    <td>請款日期：2018/06/01</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- .order_item END -->
+                    <div class="order_item col-xs-12 col-sm-12 col-md-12">
+                        <div class="order_header">
+                            <h3 class="order_number">主訂單編號：130600000062</h3>
+                        </div>
+                        <div class="order_content">
+                            <table>
+                                <tr>
+                                    <td>130600000062-1</td>
+                                    <td>飯店</td>
+                                    <td>簡單生活會館</td>
+                                    <td>訂單金額：$3,000</td>
+                                    <td>請款日期：2018/06/01</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- .order_item END -->
+                </div>
+                <!-- .fill_form : END -->
+                <div class="function_group2">
+                    <a href="download_view.html" target="_blank" class="btn btn_style3"><span class="glyphicon glyphicon-download"></span> 下載</a>
+                    <button class="btn btn_style3" data-toggle="modal" data-target="#SendOrder"><span class="glyphicon glyphicon-send"></span> 寄出</button>
+                </div>
+                <div class="button_group">
+                    <a href="order_list_all.html" class="btn btn-lg btn_style2">取消</a>
+                    <button class="btn btn-lg btn_style1 btn_save_order" >儲存</button>
+                </div>
+            </div>
+            <!-- .form_content : END -->
+        </div>
+
+
+        <div class="modal form_modal fade in" id="SendOrder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body col-xs-12 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <h4 class="modal-title">寄出訂單</h4>
+                        <div class="fill_form">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-10">
+                                    <div class="fill_item">
+                                        <label class="item_title">收件者：</label>
+                                        <div class="item_content">
+                                            <textarea class="form-control" cols="30" rows="5" placeholder="請輸入收件人們的電子郵件，並以逗號分開"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .fill_form : END -->
+
+                        <div class="button_group">
+                            <a href="build_step4.html" class="btn btn-lg btn_style1">確認寄出</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- .modal-content : END -->
+            </div>
+        </div>
+        <!-- #SendOrder : END -->
+    </div>
+    <!-- .main_content : END -->
+</body>
+<script>
+    $('.btn_save_order').on('click',function(){
+        var suggestPrices = '3,000';
+        $('.step3_form .button_group').hide();
+        $('.step3_form .order_item .order_content td:nth-child(4)').text('建議售價：$'+suggestPrices);
+        // $('.step3_form .order_item .order_content td:nth-child(4)').css('font-weight','bold');
+        $('.step3_form .order_item .order_content td:nth-child(5)').css('font-weight','bold');
+    })
+</script>
+
+</html>

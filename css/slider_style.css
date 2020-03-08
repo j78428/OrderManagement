@@ -1,0 +1,83 @@
+@charset "utf-8";
+/************************************/
+/*		Slider Style CSS			*/
+/*		Created at 2015/12/01		*/
+/************************************/
+
+
+.range_silder_box .ui-corner-all,
+.range_silder_box .ui-corner-bottom, 
+.range_silder_box .ui-corner-right,
+.range_silder_box .ui-corner-br {
+    border-bottom-right-radius: 20px;
+	}
+
+.range_silder_box .ui-corner-all,
+.range_silder_box .ui-corner-bottom,
+.range_silder_box .ui-corner-left,
+.range_silder_box .ui-corner-bl {
+    border-bottom-left-radius: 20px;
+	}
+
+.range_silder_box .ui-corner-all, 
+.range_silder_box .ui-corner-top, 
+.range_silder_box .ui-corner-right, 
+.range_silder_box .ui-corner-tr {
+    border-top-right-radius: 20px;
+	}
+
+.range_silder_box .ui-corner-all, 
+.range_silder_box .ui-corner-top, 
+.range_silder_box .ui-corner-left, 
+.range_silder_box .ui-corner-tl {
+    border-top-left-radius: 20px;
+	}
+
+.range_silder_box .ui-widget-content {
+    border: 0;
+}
+
+.range_silder_box .ui-widget-header {
+    border:4px solid #DBA0DE;
+    background: #DBA0DE;
+	}
+	
+.range_silder_box .ui-slider-horizontal {
+    height: .6em;
+	}
+	
+.range_silder_box .ui-slider-horizontal .ui-slider-handle {
+    top: -15px;
+    z-index: 1;
+    margin-left: -.5em;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e4e4e4;
+    font-size: 30px;
+	}
+
+.range_silder_box .ui-slider-horizontal .ui-slider-handle:last-child:before {
+    content: "|";
+    font-size: 12px;
+    padding: 2px;
+    color: #e4e4e4;
+    display: block;
+    text-align: center;
+}
+
+.range_silder_box .ui-state-active, 
+.range_silder_box .ui-widget-content .ui-state-active, 
+.range_silder_box .ui-widget-header .ui-state-active {
+    border: 1px solid #ccc;
+    background: #DDD;
+    font-weight: normal;
+    color: #2b2b2b;
+	}
+
+
+.range_silder_box .ui-widget {
+    border: 1px solid #EEE;
+}

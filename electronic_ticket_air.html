@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>電子機票</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .item_title {
+            color:#333;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .table_head, .table_content {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .table_head {
+            border-bottom: 1px solid #CCC;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_content">
+        <div class="container">
+            <table width="100%" face="微軟正黑體" style="font-size:12px;line-height: 1.42857143;">
+                <tr>
+                    <td>
+                        <div style="color:#999;font-size:12px;text-align:right;">列印日期: 2018/05/07 10:25:03</div>
+                        <h1 style="color:blue;font-size:14px;text-align:center;margin-top: 10px;margin-bottom: 20px;">ELECTRONIC TICKET PASSENGER ITINERARY/RECEIPT 電子機票/旅客行程收執聯<br>CUSTOMER COPY顧客聯</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="width:100%;">
+                            <tr>
+                                <td style="width:50%;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Passenger 旅客:</span>KAO/MINGPINGMR</td>
+                                <td style="width:50%;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Ticket No 機票號碼:</span>6952589157471</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Name Ref 姓名相關備註:</span></td>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Date 日期:</span>07MAY18</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Customer Number 客戶編號:</span></td>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Issuing Airline 開票航空公司:</span>EVA AIRWAYS CORPORATION</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">FOID 證件號碼:</span>RZQPJI</td>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">IATA Number 旅行社IATA號碼:</span>34300453</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Booking Ref 電腦代號:</span></td>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Issued Agent 開票旅行社:</span>0CH8AOA</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Frequent Flyer No 航空公司會員號碼:</span></td>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Tour Code 銷售代碼:</span>FSN011</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td>&nbsp;</td></tr>
+                <tr>
+                    <td>
+                        <table style="width:100%;">
+                            <tr style="vertical-align: bottom;">
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">DAY<br>日</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">DATE<br>日期</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">FLIGHT<br>航班</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;"></th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">TIME<br>時間</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">CITY/TERMINAL城市/航站<br>STOPOVER CITY停留城市</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">STATUS狀態<br>STOP 停留</th>
+                                <th class="table_head" style="padding-top: 5px;padding-bottom: 5px;border-bottom: 1px solid #CCC;font-weight: bold;">EQP 機型<br>FLYING TIME 飛行時間<br>SERVICES 服務</th>
+                            </tr>
+                            <tr style="vertical-align: top;">
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">TUE<br>二</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">08MAY<br>05月08日</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">B7510</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">DEP<br>出發</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">0720</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">TAIPEI SONGSHAN,TSA台北松山機場<br>TERMINAL 1第一航站</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">OKOK<br>NON-STOP直飛</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">AIRBUS 321<br>空中巴士 321<br>01HR(小時)50MIN(分鐘)<br>MEALS餐點</td>
+                            </tr>
+                            <tr style="vertical-align: top;">
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">08MAY<br>05月08日</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">ARR<br>抵達</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">0910</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">HANGZHOU杭州蕭山國際機場</td>
+                            </tr>
+                            <tr>
+                                <td colspan="8">
+                                    <table style="width:100%;">
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">UNI AIRWAYS CORPORATION 立榮航空 電腦代號:</span>P8TKD6</td>
+                                            <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">SEAT預選座位:</span></td>
+                                        </tr>
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVB 以下日期之前無效:</span>08MAY18</td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVA 以下日期之後無效:</span>08MAY18</td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">BAGGAGE 免費行李數:</span>30K</td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;"></td>
+                                        </tr>
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" colspan="4" style="padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">UNI AIRWAYS CORPORATION立榮航空:</span>(886 2) 2501-1999 INTL/ (886 2) 2508-6999 DOM</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="8"><div style="border-bottom:1px solid #CCC;padding-bottom:5px;margin-bottom:5px;"></div></td></tr>
+                            <tr style="vertical-align: top;">
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">SAT<br>六</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">12MAY<br>05月12日</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">BR868</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">DEP<br>出發</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">1340</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">HONG KONG INTL香港國際機場<br>TERMINAL 1第一航站</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">OKOK<br>NON-STOP直飛</td>
+                                <td class="table_content" rowspan="2" style="padding-top: 5px;padding-bottom: 5px;">77W<br>波音 777-300ER<br>01HR(小時)45MIN(分鐘)<br>MEALS餐點</td>
+                            </tr>
+                            <tr style="vertical-align: top;">
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">12MAY<br>05月12日</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">ARR<br>抵達</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">1525</td>
+                                <td class="table_content" style="padding-top: 5px;padding-bottom: 5px;">TAIPEI TAOYUAN,TPE台灣桃園國際機場<br>TERMINAL 2第二航站</td>
+                            </tr>
+                            <tr>
+                                <td colspan="8">
+                                    <table style="width:100%;">
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">EVA AIRWAYS 長榮航空 電腦代號:</span>P8TKD6</td>
+                                            <td class="table_content" style="width: 50%;padding-top: 5px;padding-bottom: 5px;" colspan="2"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">SEAT預選座位:</span></td>
+                                        </tr>
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVB 以下日期之前無效:</span></td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">NVA 以下日期之後無效:</span>22MAY18</td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">BAGGAGE 免費行李數:</span>30K</td>
+                                            <td class="table_content" style="width: 25%;padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;"></td>
+                                        </tr>
+                                        <tr style="vertical-align: top;">
+                                            <td class="table_content" colspan="4" style="padding-top: 5px;padding-bottom: 5px;"><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">EVA AIRWAYS/EVA AIRWAYS CORPORATION長榮航空:UNI AIRWAYS CORPORATION立榮航空:</span>(852) 2810-9251</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td><div style="border-bottom:1px solid #CCC;padding-bottom:15px;margin-bottom:15px;"></div></td></tr>
+                <tr>
+                    <td>
+                        <table style="width:100%;">
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">Positive identification required for airport check in. 在機場辦理登機手續時，需出示真實身份證明文件Notice 注意事項:</span></td>
+                            </tr>
+                            <tr>
+                                <td>CARRIAGE AND OTHER SERVICES PROVIDED BY THE CARRIER ARE SUBJECT TO CONDITIONS OF CARRIAGE, WHICH ARE HEREBY INCORPORATED BY REFERENCE. THESE CONDITIONS MAY BE OBTAINED FROM THE ISSUING CARRIER. PASSENGERS ON A JOURNEY INVOLVING AN ULTIMATE DESTINATION OR A STOP IN A COUNTRY OTHER THAN THE COUNTRY OF DEPARTURE ARE ADVISED THAT INTERNATIONAL TREATIES KNOWN AS THE MONTREAL CONVENTION, OP ITS PREDECESSOR, THE WARSAW CONVENTION, INCLUDING ITS AMENDMENTS (THE WARSAW CONVENTION SYSTEM), MAY APPLY TO THE ENTIRE JOURNEY, INCLUDING ANY PORTION THERE OF WITHIN A COUNTRY. FOR SUCH PASSENGERS, THE APPLICABLE TREATY, INCLUDING SPECIAL CONTRACTS OF CARRIAGE EMBODIED IN ANY APPLICABLE TARIFFS, GOVERNS AND MAY LIMIT THE LIABILITY OF THE CARRIER. CHECK WITH YOUR CARRIER FOR MORE INFORMATION.</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><span class="item_title" style="color: #333;font-weight: bold;margin-right: 5px;">IATA Ticket Notice:</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.iatatravelcentre.com/e-ticket-notice/General/English/">http://www.iatatravelcentre.com/e-ticket-notice/General/English/</a><br>(Subject to change without prior notice)</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- .main_content : END -->
+</body>
+
+</html>

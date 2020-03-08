@@ -1,0 +1,7482 @@
+﻿@charset "utf-8";
+
+
+
+
+/********************************************/
+
+
+/*      福泰後台訂單管理介面 main CSS     */
+
+
+/*      Created at 2016/06/28               */
+
+
+/********************************************/
+
+
+/*************************
+
+[顏色定義]
+主色: #DBA0DE;
+次要: #ECDEEF;
+深色: #BD70CD;
+淺色: #FCFCFD;
+
+
+*************************/
+
+body {
+    font-family: NotoSans, "Helvetica Neue", Helvetica, Arial, NotoSansCJKtc, "微軟正黑體";
+}
+
+
+
+
+/************************************/
+
+
+/*              HEADER              */
+
+
+/************************************/
+
+header nav.navbar {
+    background-color: rgba(240, 240, 240, 0);
+    margin-bottom: 0;
+    border: 0;
+}
+
+header nav.navbar .page_list {
+    padding: 12px 15px 12px 0;
+}
+
+header nav.navbar .page_list .btn {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    height: 45px;
+    line-height: 34px;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 1px solid #CF97D2;
+}
+
+header nav.navbar .page_list .btn:first-child {
+    border-left: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+header nav.navbar .page_list .btn:nth-child(2) {
+    width: 159px;
+    border-radius: 0 8px 8px 0!important;
+}
+
+
+
+header nav.navbar .page_list .icon_menu .icon-bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 1px;
+    background-color: #FFFF66;
+    transition: all 0.2s ease-out;
+}
+
+
+
+
+header nav.navbar .page_list .dropdown-toggle.btn-default:active,
+header nav.navbar .page_list .open>.dropdown-toggle.btn-default:active:hover,
+header nav.navbar .page_list .open>.dropdown-toggle.btn-default:focus,
+header nav.navbar .page_list .open>.dropdown-toggle.btn-default:hover {
+    color: #FFF;
+    background-color: #2E3E4E;
+    border-color: #adadad;
+}
+
+
+header nav.navbar .page_list ul.dropdown-menu {
+    background: #CF97D2;
+    border: 1px solid #CF97D2;
+    min-width: 200px;
+    margin-top: -9px;
+}
+
+header nav.navbar .page_list ul.dropdown-menu li>a:focus,
+header nav.navbar .page_list ul.dropdown-menu li>a:hover {
+    background: #DBA0DE;
+}
+
+header nav.navbar .page_list ul.dropdown-menu li a {
+    color: #FFF;
+    padding: 12px 20px;
+}
+
+.member_function .member_name {
+    float: right;
+    padding: 20px 0 20px 15px;
+}
+
+.member_function .member_name span {
+    color: #dba0de;
+}
+
+.member_function a.logout {
+    float: right;
+    color: #333;
+    padding: 20px 0 20px 8px;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: rgba(0, 173, 181, 0);
+    padding-bottom: 10px;
+    border-bottom: 5px solid #00ADB5;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-inverse .navbar-toggle:focus,
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #cf97d2;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #FFFF66;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+.order_search {
+    background-color: #FAF7FB;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #f6f2f7;
+    border-radius: 8px;
+    padding: 0 0 0 15px;
+}
+
+.order_search input[type="text"] {
+    background: rgba(240, 248, 255, 0);
+    border: 0;
+    width: calc(100% - 45px);
+    height: 45px;
+    padding: 0;
+    float: left;
+    transition: all 0.2s ease-out;
+}
+
+
+.order_search button {
+    height: 45px;
+    min-width: 45px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0), 0 2px 10px 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0), 0 2px 10px 0 rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+
+
+.inquiry_type {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.inquiry_type .form-control {
+    border: 1px solid #DBA0DE;
+    -webkit-box-shadow: inset 0 0px 0px 1px #DBA0DE;
+    box-shadow: inset 0 0px 0px 1px #DBA0DE;
+}
+
+
+
+@media (max-width: 767px) {
+    header nav.navbar {
+        color: #FFF;
+        background: #CF97D2;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 15px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    .container-fluid>.navbar-header,
+    .container>.navbar-header {
+        background: #DBA0DE;
+    }
+    header nav.navbar.navbar-inverse .navbar-brand {
+        color: #FFF;
+        font-weight: bold;
+    }
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border-color: #dba0de;
+    }
+    .navbar-nav>li>a {
+        color: #fff!important;
+        padding: 15px 20px;
+    }
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover {
+        color: #fff;
+        background-color: #dba0de;
+        border-bottom: 0;
+    }
+    .member_function {
+        width: 100%;
+        padding: 0px 0 5px 0;
+        border-top: 1px solid #e0b5e2;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    }
+    .member_function a.logout {
+        color: #FFF;
+        width: 100%;
+        padding: 15px 0 15px 8px;
+    }
+    .order_search {
+        overflow: hidden;
+    }
+    .order_search input[type="text"] {
+        width: auto;
+        color: #333;
+    }
+    .order_search button {
+        float: right;
+        width: 100px;
+    }
+    .order_search button span.btn_title {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    header nav.navbar {
+        border-radius: 0;
+    }
+}
+
+
+
+
+
+/************************************/
+
+
+/*              LOGIN               */
+
+
+/************************************/
+
+.login_form {
+    max-width: 330px;
+    padding: 15px;
+    margin: 10% auto;
+}
+
+.login_form .form_title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.login_form .fill_form .fill_item {
+    margin-bottom: 12px;
+}
+
+.login_form .fill_form .checkbox {
+    clear: both;
+}
+
+.login_form .button_group .btn {
+    width: 100%;
+}
+
+
+
+
+
+/***************************************/
+
+
+/*              主訂單列表頁                */
+
+
+/***************************************/
+
+
+/*---------尚未有任何資料---------*/
+
+.notice_message {
+    color: #999;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+@media (max-width:480px) {
+    .notice_message {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/*---------訂單搜尋結果列表---------*/
+
+.result_block {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    clear: both;
+}
+
+.result_block .block_top {
+    overflow: hidden;
+}
+
+.result_block .block_top .date_filter {
+    width: 600px;
+    float: left;
+}
+
+.result_block .block_top .date_filter .fill_item {
+    float: left;
+    width: calc(60% - 15px);
+    margin-right: 15px;
+}
+
+.result_block .block_top .date_filter .btn {
+    float: left;
+    width: calc(20% - 15px);
+    margin-right: 15px;
+    margin-top: 25px;
+}
+
+.result_block .block_top .date_filter .btn:last-child {
+    margin-right: 0;
+}
+
+
+.result_block .block_top .search_company {
+    float: left;
+    margin-left: 15px;
+}
+
+.result_block .block_top .search_company .fill_item {
+    float: left;
+    margin-right: 15px;
+}
+
+.result_block .block_top .search_company .btn {
+    float: left;
+    margin-right: 15px;
+    margin-top: 25px;
+}
+
+
+
+.result_block .block_top .function_group .btn {
+    margin-top: 25px;
+    margin-left: 8px;
+}
+
+.result_block .result_total {
+    color: #BBB;
+    padding: 7px 20px;
+}
+
+.result_block .block_content {
+    overflow: hidden;
+    margin: 10px 0;
+    /*background: #fafafb;*/
+}
+
+
+
+.result_block .block_content .result_table {
+    float: right;
+    overflow: auto;
+    /*max-height: 768px;*/
+    width: 100%;
+    background: #FFF;
+}
+
+.result_block .block_content .result_table table {
+    min-width: 100%;
+}
+
+
+
+
+
+/*
+.result_block .block_content .result_table table tr:nth-child(2n+3) td {
+    background: #f8f8f8;
+    }*/
+
+.result_block .block_content .result_table table tr:nth-child(n+2):hover td {
+    background: #faf7fb;
+}
+
+.result_block .block_content .result_table table tr th {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    white-space: nowrap;
+    transition: all .2s ease-out;
+}
+
+.result_block .block_content .result_table table tr th:first-child {
+    width: 50px;
+}
+
+.result_block .block_content .result_table table tr td {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 12px 10px;
+    white-space: nowrap;
+    transition: all 0.1s ease-in-out
+}
+
+.result_block .block_content .result_table table .order_date {
+    color: #AAA;
+}
+
+.result_block .block_content .result_table table .order_type {
+    color: #999;
+}
+
+.result_block .block_content .result_table table .op_list {
+    min-width: 100px
+}
+
+.result_block .block_content .result_table table .op_list.not_specified {
+    box-shadow: 0 0 0px 1px #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+.result_block .block_content .result_table table .status_show {
+    color: #999;
+    border-width: 0 0 1px 0;
+    border-color: #dadada;
+    padding-bottom: 1px;
+}
+
+.result_block .block_content .result_table table .status_show option {
+    color: #333;
+}
+
+.result_block .block_content .result_table .checkbox {
+    margin: 0;
+}
+
+
+
+
+
+
+.result_block .block_bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 15px;
+    background-color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------訂單列表：訂單項目類型-----------------*/
+
+.order_types .type_hotel:before {
+    content: "●";
+    color: #56CDA7;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.order_types .type_flight:before {
+    content: "●";
+    color: #73DCF0;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.order_types .type_package:before {
+    content: "●";
+    color: #FEA77C;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.order_types .type_ticket:before {
+    content: "●";
+    color: #FF95B8;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.order_types .type_travel:before {
+    content: "●";
+    color: #FB8988;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.order_types .type_other:before {
+    content: "●";
+    color: #dba0de;
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+/*----------------訂單列表：訂單項目類型(大)-----------------*/
+
+.order_types_big {
+    color: #FFF;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 2px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 3px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+
+.order_types_big.type_hotel {
+    background: #56CDA7;
+}
+
+.order_types_big.type_flight {
+    background: #73DCF0;
+}
+
+.order_types_big.type_package {
+    background: #FEA77C;
+}
+
+.order_types_big.type_ticket {
+    background: #FF95B8;
+}
+
+.order_types_big.type_travel {
+    background: #FB8988;
+}
+
+.order_types_big.type_other {
+    background: #dba0de;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------子訂單搜尋結果 - search bar----------------*/
+
+.search_bar .fill_item {
+    margin-right: -15px;
+}
+
+.search_bar .button_group {
+    margin-top: 24px;
+}
+
+.search_bar .button_group .btn,
+.search_bar .button_group .btn:last-child {
+    margin: 0 15px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*              建立訂單               */
+
+
+/***************************************/
+
+/*------ 分頁:build_order.html ------*/ 
+
+/*---------------- 建立訂單 - 大標----------------*/
+
+.build_order_content .form_title {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+/*----------------建立訂單 - fill_item----------------*/
+
+.build_order_content .block_content .fill_item .item_title {
+    width: 100%
+}
+
+.build_order_content .block_content .fill_item .item_content {
+    float: left;
+    width: 60%
+}
+
+.build_order_content .block_content .fill_item .item_content select:nth-child(1) {
+    float: left;
+    width: 60%;
+    margin-right: 12.5px;
+}
+
+.build_order_content .block_content .fill_item .item_content select:nth-child(2) {
+    float: left;
+    width: 30%;
+}
+
+.build_order_content .block_content .fill_item .btn {
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------建立訂單上方區塊 - block_top----------------*/
+
+.build_order_content .block_top .fill_form {
+    border-bottom: 1px solid #ccc;
+}
+
+.build_order_content .block_top .company_filter {
+    float: left;
+    width: 25%;
+    margin-right: 10px;
+}
+
+.build_order_content .block_top .add_main_order {
+    float: left;
+    width: 25%;
+    margin-left: 15px;
+}
+
+.build_order_content .block_top .add_main_order .fill_item .item_title {
+    width: 100%
+}
+
+.build_order_content .block_top .add_main_order .fill_item .item_content {
+    float: left;
+    width: 60%
+}
+
+.build_order_content .block_top .add_main_order .fill_item .item_content select:nth-child(1) {
+    float: left;
+    width: 60%;
+    margin-right: 12.5px;
+}
+
+.build_order_content .block_top .add_main_order .fill_item .item_content select:nth-child(2) {
+    float: left;
+    width: 30%;
+}
+
+.build_order_content .block_top .add_main_order .fill_item .item_content .form-control {
+    float: left;
+    width: 29%;
+}
+
+.build_order_content .block_top .add_main_order .fill_item .btn {
+    margin-left: 15px;
+}
+
+.build_order_content .block_top .function_group {
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------建立訂單中間區塊 主訂單 - block_content----------------*/
+
+.build_order_content .block_content {
+    float: left;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.build_order_content .order_list_block .order_item {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.build_order_content .block_content .order_item .order_item_top .checkbox_block {
+    float: left;
+    margin-top: 2px;
+}
+
+.build_order_content .block_content .order_item_top .item_title {
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.build_order_content .block_content .order_item_top .item_content {
+    float: left;
+    width: 40%;
+}
+
+.build_order_content .block_content .order_item_top .input_count {
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------建立訂單中間區塊 子訂單 - sub_order_item ----------------*/
+
+.build_order_content .block_content .sub_order_list {
+    margin-top: 15px;
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.build_order_content .block_content .sub_order_item {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 1;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item.active .sub_order_info {
+    background: #faf7fb;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item:hover .sub_order_info {
+    background: #faf7fb;
+}
+
+.build_order_content .btn[disabled],
+.build_order_content .form-control[disabled],
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info{
+    cursor:default;
+}
+
+.build_order_content .block_content .sub_order_item.unavailable {
+    opacity: 0.3;
+}
+
+.build_order_content .block_content .sub_order_item.unavailable:hover .sub_order_info{
+    background: #FCFCFD;
+}
+
+
+/*-----建立訂單中間區塊 子訂單 - sub_order_item 內部細項 -----*/
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info {
+    background: #FCFCFD;
+    position: relative;
+    float: left;
+    width: 65%;
+    margin-right: 40px;
+    border-radius: 8px;
+}
+
+
+
+.build_order_content .block_content .sub_order_list .sub_order_info .checkbox_block {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 92px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+    padding-top: 12px;
+    background: #eee;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info .function_group .error_message {
+    float: right;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_info .top_info {
+    color: #000;
+    font-weight: bold;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_info .top_info span {
+    margin-right: 15px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_info>.info_content {
+    float: left;
+    width: 70%;
+    padding: 12px 12px 12px 107px;
+    min-height: 113px;
+}
+
+
+.build_order_content .block_content .sub_order_list .sub_order_info>.info_content .product_select {
+    float: left;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 11px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content>.item_title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content .price_list {
+    margin-top: 8px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content .select_sub_product {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content .price_list .info_item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content .price_list .info_item .item_title {
+    color: #999;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info>.info_content .price_list .info_item .item_content {
+    display: inline-block;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info .function_group {
+    padding: 12px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_info .function_group .product_function_group a{
+    float: right;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/*------建立訂單中間區塊 子訂單 編輯 - edit_box ------*/
+
+.build_order_content .block_content .sub_order_list .edit_box {
+    float: left;
+    width: 30%;
+}
+
+.build_order_content .block_content .sub_order_list .edit_box .fill_item_group {
+    float: left;
+}
+
+.build_order_content .block_content .sub_order_list .edit_box .fill_item {
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.build_order_content .block_content .sub_order_list .edit_box .item_title {
+    float: left;
+    width: auto;
+    margin-top: 5px;
+    margin-right: 8px;
+}
+
+.build_order_content .block_content .sub_order_list .edit_box .item_content {
+    float: left;
+    width: 60%;
+}
+
+.build_order_content .block_content .sub_order_list .edit_box .fill_item_group+.btn {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----建立訂單中間區塊 子訂單 詳細資料 切換按鈕 - nav-tabs -----*/
+
+.build_order_content .block_content .sub_order_item .sub_order_detail {
+    clear: both;
+    float: left;
+    width: calc(65% - 92px);
+    margin-left: 92px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: solid 1px #eee;
+    padding-bottom: 15px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .nav-tabs {
+    border: none;
+    padding: 15px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .nav-tabs li {
+    margin-right: 6px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .nav-tabs li a {
+    padding: 4px 10px;
+    color: #999;
+    border: 2px solid #EEE;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .nav-tabs li.active a {
+    border: 2px solid #E8A9EB;
+    color: #E8A9EB;
+}
+
+
+
+
+
+
+
+
+/*-----建立訂單中間區塊 子訂單 詳細資料 資料區塊 - tab-content -----*/
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .info_item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content table {
+    width: 100%;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content table td{
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 2px;
+    width: 33.33%;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content table tr:nth-child(1) td{
+    padding-top: 0px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content .air_ticket{
+    padding-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-top: 1px solid #EEEEEE;
+    padding-bottom: 10px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content .air_ticket:nth-child(1){
+    border-top: none;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content .air_ticket:nth-child(1){
+    padding-top: 0px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content .air_ticket table td:nth-child(1){
+    padding-left: 0px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail  .tab-content .air_ticket table td:nth-last-child(1){
+    padding-right: : 0px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .info_title {
+    color: #999;
+    display: inline-block;
+    width: 75px;
+    vertical-align: top;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .info_title.title_inseparable{
+    width: auto;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .info_passenger_name{
+    float: left;
+    width: auto;
+    min-width: 140px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .info_content {
+    display: inline-block;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail ul.name_list li{
+    padding-bottom: 5px;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail .tab-content .RemarkInfo .info_title {
+    float: left;
+    width: auto;
+}
+
+
+
+
+
+
+
+/*-----建立訂單中間區塊 子訂單 詳細資料 資料區塊&編輯 顯示控制 - edit_box sub_order_detail -----*/
+
+.build_order_content .block_content .sub_order_item .edit_box {
+    display: none;
+}
+
+.build_order_content .block_content .sub_order_item.active .edit_box {
+    display: block;
+}
+
+.build_order_content .block_content .sub_order_item .sub_order_detail {
+    display: none;
+}
+
+.build_order_content .block_content .sub_order_item.active .sub_order_detail {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----建立訂單中間區塊 子訂單 詳細資料 訂購狀態 - booking_status -----*/
+
+.build_order_content .block_content .sub_order_list .sub_order_item .booking_status {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 92px;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+    padding-top: 25px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status1 {
+    background-color: #CCC;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status2 {
+    background-color: #73DCF0;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status3 {
+    background-color: #56CDA7;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status4 {
+    background-color: #FB8988;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status5 {
+    background-color: #FF7F50;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status6 {
+    background-color: #888;
+}
+
+
+
+
+
+
+/*-----建立訂單中間區塊 子訂單 詳細資料 訂購狀態 標誌 - status_icon -----*/
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status .status_icon {
+    width: 60px;
+    height: 40px;
+    margin: auto;
+}
+
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status1 .status_icon:before {
+    content: "\e101";
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    color: #FFF;
+    font-size: 30px;
+}
+
+
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status2 .status_icon:before {
+    content: "";
+    display: block;
+    background-image: url(../images/loading.gif);
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 40px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status3 .status_icon:before {
+    content: "\e013";
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    color: #FFF;
+    font-size: 30px;
+}
+
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status3 .status_icon:before {
+    content: "\e013";
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    color: #FFF;
+    font-size: 30px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status4 .status_icon:before {
+    content: "\e014";
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    color: #FFF;
+    font-size: 30px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status5 .status_icon:before {
+    content: "";
+    display: block;
+    background-image: url(../images/loading2.gif);
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 40px;
+}
+
+.build_order_content .block_content .sub_order_list .sub_order_item .sub_order_info .booking_status.status6 .status_icon:before {
+    content: "\e089";
+    display: block;
+    font-family: 'Glyphicons Halflings';
+    color: #FFF;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------建立訂單下方區塊 與 下方功能按鈕 - block_bottom & function_batch ----------------*/
+
+.build_order_content .block_bottom {
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 15px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    bottom: 0px;
+}
+
+.build_order_content .function_batch {
+    background: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 15px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    bottom: 0px;
+}
+
+.build_order_content .btn_disabled {
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+/*----------------建立訂單彈跳視窗 - modal ----------------*/
+
+.build_order_content_modal .modal-body .modal_body_top {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #BD70CD;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.build_order_content_modal .modal-body .modal_body_bottom {
+    right: -85px;
+    position: relative;
+    width: 47%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------ 分頁:build_order_confirm.html ------*/ 
+
+/*---------------- 訂單確認 - build_order_confirm ----------------*/
+
+.build_order_confirm .form_title {
+    text-align: left;
+}
+
+.build_order_confirm .order_item {
+    background: #FFF;
+    border: 1px solid #D7D7D7;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.build_order_confirm .order_item .order_header {
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.build_order_confirm .order_item .order_header .order_number {
+    color: #BD70CD;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.build_order_confirm .order_item .order_content {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.build_order_confirm .order_item .order_content table {
+    width: 100%;
+}
+
+.build_order_confirm .order_item .order_content table tr td:nth-child(1) {
+    width: 15%;
+}
+
+.build_order_confirm .order_item .order_content table tr td:nth-child(2) {
+    width: 10%;
+}
+
+.build_order_confirm .order_item .order_content table tr td:nth-child(3) {
+    width: 40%;
+}
+
+.build_order_confirm .order_item .order_content table tr td:nth-child(4) {
+    width: 18%;
+}
+
+.build_order_confirm .order_item .order_content table tr td:nth-child(5) {
+    text-align: right;
+    width: 15%;
+}
+
+.build_order_confirm .order_item .order_content table tr td {
+    padding: 10px 15px;
+}
+
+.build_order_confirm .function_group {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-top: -50px;
+}
+
+.build_order_confirm .function_group .btn {
+    min-width: 48%;
+}
+
+.build_order_confirm .function_group .btn:first-child {
+    margin-right: 2%;
+}
+
+.build_order_confirm .function_group2 {
+    width: 30%;
+    float: right;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.build_order_confirm .function_group2 .btn {
+    min-width: 48%;
+}
+
+.build_order_confirm .function_group2 .btn:first-child {
+    margin-right: 2%;
+}
+
+.build_order_confirm .button_group {
+    width: 60%;
+}
+
+.build_order_confirm .button_group .btn {
+    min-width: 25%;
+}
+
+@media (max-width: 1199px) {
+    .build_order_confirm .fill_form {
+        overflow: auto;
+    }
+    .build_order_confirm .order_item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .build_order_confirm .fill_form {
+        overflow: auto;
+    }
+    .build_order_confirm .order_item {
+        width: auto;
+    }
+    .build_order_confirm .order_item .order_content {
+        white-space: nowrap;
+    }
+    .build_order_confirm .button_group {
+        width: 100%;
+    }
+    .build_order_confirm .button_group .btn {
+        min-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/*-------------download view-------------*/
+
+.form_top {
+    padding: 30px 0 20px 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.form_top h2 {
+    color: #BD70CD;
+    font-weight: bold;
+}
+
+.form_top .sub_info .info_item {
+    color: #888;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*              產品搜尋                */
+
+
+/***************************************/
+
+/*---------------- 產品搜尋 - 共用元素 ----------------*/
+
+.product_search .form_title {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 -  聯絡人 必填 ----------------*/
+.product_search .form_title {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 30px;
+}
+
+.product_search .back_item {
+    margin: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.product_search .previous_page,
+.product_search .previous_page:focus,
+.product_search .previous_page:hover {
+    background: none;
+    color: #BD70CD;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+
+
+.product_search .form_title .previous_page span {
+    color: #BD70CD;
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+/*---------------- 產品搜尋 - 副標題(子訂單標號) ----------------*/
+
+.product_search .form_title span {
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 - info 物件 ----------------*/
+.product_search .info_item {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.product_search .info_item .info_title {
+    font-size: 14px;
+    color: #999999;
+    width: 75px;
+    clear: left;
+    float: left;
+}
+
+.product_search .info_item .info_content {
+    width: auto;
+    float: left;
+}
+
+.product_search .info_item .info_title.main_title {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.product_search .info_item.margin_bottom_lg {
+    margin-bottom: 20px;
+}
+
+.product_search .total_info .info_title {
+    color: #333;
+    margin-top: 5px;
+}
+
+.product_search .total_info .info_content {
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 - 旅客資料 旅客大人or小孩提示 ----------------*/
+
+.product_search .passenger_type {
+    color: #DBA0DE;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 -  聯絡人 必填 ----------------*/
+
+.product_search .contactor .item_title span:nth-child(1) {
+    color: #BD70CD;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 -  nav-tabs 切換tab按鈕 樣式1 ----------------*/
+
+.product_search .nav-tabs.tabs_style1 {
+    border: none;
+    padding: 15px 0;
+}
+
+.product_search .nav-tabs.tabs_style1 li.active:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-right: 9px solid transparent;
+    border-top: 10px solid #DBA0DE;
+    border-left: 9px solid transparent;
+}
+
+.product_search .nav-tabs.tabs_style1 li a,
+.product_search .nav-tabs.tabs_style1 li a:hover {
+    color: #DBA0DE;
+    border-radius: 8px;
+    border: 1px solid #DBA0DE;
+    padding: 6px 12px;
+    background: transparent;    
+    text-align: center; 
+}
+
+.product_search .nav-tabs.tabs_style1 li {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.product_search .nav-tabs.tabs_style1 li:first-child {
+    padding-left: 0;
+}
+
+.product_search .nav-tabs.tabs_style1 li:last-child {
+    padding-right: 0;
+}
+
+.product_search .nav-tabs.tabs_style1 li.active a {
+    color: #FFF;
+    background: #DBA0DE;
+    border: solid transparent 1px;
+}
+
+
+
+
+
+
+/*---------------- 產品搜尋 -  nav-tabs 切換tab按鈕 樣式2 ----------------*/
+
+.product_search .nav-tabs.tabs_style2 {
+    border-bottom: none;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.product_search .nav-tabs.tabs_style2 li {
+    margin-right: 30px;
+    border-bottom: 1px transparent solid;
+    float: left;
+}
+
+.product_search .nav-tabs.tabs_style2 li.active {
+    border-bottom: 2px #BD70CD solid;
+}
+
+.product_search .nav-tabs.tabs_style2 li.active a {
+    border: none;
+    color: #BD70CD;
+    background: transparent;
+}
+
+.product_search .nav-tabs.tabs_style2 a,
+.product_search .nav-tabs.tabs_style2 a:hover {
+    border: none;
+    font-size: 24px;
+    color: #999999;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0px;
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋 -  Slider 價格拉條 ----------------*/
+
+.product_search .ui-state-default,
+.product_search .ui-widget-content .ui-state-default,
+.product_search .ui-widget-header .ui-state-default {
+    border-radius: 20px;
+}
+
+.product_search .fill_item .item_title .text_show {
+    float: right;
+    color: #000;
+    padding: 0;
+    border-style: none;
+    background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  - 輸入表單確認符號  ----------------*/
+
+.product_search .booking_message {
+    display: none;
+    font-size: 13px;
+    float: left;
+    margin-top: 15px;
+}
+
+.product_search li.form_confirm_status.undone:after {
+    content: "\e101";
+    display: inline-block;
+    color: #fb8988;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.product_search li.form_confirm_status.complete:after {
+    content: "\e013";
+    display: inline-block;
+    color: #FFF;
+    background: #56CDA7;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 25px;
+
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 100;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-right: 1px;
+    padding-top: 1.7px;
+    margin-top: 6px;
+}
+
+.product_search .hide_info_title:before {
+    content: "+";
+    color: #DBA0DE;
+    font-size: 14px;
+    margin-left: 1px;
+    float: left;
+    width: 10px;
+}
+
+.product_search .hide_info_title.show:before {
+    content: "-";
+    color: #333333;
+    font-size: 14px;
+    margin-left: 1px;
+    float: left;
+    width: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  - 訂購完成 遮蔽畫面  ----------------*/
+
+.booking_screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(115, 220, 240, 0.9);
+    top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.booking_screen .booking_status.status2 {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 50px);
+}
+
+.booking_screen .booking_status.status2 .status_icon:before {
+    content: "";
+    display: block;
+    background-image: url(../images/loading.gif);
+    background-size: 100%;
+    background-position: center;
+    width: 100px;
+    height: 40px;
+}
+
+.booking_screen .booking_status .title {
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  - 飯店類型 黑底白字小mark  ----------------*/
+
+.product_search .type_mark {
+    background: #000;
+    color: #FFF;
+    font-size: 13px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  - info_block 以 table  顯示資料  ----------------*/
+
+.product_search .info_block {
+    padding: 0;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+}
+
+.product_search .info_block table tr {
+    margin-top: 5px;
+    float: left;
+    width: 100%;
+}
+
+.product_search .info_block table th:nth-child(1) {
+    width: 75px;
+    font-weight: normal;
+}
+
+.product_search .info_block table td:nth-child(1) {
+    font-size: 14px;
+    color: #999999;
+    width: 75px;
+    vertical-align: text-top;
+}
+
+.product_search .info_block table.more_detail td:nth-child(1) {
+    padding-left: 10px;
+}
+
+
+.product_search .info_block .info_box {
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+
+.product_search .info_block .info_box.dividers {
+    border-top: 1px solid #EEEEEE;
+}
+
+.product_search .info_block .info_box .box_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product_search .info_block .info_box .box_title.title_lg {
+    font-size: 24px;
+}
+
+.product_search .info_block .info_box .info_item {
+    margin-top: 15px;
+}
+
+.product_search .info_block .info_box .info_item:nth-child(1) {
+    margin-top: 0px;
+}
+
+.product_search .info_block .info_box.total_price {
+    font-size: 14px;
+    background: #FCFCFD;
+    float: left;
+    width: 100%;
+}
+
+.product_search .info_block .info_box.total_price span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  title 顯示/隱藏content  ----------------*/
+
+.product_search .booking_block .fill_form .fill_item .hide_info_title {
+    color: #DBA0DE;
+}
+
+.product_search .booking_block .fill_form .fill_item .hide_info_title.show {
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  輸入資料欄位 passenger_item 背景  ----------------*/
+
+.product_search .booking_block .passenger_item {
+    background: #FCFCFD;
+    padding: 10px 15px 5px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  輸入表單 ----------------*/
+
+.product_search .booking_block .tab-content {
+    padding: 0;
+    padding-bottom: 50px;
+    float: left;
+    width: 100%;
+}
+
+.product_search #PassengerInfo .fill_form .fill_item {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  底部 與 底部按鈕 ----------------*/
+
+.product_search .booking_block .block_bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #FFF;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 15px;
+}
+
+.product_search .block_bottom button,
+.product_search .block_bottom div {
+    float: left;
+    clear: none;
+    margin: 0 auto;
+    margin-right: 10px;
+}
+
+.product_search .block_bottom button {
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.product_search .block_bottom .checkbox {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  顯示資料 ----------------*/
+
+.product_search .block_content .result_block {
+    clear: none;
+    float: right;
+    padding-left: 30px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  顯示資料 篩選功能 ----------------*/
+
+
+.product_search .block_content .result_block .block_top .fill_item {
+    float: left;
+    width: 14%;
+    padding-right: 10px;
+}
+
+.product_search .block_content .result_block .block_top .fill_item label {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+.product_search .block_content .result_block .block_top .fill_item:nth-child(3) {
+    width: auto;
+    margin-left: 15px;
+    float: left;
+}
+
+.product_search .block_content .result_block .block_top .fill_item:nth-child(3) .range_silder_box {
+    margin-top: 10px
+}
+
+.product_search .block_content .result_block .block_top .fill_item:nth-child(3) .item_title input {
+    float: right;
+}
+
+.product_search .block_content .result_block .block_top .fill_item:nth-child(3) .item_title {
+    margin-left: -10px;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  搜尋區塊 ----------------*/
+
+.product_search .block_content .search_block {
+    /*padding: 0;*/
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    /*    padding-top: 3px;*/
+}
+
+
+.product_search .block_content .search_block .bottom_block {
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 產品搜尋  -  沒有搜尋結果時顯示 ----------------*/
+.product_search .block_content .result_block .no_result {
+    color: #999;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/*----------------- 產品搜尋  -  幣別顯示 ------------------------*/
+
+.product_search .result_block .block_content .result_table table .currency {
+    color: #999;
+    border-width: 0 0 1px 0;
+    border-color: #dadada;
+    padding-bottom: 1px;
+}
+
+.product_search .result_block .block_content .result_table table .currency option {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:search_hotel.html ----------*/
+
+/*---------------- 搜尋飯店  -  結果列表 ----------------*/
+
+.search_hotel .block_content .result_block {
+    clear: none;
+    float: right;
+    padding-left: 30px;
+    margin-top: 0px;
+}
+
+.search_hotel .block_content .result_block .block_top .fill_item {
+    float: left;
+    width: 14%;
+    padding-right: 10px;
+}
+
+
+.search_hotel .block_content .result_block .block_top .fill_item:nth-child(3) .range_silder_box {
+    margin-top: 10px
+}
+
+.search_hotel .block_content .result_block .block_top .fill_item:nth-child(3) .item_title input {
+    float: right;
+}
+
+.search_hotel .block_content .result_block .block_top .fill_item:nth-child(3) .item_title {
+    margin-left: -10px;
+    margin-top: -5px;
+}
+
+.search_hotel .ui-state-default,
+.search_hotel .ui-widget-content .ui-state-default,
+.search_hotel .ui-widget-header .ui-state-default {
+    border-radius: 20px;
+}
+
+.search_hotel .block_content .result_block .block_top .fill_item label input {
+    float: left;
+}
+
+.search_hotel .block_content .result_block .block_top .fill_item label span {
+    float: left;
+}
+
+.tag_group .tag {
+    float: left;
+}
+
+.tag_group .tag.breakfast_status1 {
+    color: #FB8988;
+}
+
+.tag_group .tag.breakfast_status2 {
+    color: #56CDA7;
+}
+
+.tag_group .tag.room_status1 {
+    color: #FB8988;
+}
+
+.tag_group .tag.room_status1 {
+    color: #56CDA7;
+}
+
+
+
+
+
+
+
+
+
+/*---------------- 搜尋飯店  -  結果列表的table ----------------*/
+
+.search_hotel .form_content .block_content .result_block .result_table table th {
+    padding: 12px 10px;
+    /*color: #999999;*/
+    font-weight: bold;
+}
+
+.search_hotel .form_content .block_content .result_block .result_table table th:nth-child(1),
+.search_hotel .form_content .block_content .result_block .result_table table td:nth-child(1) {
+    width: 60%;
+}
+
+.search_hotel .form_content .block_content .result_block .result_table table th:nth-child(2),
+.search_hotel .form_content .block_content .result_block .result_table table td:nth-child(2) {
+    width: 30%;
+}
+
+.search_hotel .form_content .block_content .result_block .result_table table th:nth-child(3),
+.search_hotel .form_content .block_content .result_block .result_table table td:nth-child(3) {
+    width: 10%;
+}
+
+
+
+.search_hotel .block_content .result_block table tr td .list_item_info .info_top span:nth-child(2) {
+    padding-left: 6px;
+    font-size: 12px;
+}
+
+.search_hotel .block_content .result_block table tr td .list_item_info .info_content {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search_hotel .block_content .result_block table tr td .list_item_info .info_bottom {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #999;
+}
+
+
+.search_hotel .block_content .result_block table tr td:nth-child(2) span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search_hotel .block_content .result_block table td:nth-child(2) span:nth-child(2) {
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: 5px;
+}
+
+.search_hotel .block_content .result_block table td:nth-child(3) a {
+    float: right;
+}
+
+
+
+
+
+
+
+/*----------  分頁:search_hotel_room.html ----------*/
+/*---------------- 搜尋飯店房型  -  搜尋區塊 ----------------*/
+
+
+.search_hotel_room .search_block {
+    border: none!important;
+    padding: 0;
+}
+
+.search_hotel_room .search_block .hotel_info_box .info_top {
+    font-size: 12px;
+}
+
+.search_hotel_room .search_block .hotel_info_box .info_top .type_mark {
+    margin-right: 8px;
+}
+
+.search_hotel_room .search_block .hotel_info_box .hotel_name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.search_hotel_room .search_block .hotel_info_box .address {
+    color: #999;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.search_hotel_room .search_block .hotel_info_box #hotelMap {
+    background-image: url(../images/hotel_map.jpg);
+    width: 100%;
+    height: 135px;
+}
+
+.search_hotel_room .search_block .search_condition_box {
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 15px 15px 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- 搜尋飯店房型  -  結果區塊 ----------------*/
+
+.search_hotel_room .result_block table tr td:nth-child(1) {
+    width: 30%;
+}
+
+.search_hotel_room .result_block table tr td:nth-child(2) {
+    width: 25%;
+}
+
+.search_hotel_room .result_block table tr td:nth-child(3) {
+    width: 20%;
+}
+
+.search_hotel_room .result_block table tr td:nth-child(4) {
+    width: 25%;
+    text-align: right;
+}
+
+.search_hotel_room .result_block table tr td .room_name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: normal;
+}
+
+.search_hotel_room .result_block table tr td .price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search_hotel_room .result_block table tr td .price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.search_hotel_room .result_block table tr td .sub_price {
+    color: #999;
+    font-size: 14px;
+}
+
+.search_hotel_room .result_block table tr td .breakfast_status {
+    font-size: 12px;
+    padding: 1px 3px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.search_hotel_room .result_block table tr td .breakfast_status.status1 {
+    color: #DDD;
+    border: 1px solid #DDD;
+}
+
+.search_hotel_room .result_block table tr td .breakfast_status.status2 {
+    color: #fff;
+    background-color: #56CDA7;
+    border: 1px solid #56CDA7;
+}
+
+.search_hotel_room .result_block table tr td .sub_info {
+    display: inline-block;
+    color: #999;
+}
+
+.search_hotel_room .result_block table tr td .memo_info {
+    color: #999;
+    margin-top: 5px;
+}
+
+.search_hotel_room .result_block table tr td .confirm_message {
+    font-size: 12px;
+    color: #fb8988;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.search_hotel_room .result_block table tr td .confirm_message:before {
+    content: "\e101";
+    display: inline-block;
+    color: #fb8988;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    border-radius: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+/*---------- 分頁:search_hotel_booking.html / 搜尋飯店產品 : 登入資料 ----------*/
+/*---------------- (搜尋飯店)登入個人資料  -  飯店資訊區塊 ----------------*/
+
+.hotel_booking .hotel_info_block .info_item .info_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hotel_booking .hotel_info_block.info_block .info_box .box_content .info_item:nth-child(4),
+.hotel_booking .hotel_info_block.info_block .info_box .box_content .info_item:nth-child(2) {
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+/*---------------- (搜尋飯店)登入個人資料  -  輸入資料表單 ----------------*/
+
+.hotel_booking .booking_block .special_require .list_item {
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.hotel_booking .booking_block .special_require .list_item .checkbox {
+    clear: none;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.hotel_booking .booking_block .special_require .list_item label {
+    float: left;
+}
+
+.hotel_booking .booking_block .special_require .list_item select {
+    float: left;
+    width: auto;
+    margin-top: -5px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:search_air.html ----------*/
+/*---------------- 機票搜尋  -  搜尋區塊 ----------------*/
+
+.search_air .search_block .flight_segments_item {
+    width: 100%;
+    float: left;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.search_air .search_block .flight_segments_item:nth-child(1) {
+    border: 2px solid #30B2EB;
+}
+
+.search_air .search_block .flight_segments_item:nth-child(2) {
+    border: 2px solid #1583E6;
+}
+
+.search_air .search_block .flight_segments_item .flight_title {
+    float: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.search_air .search_block .flight_segments_item>.item_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.search_air .flight_segments_item_name{
+    font-size: 14px;
+    color: #30B2EB;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.search_air .flight_segments_item.second .flight_segments_item_name{
+    color: #1583E6;
+}
+
+.search_air .span_departure,
+.search_air .span_line,
+.search_air .span_arrival {
+    float: left;
+}
+
+.search_air .span_line {
+    color: #999;
+    font-size: 24px;
+    line-height: 14px;
+}
+
+.search_air .search_block .flight_segments_item>.item_title .departure_date_info {
+    float: right;
+}
+
+.search_air .search_block .flight_segments_item>.item_content {
+    clear: both;
+    padding-top: 10px;
+}
+
+.search_air .search_block .flight_segments_item>.item_content .item_title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666666;
+}
+
+.search_air .search_block .flight_segments_item .function_group {
+    margin-bottom: 5px;
+}
+
+
+
+/*---------------- 機票搜尋  -  結果區塊 ----------------*/
+
+.search_air .result_block {
+    clear: none;
+}
+.search_air .list_content .airplane_item {
+    clear: left;
+    float: left;
+     width: calc(100% - 20px);
+    border: 2px solid transparent;
+    background: #FCFCFD;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+
+.search_air .list_content .list_content_title{
+    padding: 20px;
+    border-bottom: 1px solid #EFEFEF;
+    padding-left: 10px;
+}
+
+
+
+.search_air .list_content .list_content_title .flight_left_title{
+    float: left;
+    width: 86%;
+}
+
+.search_air .list_content .list_content_title .flight_right_title{
+    float: left;
+    width: 14%;
+}
+
+.search_air .list_content .list_content_title .airline_name,
+.search_air .list_content .list_content_title .air_ticket_info,
+.search_air .list_content .list_content_title .currency{
+    float: left;
+    white-space: nowrap;
+    color: #999999;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.search_air .list_content .list_content_title .airline_name{
+    width: 18%;
+}
+
+
+.search_air .list_content .flight_block {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: #fff;
+}
+
+
+.search_air .list_content .flight_block.noIssueTicket:hover,
+.search_air .list_content .flight_block.noIssueTicket {
+    background-color: #fb8988;
+}
+
+.search_air .flight_block.noIssueTicket .span_departure, 
+.search_air .flight_block.noIssueTicket .span_line, 
+.search_air .flight_block.noIssueTicket .span_arrival{
+    color:#fff ;
+}
+
+.search_air .list_content .flight_block.noIssueTicket .flight_left_block .row .airline span{
+    color: #fff;
+}
+
+
+.search_air .list_content .flight_block:hover{
+    background: #faf7fb;
+}
+
+.search_air .list_content .flight_block+.flight_block{
+     border-top: 2px solid #ccc;
+}
+
+
+
+.search_air .list_content .flight_block .flight_left_block {
+    float: left;
+    width: 86%;
+}
+
+
+.search_air .list_content .flight_block .flight_right_block {
+    float: right;
+    width: 14%;
+    margin-top: 8px;
+    padding-top: 35px;
+}
+
+
+.search_air .list_content .flight_block .flight_right_block a {
+    width: 100%;
+}
+
+.search_air .list_content .flight_block .flight_right_block .sub_info {
+    text-align: center;
+    padding: 2px 5px 5px 5px;
+    font-size: 12px;
+}
+
+
+.search_air .list_content .flight_block .flight_right_block .sub_info_seat {
+    float: right;
+    width: 245px;
+    text-align: right;
+    margin-top: 4px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row {
+    margin: 10px 0;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airline {
+    float: left;
+    width: 18%;
+    font-size: 16px;
+    color: #333;
+    /*margin-top: 14px;*/
+    /*margin-right: 15px;*/
+}
+
+
+.search_air .list_content .flight_block .flight_left_block .row .airline .airline_img {
+    float: left;
+    background: url(../images/icon/air_img.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airline span {
+    float: left;
+    /*margin-top: 13px;*/
+    font-weight: bold;
+}
+
+
+
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info {
+    float: left;
+    margin-right: 15px;
+    width: 13%;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info .time{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info .cabin {
+    font-size: 12px;
+    color: #999999;
+    font-weight: normal;
+}
+
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info .transfer_count {
+    font-size: 12px;
+    color: #999999;
+    font-weight: normal;
+    margin-bottom: 7px;
+    padding-left: 0;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info .transfer_count span{
+    color: #E8A9EB;
+}
+
+.search_air .list_content .flight_block .flight_left_block .row .airplane_info .transfer_count img {
+    width: 17px;
+    margin-left: 3px;
+    margin-bottom: -3px;
+}
+
+
+.search_air .list_content .spend_time {
+    background-image: url(../images/airplane_arrow.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    width: 155px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    margin: 9px;
+}
+
+.search_air .list_content .spend_time span{
+    font-size: 12px;
+    color: #CCC;
+    background-color: #FCFCFD;
+    padding: 0 10px;
+}
+
+
+
+
+.search_air .airplane_item_group{
+    width: 82%;
+    float: left;
+}
+
+.search_air .airplane_item_group .group_title{
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.search_air .airplane_item .radio_option{
+    width: 7%;
+    margin-top: 10px;
+}
+
+.search_air .flight_block .flight_left_block>.row:nth-child(even) .airplane_item_group .airplane_item.choose{
+      border: 2px solid #1583E6;    
+}
+
+.search_air .flight_block .flight_left_block>.row:nth-child(odd) .airplane_item_group .airplane_item.choose{
+      border: 2px solid #30B2EB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:air_confirm.html ----------*/
+/*---------------- 機票確認  -  詳細資料欄位 ----------------*/
+
+.air_confirm .detail_block_group {
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+.air_confirm .detail_block .block_header {
+    background: #FFF;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.air_confirm .airplane_item_group .group_title {
+    font-size: 18px;
+}
+
+.air_confirm .airplane_item_group .group_title .airplane_date,
+.air_confirm .airplane_item_group .group_title .span_departure,
+.air_confirm .airplane_item_group .group_title .span_line,
+.air_confirm .airplane_item_group .group_title .span_arrival {
+    float: left;
+}
+
+.air_confirm .airplane_item_group .group_title .airplane_date {
+    margin-right: 15px;
+}
+
+.air_confirm .airplane_item_group .group_title .span_line {
+    color: #999;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 0 5px;
+}
+
+.air_confirm .block_content.air_content {
+    padding: 0;
+}
+
+.air_confirm .block_content.sub_content {
+    background: #FCFCFD;
+    border-radius: 8px;
+}
+
+.air_confirm .block_content.sub_content .sub_info_list {
+    margin-top: 20px;
+}
+
+.air_confirm .block_content.sub_content .sub_info_list .item_title {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.air_confirm .block_content.sub_content .sub_info_list .item_content {
+    line-height: 26px;
+}
+
+.air_confirm .block_content .detail_block {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.air_confirm .block_content .detail_block:nth-child(1) {
+    margin-top: 0px;
+}
+
+.air_confirm .airplane_item_group {
+    float: left;
+    width: 100%;
+}
+
+.air_confirm .airplane_item_group .group_content {
+    float: left;
+    width: 100%;
+    background: #FCFCFD;
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.air_confirm .airplane_item_group .airplane_item {
+    float: left;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item {
+    float: left;
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item:nth-child(1) {
+    width: 20%
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item:nth-child(1) .info_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: auto;
+}
+
+.air_confirm.product_search .airplane_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.air_confirm .airplane_item_group .airplane_item .airplane_title span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #FB8988;
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item:nth-child(2) {
+    width: 60%
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item:nth-child(3) {
+    width: 20%
+}
+
+.air_confirm .airplane_item_group .airplane_item .info_item:nth-child(3) table td:nth-child(1) {
+    color: #999999;
+}
+
+.air_confirm .airplane_item_group .airplane_item .time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.air_confirm .airplane_item_group .airplane_item .time span {
+    font-size: 16px;
+}
+
+.air_confirm.product_search .info_item .info_content {
+    width: 100%;
+    float: left;
+}
+
+.air_confirm.product_search .airplane_title,
+.air_confirm.product_search .spend_time,
+.air_confirm.product_search .airplane_info {
+    width: 20%;
+    float: left;
+}
+
+
+.air_confirm .airplane_item_group .airplane_item .spend_time {
+    background-image: url(../images/airplane_arrow.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: left;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    margin: 9px;
+}
+
+.air_confirm .airplane_item_group .airplane_item .spend_time span {
+    background: #FCFCFD;
+    padding: 10px;
+}
+
+.air_confirm .detail_block .info_item {
+    margin-top: 20px;
+}
+
+.air_confirm .detail_block .sub_info_group {
+    float: right;
+    width: calc(20% - 20px);
+}
+
+.air_confirm .detail_block .sub_info_item span {
+    color: #888;
+}
+
+
+
+
+
+
+
+
+
+/*---------------- 機票確認  -  最底部欄位 ----------------*/
+
+.air_confirm .block_bottom {
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 30px);
+    background: #FFF;
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:search_air_booking.html ----------*/
+/*---------------- (機票)登入個人資料  -  機票資訊 ----------------*/
+
+.air_booking .air_info_block .info_list {
+    float: left;
+    width: 100%;
+}
+
+.air_booking .air_info_block .info_list li {
+    margin-left: -10px;
+}
+
+.air_booking .air_info_block .air_ticket_item .item_title,
+.air_booking .air_info_block .air_ticket_item .airplane_info,
+.air_booking .air_info_block .air_ticket_item span {
+    float: left;
+    font-size: 16px;
+}
+
+.air_booking .air_info_block .air_ticket_item span {
+    color: #CCC;
+    font-size: 12px;
+    line-height: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:search_travel.html ----------*/
+/*---------------- 行程搜尋  -  結果區塊 ----------------*/
+
+.search_travel .search_block .fill_item label.item_title {
+    font-weight: normal;
+    color: #666;
+}
+
+.search_travel .form_content .block_content .result_block .result_table table th {
+    padding: 12px 10px;
+}
+
+.search_travel .block_content .result_block table tr td .list_item_info .info_top span:nth-child(2) {
+    padding-left: 6px;
+}
+
+.search_travel .block_content .result_block table tr td .list_item_info .info_content {
+    font-size: 16px;
+    color: #333333;
+}
+
+.search_travel .result_block .result_table th {
+    color: #999999;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.search_travel .result_block .result_table th:nth-child(1),
+.search_travel .result_block .result_table td:nth-child(1) {
+    width: 10%;
+}
+
+.search_travel .result_block .result_table th:nth-child(2),
+.search_travel .result_block .result_table td:nth-child(2) {
+    width: 50%;
+    white-space: normal;
+}
+
+.search_travel .result_block .result_table th:nth-child(3),
+.search_travel .result_block .result_table td:nth-child(3) {
+    width: 15%;
+}
+
+.search_travel .result_block .result_table th:nth-child(4),
+.search_travel .result_block .result_table td:nth-child(4) {
+    width: 14%;
+}
+
+.search_travel .result_block .result_table th:nth-child(5),
+.search_travel .result_block .result_table td:nth-child(5) {
+    width: 11%;
+    text-align: center;
+}
+
+.search_travel .result_block .result_table td {
+    vertical-align: top;
+}
+
+.search_travel .result_block .result_table td:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search_travel .result_block .result_table td:nth-child(2) .list_item_info .info_top {
+    font-size: 13px;
+    color: #999;
+}
+
+.search_travel .result_block .result_table td:nth-child(2) .list_item_info .info_top span {
+    margin-right: 10px;
+}
+
+.search_travel .result_block .result_table td:nth-child(3) {
+    font-size: 16px;
+}
+
+.search_travel .result_block .result_table .select_group select {
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+
+
+/*---------- 分頁:search_coupon.html ----------*/
+/*---------------- 票券搜尋  -  搜尋區塊 ----------------*/
+
+@media (max-width: 1023px) {
+    .product_search.search_coupon .block_content .search_block{
+        padding-bottom: 15px;
+    }   
+
+    .product_search.search_coupon .block_content .search_block .btn_search{
+        float: right;
+    }   
+}
+
+.search_coupon .search_block .function_title{
+    padding-top: 6px;
+    white-space: nowrap;
+}
+
+
+/*---------------- 票券搜尋  -  結果區塊 ----------------*/
+.search_coupon.product_search .block_content .result_block{
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: 650px;
+    margin-bottom: 0;
+}
+
+.search_coupon .block_content .result_list{
+    float: right;
+    width: 100%;
+    background: #FFF;
+    padding: 2px;
+    height: 59vh;
+    overflow: auto;
+}
+
+
+.search_coupon .block_content .result_list::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+
+.search_coupon .block_content .result_list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+.search_coupon .block_content .result_list::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 10px;
+}
+
+
+
+.search_coupon .block_content .result_list .list_title{
+    padding: 5px 5px;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    float: left;
+    width: 100%;
+    border-right: 4px solid transparent;
+    color: #999;
+}
+
+
+.search_coupon .block_content .result_list .list_content{
+    float: left;
+    width: 100%;
+}
+
+.search_coupon .block_content .result_list .list_content .coupon_item{
+    padding: 15px 5px;
+    float: left;
+    width: 100%;
+    border-right: 4px solid transparent;
+    border-top: 1px solid #eee;
+}
+
+
+.search_coupon .block_content .result_list .list_content .coupon_item:nth-child(1){
+    border-top:none;
+}
+
+
+.search_coupon .block_content .result_list .list_content .coupon_item.active{
+    -moz-box-shadow: 0px 4px 6px 0px rgba(204, 204, 204, 0.7);
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(204, 204, 204, 0.7);
+    box-shadow: 0px 4px 6px 0px rgba(204, 204, 204, 0.7);
+    border-right: 4px solid #DBA0DE;
+}
+
+/*
+.search_coupon .block_content .result_list .list_content .coupon_item.active::after{
+    content: "";
+    position: absolute;
+    right: -20px;
+    border-top: 40px solid transparent;
+    border-right: 20px solid #fdf8fe;
+    border-bottom: 40px solid transparent;
+}*/
+
+.search_coupon .result_block .block_content{
+    overflow: visible;
+}
+
+
+.search_coupon .result_block .block_content .block_top{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.search_coupon .result_block .block_content .result_table{
+    overflow: visible;
+}
+
+
+/* radio篩選 CSS覆蓋 */
+.search_coupon .radio_option ul.option_list li input[type="radio"]:checked+label p{
+}
+
+
+@media (min-width: 0px){    
+    .search_coupon .radio_option ul.option_list li{
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px){    
+    .search_coupon .radio_option ul.option_list li{
+         margin-right: 3px;
+    }
+}
+
+@media (min-width: 1100px) {    
+    .search_coupon .radio_option ul.option_list li{
+         margin-right: 10px;
+    }
+}
+
+@media (min-width: 1210px) {    
+    .search_coupon .radio_option ul.option_list li{
+         margin-right: 20px;
+    }
+}
+
+
+.search_coupon .radio_option ul.option_list li input[type="radio"]+label p{
+    color: #DBA0DE;
+    background: #f2f2f2;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin-left: -2px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.search_coupon .radio_option ul.option_list li:last-child input[type="radio"]+label p{
+     border-radius: 8px;
+}
+    
+
+
+/*  -- 票券內容 --  */
+
+.search_coupon .list_title .img_box{
+    float: left;
+    margin-right: 30px;
+}
+
+@media (min-width: 0px){      
+    .search_coupon .list_title .img_box{
+        width: 100px;
+    }
+}
+
+@media (min-width: 1100px) {       
+    .search_coupon .list_title .img_box{
+        width: 110px;
+    }
+}
+
+@media (min-width: 1210px) {    
+    .search_coupon .list_title .img_box{
+        width: 120px;
+    }
+}
+
+.search_coupon .coupon_item>.img_box{
+    height: 120px;
+    float: left;
+    background: #f2f2f2;
+    border-radius: 10px;
+    width: 120px;
+    display: table;
+    margin-right: 30px;
+}
+
+
+
+@media (min-width: 1024px){      
+    .search_coupon .coupon_item>.img_box{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 1100px) {     
+    .search_coupon .coupon_item>.img_box{
+        height: 110px;
+        width: 110px;
+    }
+
+
+}
+
+@media (min-width: 1210px) {    
+    .search_coupon .coupon_item>.img_box{
+        height: 120px;
+        width: 120px;
+    }
+
+    .search_coupon .coupon_item>.list_item_info{
+        width: calc(100% - 120px / 2);
+    }
+
+    .search_coupon .coupon_item>.coupon_price{
+        width: calc(100% - 120px / 2);
+    }
+}
+
+
+
+
+.search_coupon .coupon_item>.img_box .img{
+    width: 100%;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.search_coupon .coupon_item>.img_box img{
+    width: 100%;
+}
+
+
+.search_coupon .coupon_item>.list_item_info .info_top{
+    font-size: 12px;
+    color: #999;
+}
+
+.search_coupon .coupon_item>.list_item_info .info_content{
+    font-size: 16px;
+}
+
+.search_coupon .coupon_item>.list_item_info .sub_info{
+    padding-top: 10px;
+}
+
+.search_coupon .coupon_item>.coupon_price{
+    font-size: 16px;
+}
+
+.search_coupon .coupon_item>.function_box{
+    width: 10%;
+    float: right;
+    text-align: right;
+    padding-right: 0;
+}
+
+
+
+
+/*-- 換頁/下一頁按鈕 --*/
+.search_coupon .result_block .block_bottom{
+    padding-left: 15px;
+    padding-right: 0;
+    width: 66.66666667%;
+}
+
+
+
+
+/* ---- 選填訂購資訊 ---- */
+.search_coupon .coupon_order_block {
+    float: right;
+    padding: 25px;
+    padding-bottom: 35px;
+    background: #fdf8fe;
+    border-radius: 10px;
+    overflow: auto;
+}
+@media (min-width: 1023px)  {
+    .search_coupon .coupon_order_block {
+
+        margin-right: 15px;
+        margin-left: 15px;
+        width: calc(33.33333333% - 30px);
+        height: calc(100vh - 135px);
+        min-height: 680px;
+        min-width: 290px;
+    }
+}
+@media (max-width: 1023px)  {
+    .search_coupon .coupon_order_block {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        /*float: right;
+        padding: 25px;
+        padding-bottom: 35px;
+        background: #fdf8fe;
+        border-radius: 10px;
+        height: calc(100vh - 135px);
+        min-height: 680px;
+        min-width: 290px;
+        overflow: auto;*/
+    }
+}
+
+
+ 
+
+.search_coupon .coupon_order_block::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.search_coupon .coupon_order_block::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+.search_coupon .coupon_order_block::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 10px;
+}
+
+
+
+
+.search_coupon .coupon_order_block label{
+    font-weight: normal;
+    max-width: calc(100% - 125px);
+}
+
+.search_coupon .coupon_order_block .order_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.search_coupon .coupon_order_block .order_box{
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search_coupon .coupon_order_block .box_title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #DBA0DE;
+    margin-bottom: 20px;
+}
+
+
+.search_coupon .coupon_order_block .fill_item{
+    float: left;
+    width: 100%;
+}
+
+.search_coupon .coupon_order_block .fill_item>.item_content{
+      float: right;
+}
+
+/* -- 票種 -- */
+.search_coupon .coupon_type_box .fill_item{
+    margin-bottom: 10px;
+}
+
+.search_coupon .coupon_type_box .fill_item>.item_title>span{
+    font-size: 18px;
+}
+
+.search_coupon .coupon_type_box .fill_item>.item_title>.sub_title{
+    color: #999;
+    line-height: 25px;
+}
+
+.search_coupon .coupon_order_block .fill_item>.item_content .plus{
+    float: right;
+}
+
+.search_coupon .coupon_order_block .fill_item>.item_content .condRoomChild,
+.search_coupon .coupon_order_block .fill_item>.item_content .condRoomPeople,
+.search_coupon .coupon_order_block .fill_item>.item_content .minus{
+    float: left;
+}
+
+.search_coupon .coupon_order_block .fill_item>.item_content .condRoomChild,
+.search_coupon .coupon_order_block .fill_item>.item_content .condRoomPeople{
+    font-size: 20px;
+    min-width: 43px;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 33px;
+}
+
+
+
+/* -- 預定日期 -- */
+.search_coupon .coupon_date_box .fill_item{
+    margin-bottom: 15px;
+}
+
+.search_coupon .coupon_date_box .fill_item>.item_title{
+    line-height: 28px;
+}
+
+.search_coupon .coupon_date_box .fill_item .form-control{
+    width: 135px;
+}
+
+
+/* -- 加值服務 -- */
+
+.search_coupon .coupon_plus_box .plus_item_list .plus_item{
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search_coupon .coupon_plus_box .plus_item_list .item_title{
+    float: left;
+    max-width: calc(100% - 50px);
+}
+
+
+.search_coupon .coupon_plus_box .plus_item_list .item_title .plus_price>span{
+    font-size: 18px;
+}
+
+
+.search_coupon .coupon_plus_box .plus_item_list .plus_content{
+    float: right;
+}
+
+
+
+
+/* ---- 票券總額 ---- */
+.search_coupon .coupon_order_block .order_bottom{
+    position: fixed;
+    width: calc(33.33333333% - 40px);
+    color: #FFF;
+    bottom: 15px;
+    float: left;
+    background: #bd70cd;
+     padding: 20px 25px;
+    border-radius: 8px;
+    right: 30px;
+}
+
+
+.search_coupon .coupon_order_block .order_bottom .total_price_box{
+    float: left;
+    line-height: 37px;
+}
+
+
+.search_coupon .coupon_order_block .order_bottom .total_price_box span{
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.search_coupon .coupon_order_block .order_bottom .function_group{
+    float: right;
+}
+
+
+.search_coupon .coupon_order_block .order_bottom .function_group .btn{
+    width: 110px;
+}
+
+
+
+
+
+
+
+
+
+/*---------- 分頁:search_coupon_detail.html ----------*/
+/*---------------- 票券  - 票券介紹 ----------------*/
+.search_coupon_detail .img_box .img img{
+    width: 100%;
+}
+
+.search_coupon_detail .block_content{
+    padding: 30px 0px;
+}
+
+
+.search_coupon_detail .product_no{
+    color: #888;
+}
+
+.search_coupon_detail .product_name{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* -- 分頁標籤 -- */
+.search_coupon_detail .nav-tabs {
+    border-bottom: 5px solid #DBA0DE;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.search_coupon_detail .nav-tabs>li>a{
+    color: #DBA0DE;
+    margin: 0;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: none;
+}
+
+.search_coupon_detail .nav-tabs>li>a:hover{
+    color: #E8A9EB;
+}
+
+.search_coupon_detail .nav-tabs>li.active>a{
+    background: #DBA0DE;
+    color: #FFF;
+    border: 1px solid #DBA0DE;
+    border-bottom: none;
+}
+
+
+/* -- 分頁共用 -- */
+.search_coupon_detail .info_item .item_content .info_list.list_no_style>li:before{
+    content:"";
+    margin-right: 0px;
+}
+
+.search_coupon_detail a{
+     text-decoration: none;
+}
+
+/* -- 產品介紹 -- */
+.search_coupon_detail #ProductDescription .image_box{
+    margin-bottom: 30px;
+}
+
+.search_coupon_detail #ProductDescription .info_item .item_title:before{
+    content:"∎";
+    margin-right: -5px;
+}
+
+.search_coupon_detail #ProductDescription .info_item .item_content .info_list>li:before{
+    content:"．";
+    margin-right: -3px;
+}
+
+
+/* -- 使用說明 -- */
+.search_coupon_detail #InstructionsUse .info_item .item_content .info_list>li:before{
+    content:"-";
+}
+
+
+/* -- 注意事項 -- */
+.search_coupon_detail #Precautions .info_item .item_content .info_list>li{
+    list-style-type:decimal;
+}
+
+
+ 
+
+
+
+
+
+/*---------- 分頁:search_coupon_booking.html ----------*/
+/*---------------- 票券  - 填寫訂購資料 ----------------*/
+.product_search.coupon_booking .info_item table{
+    width: 100%;
+}
+
+.product_search.coupon_booking .info_block table td:nth-child(1){
+    float: left;
+    width: calc(100% - 125px - 48px);
+    color: #333;
+}
+
+.product_search.coupon_booking .info_block table td:nth-child(2){
+    width: 125px;
+    float: left;
+    text-align: right;
+    font-weight: bold;
+}
+
+.product_search.coupon_booking .info_block table td:nth-child(3){
+    float: right;
+    width: 48px;
+    text-align: center;
+}
+
+.product_search.coupon_booking .info_block table td:nth-child(3) .btn{
+    border:none;
+    margin-right: -15px;
+    padding: 0;
+}
+
+
+.product_search.coupon_booking .info_block table td:nth-child(3) .btn:hover,
+.product_search.coupon_booking .info_block table td:nth-child(3) .btn:active,
+.product_search.coupon_booking .info_block table td:nth-child(3) .btn:focus{
+    color: #DBA0DE;
+    background: transparent;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*              主訂單明細                */
+
+
+/***************************************/
+
+.top_block {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+
+.top_block .search_group {
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+/*-------------主訂單主欓-------------*/
+
+.top_block .order_main_info {
+    float: left;
+    width: 100%;
+}
+
+.top_block .order_main_info.main_order_master .info_item {
+    display: inline-block;
+    margin: 5px 50px 8px 0;
+}
+
+.top_block .order_main_info .info_item .item_title {
+    font-size: 14px;
+    color: #999;
+}
+
+.top_block .order_main_info .info_item .item_content {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.top_block .sub_info_item {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.top_block .order_main_info.main_order_master .sub_info_item span {
+    color: #BD70CD;
+}
+
+
+.top_block .order_main_info .block_2 {
+    padding: 8px 15px;
+    margin-right: -15px;
+    margin-left: -15px;
+    float: left;
+    width: calc(100% + 30px);
+}
+
+.top_block .order_main_info.main_order_master .block_2 {
+    background-color: #f5f5f5;
+}
+
+
+
+
+
+.order_main_info select.status_show {
+    color: #333;
+    border-width: 0;
+    border-color: #dadada;
+    line-height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------主訂單明細 - 子訂單列表-------------*/
+
+.result_block.sub_order_list {
+    margin-top: 0;
+}
+
+.result_block.sub_order_list .block_top .function_group .btn {
+    margin-top: 10px;
+}
+
+.result_block.sub_order_list .order_info .top_info .info_item {
+    display: inline-block;
+    color: #999;
+    margin-right: 15px;
+}
+
+.result_block.sub_order_list .order_info .order_title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 4px 0 14px 0;
+}
+
+.result_block.sub_order_list .order_info .sub_info>.info_item {
+    display: inline-block;
+    color: #666;
+    padding: 0 12px;
+    border-left: 1px solid #EEE;
+}
+
+.result_block.sub_order_list .order_info .sub_info>.info_item:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+
+.result_block.sub_order_list .order_info .sub_info>.info_item>span {
+    color: #999;
+}
+
+
+.result_block.sub_order_list .order_info .sub_info>.info_item .confirm_status {
+    display: inline-block;
+    color: #56CDA7;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+.result_block.sub_order_list .sub_message {
+    color: #999;
+    font-size: 13px;
+    padding: 5px 0;
+    margin-bottom: -27px;
+}
+
+
+.result_block.sub_order_list .sub_message.error {
+    color: #fb8988;
+}
+
+
+
+.result_block.sub_order_list .block_bottom.setting_modal_function {
+    display: none;
+    box-shadow: 0 0 5px 0 #CCC;
+}
+
+
+
+.result_block.sub_order_list .block_content .result_table table tr th:first-child,
+.result_block.sub_order_list .block_content .result_table table tr td:first-child {
+    display: none;
+}
+
+.result_block.sub_order_list.setting_modal .block_content .result_table table tr th:first-child,
+.result_block.sub_order_list.setting_modal .block_content .result_table table tr td:first-child {
+    display: table-cell;
+}
+
+
+.result_block.sub_order_list.setting_modal .block_top {
+    display: none;
+}
+
+
+.result_block.sub_order_list.setting_modal .block_bottom.setting_modal_function {
+    display: block;
+}
+
+
+.result_block.sub_order_list.setting_modal .unavailible {
+    opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*              子訂單明細                */
+
+
+/***************************************/
+
+
+/*-------------子訂單主欓-------------*/
+
+.top_block .order_main_info.sub_order_master>.info_item {
+    height: 60px;
+}
+
+.top_block .order_main_info.sub_order_master .status_group .label {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.top_block .order_main_info.sub_order_master .sub_order_number {
+    margin-left: 10px;
+}
+
+.top_block .order_main_info.sub_order_master .product_name {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.top_block .order_main_info.sub_order_master .block_1 {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.top_block .order_main_info.sub_order_master .block_1 > .info_item {
+    float: left;
+    width: 10%;
+    padding: 0 5px;
+    position: relative;
+}
+
+.top_block .order_main_info.sub_order_master .block_1 > .info_item:first-child {
+    width: 60%;
+}
+
+.top_block .order_main_info.sub_order_master .block_1 > .info_item .popup_box {
+    right: 0;
+}
+
+.top_block .order_main_info.sub_order_master .block_2 {
+    border-top: 1px solid #efefef;
+    padding: 12px 15px;
+}
+
+.top_block .order_main_info.sub_order_master .block_2 > .sub_info_item {
+    float: left;
+    padding: 0 5px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.top_block .order_main_info.sub_order_master .block_2 > .sub_info_item:last-child {
+    float: right;
+    width: 40%;
+    margin-right: 0;
+    text-align: right;
+}
+
+.top_block .order_main_info.sub_order_master .sub_info_item {
+    margin: 0;
+}
+
+.top_block .order_main_info.sub_order_master .sub_info_item span {
+    color: #888;
+}
+
+.top_block .order_sub_info {
+    color: #888;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.top_block .order_sub_info .sub_info_item:last-child {
+    margin: 0;
+}
+
+
+
+
+
+
+.popup_box {
+    visibility: hidden;
+    opacity: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    padding: 8px 12px;
+    margin-top: 5px;
+    position: absolute;
+    z-index: 999;
+    width: 200px;
+    transition: all 0.2s ease-in-out;
+    font-size: 13px;
+}
+
+.popup_box .info_item {
+    margin: 8px 0;
+    color: #999;
+}
+
+.popup_box .info_item span:last-child {
+    float: right;
+    color: #333;
+}
+
+.label:hover+.popup_box {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.icon_help {
+    width: 15px;
+    height: 15px;
+    background: #DBA0DE;
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    /*display: inline-block;*/
+    display: none;
+}
+
+.icon_help:hover+.popup_box {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+/*-------------子訂單明細-------------*/
+
+.detail_block .block_header {
+    background-color: #F5F5F5;
+    padding: 8px 20px;
+    clear: both;
+}
+
+
+.detail_block .block_header .block_title {
+    color: #BD70CD;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0 30px 0 0;
+    display: inline-block;
+}
+
+.detail_block .block_header .info_item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.detail_block .block_header .info_item span {
+    color: #BD70CD;
+}
+
+
+.detail_block .block_content {
+    padding: 15px 20px;
+}
+
+.detail_block .block_content table {
+    width: 100%;
+}
+
+.detail_block .block_content table.list_table tr td {
+    padding: 8px 0;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.detail_block .block_content table.list_table tr:last-child td {
+    border-bottom: 0;
+}
+
+
+.detail_block .block_content table.list_table.cancellation_detail {
+    width: 50%;
+}
+
+.detail_block .sub_info_list {
+    margin-bottom: 20px;
+}
+
+.detail_block .sub_info_list .sub_info_item{
+    display: inline;
+    margin-right: 30px;
+}
+
+.detail_block .sub_info_list .sub_info_item span{
+    color: #888;
+}
+
+.detail_block .block_content .list_table + .list_table {
+    margin-top: 25px;
+}
+
+
+
+
+
+
+
+
+/*-------------子訂單明細 - 機票明細-------------*/
+
+.detail_block .flight_info {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 12px 0;
+}
+
+.detail_block .flight_info:last-child {
+    border-bottom: 0;
+}
+
+
+.detail_block .flight_info .fight_departure_date {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.detail_block .flight_info .flight_segment {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.detail_block .flight_info .airline,
+.detail_block .flight_info .departure_info,
+.detail_block .flight_info .arrival_info,
+.detail_block .flight_info .other_info,
+.detail_block .flight_info .status_info {
+    float: left;
+    padding-right: 20px;
+}
+
+
+.detail_block .flight_info .airline,
+.detail_block .flight_info .other_info {
+    width: 200px;
+}
+
+.detail_block .flight_info .departure_info,
+.detail_block .flight_info .arrival_info {
+    width: 250px;
+}
+
+.detail_block .flight_info .departure_info:after {
+    content: "\e092";
+    display: inline-block;
+    color: #CCC;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    margin-top: -28px;
+    float: right;
+}
+
+
+.detail_block .flight_info .airline_name {
+    font-size: 18px;
+}
+
+.detail_block .flight_info .airline_number,
+.detail_block .flight_info .arrival_info .airport,
+.detail_block .flight_info .departure_info .airport {
+    color: #888;
+    margin-top: -5px;
+}
+
+.detail_block .flight_info .arrival_info .time,
+.detail_block .flight_info .departure_info .time {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.detail_block .flight_info .arrival_info .time span {
+    font-size: 14px;
+}
+
+.detail_block .flight_info .arrival_info .time>.popup_box {
+    font-weight: normal;
+}
+
+.detail_block .flight_info .arrival_info .time:hover>.popup_box {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.detail_block .flight_info .other_info .info_item span {
+    color: #888;
+}
+
+.detail_block .flight_info .actual_airline {
+    color: #DBA0DE;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------子訂單明細 - 訂房明細-------------*/
+
+.hotel_info {
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+.hotel_info .stay_date,
+.hotel_info .hotel_detail,
+.hotel_info .memo_info {
+    float: left;
+}
+
+.hotel_info .stay_date {
+    width: 250px;
+}
+
+
+
+.hotel_info .hotel_detail {
+    width: calc(55% - 125px);
+    padding-right: 20px;
+}
+
+
+.hotel_info .checkin_date,
+.hotel_info .checkout_date {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.hotel_info .checkin_date,
+.hotel_info .checkout_date {
+    float: left;
+    letter-spacing: 1px;
+}
+
+.hotel_info .checkin_date .year,
+.hotel_info .checkout_date .year {
+    font-size: 14px;
+    margin-top: -2px;
+    letter-spacing: 0;
+}
+
+.hotel_info .stay_date .to {
+    float: left;
+    color: #888;
+    line-height: 23px;
+    margin: 0 9px;
+}
+
+.hotel_info .hotel_detail .hotel_name {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+
+
+.hotel_info .status_info {
+    margin: 5px 0 15px 0;
+}
+
+
+
+.hotel_info .sub_info .info_item {
+    margin-bottom: 5px;
+}
+
+.hotel_info .sub_info .info_item:last-child {
+    margin-bottom: 0;
+}
+
+.hotel_info .sub_info .info_item span {
+    color: #999;
+    letter-spacing: 1px;
+}
+
+
+
+.hotel_info .memo_info {
+    width: calc(45% - 125px);
+}
+
+.hotel_info .memo_info .info_item {
+    margin-bottom: 15px;
+}
+
+
+.hotel_info .memo_info .info_item:last-child {
+    margin-bottom: 0;
+}
+
+.hotel_info .memo_info .info_item .item_title {
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+
+
+
+
+
+
+
+
+/*-------------子訂單明細 - 旅遊行程明細-------------*/
+
+.travel_info {
+    padding: 12px 0;
+    overflow: hidden;
+}
+
+.travel_info .travel_detail {
+    float: left;
+}
+
+.travel_info .travel_detail .travel_name {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.travel_info .sub_info .info_item {
+    margin-bottom: 5px;
+}
+
+.travel_info .sub_info .info_item:last-child {
+    margin-bottom: 0;
+}
+
+.travel_info .sub_info .info_item span {
+    color: #999;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+/*-------------子訂單明細 - 票券明細(coupon)-------------*/
+.detail_block .coupon_name{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------子訂單明細 - 訂單備註回覆區塊 -------------*/
+
+.detail_block .reply_block {
+    margin-top: 5px;
+    margin-right: 15px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    overflow: hidden;
+    color: #666;
+    font-size: 13px;
+}
+
+.detail_block .reply_block .message_item {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.detail_block .reply_block .message_item:last-child {
+    margin-bottom: 0;
+}
+
+.detail_block .reply_block .message_content {
+    float: left;
+    width: calc(100% - 300px);
+}
+
+.detail_block .reply_block .message_info {
+    float: left;
+    width: 300px;
+    text-align: right;
+}
+
+.detail_block .reply_block .message_info>div {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------處理狀態-----------------*/
+
+.process_status1 {
+    color: #DDD;
+    border: 1px solid #DDD;
+}
+
+.process_status2 {
+    color: #73DCF0;
+    border: 1px solid #73DCF0;
+}
+
+.process_status3 {
+    background-color: #56CDA7;
+    border: 1px solid #56CDA7;
+}
+
+.process_status4 {
+    color: #fb8988;
+    border: 1px solid #fb8988;
+}
+
+.process_status5 {
+    background-color: #fb8988;
+    border: 1px solid #fb8988;
+}
+
+
+.status_group .label {
+    padding: 4px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*            收款紀錄(公司)           */
+
+
+/***************************************/
+
+.main_content.company_content .top_block {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
+
+
+/*------------- 付款紀錄 - 公司主檔 -------------*/
+
+.main_content.company_content .company_main_info {
+    float: left;
+    width: 100%;
+}
+
+.main_content.company_content .company_main_info .info_item {
+    display: inline-block;
+    margin: 5px 50px 8px 0;
+}
+
+.main_content.company_content .company_main_info .info_item .item_title {
+    font-size: 14px;
+    color: #999;
+}
+
+.main_content.company_content .company_main_info .info_item .item_content {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------- 付款紀錄 - 列表tabs-------------*/
+
+.main_content.company_content .top_block .links_group {
+    border-bottom: 1px solid #dba0de;
+}
+
+.main_content.company_content .top_block .links_group.nav-tabs>li>a {
+    color: #dba0de;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom-color: #dba0de;
+    border-radius: 8px 8px 0 0;
+    margin-right: 0;
+    transition: all 0.2s ease-out;
+}
+
+.main_content.company_content .top_block .links_group.nav>li>a:focus,
+.main_content.company_content .top_block .links_group.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #dba0de;
+    color: #FFF;
+}
+
+.main_content.company_content .top_block .links_group.nav-tabs>li.active>a,
+.main_content.company_content .top_block .links_group.nav-tabs>li.active>a:focus,
+.main_content.company_content .top_block .links_group.nav-tabs>li.active>a:hover {
+    color: #dba0de;
+    background-color: #FFF;
+    border: 1px solid #dba0de;
+    border-bottom-color: transparent;
+}
+
+
+
+
+
+
+
+.main_content.company_content .result_block .block_top .function_group .btn {
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------- 收款紀錄 - 列表共通樣式 -------------*/
+
+.main_content.company_content .result_block .block_top .filter_group {
+    float: left;
+}
+
+.main_content.company_content .result_block .block_top .filter_group .fill_item {
+    float: left;
+    margin-right: 15px;
+}
+
+.main_content.company_content .result_block .block_top .filter_group .btn {
+    float: left;
+    margin-right: 15px;
+}
+
+.main_content.company_content .result_block .block_top .filter_group .btn:last-child {
+    margin-right: 0;
+}
+
+
+
+.main_content.company_content .result_block .block_content table tr th:first-child {
+    width: auto;
+}
+
+
+
+.main_content.company_content .result_block .block_bottom.setting_modal_function {
+    display: none;
+    box-shadow: 0 0 5px 0 #CCC;
+}
+
+
+
+.main_content.company_content .result_block.setting_modal .block_top {
+    display: none;
+}
+
+.main_content.company_content .result_block.setting_modal .block_bottom.setting_modal_function {
+    display: block;
+}
+
+
+.main_content.company_content .result_block.setting_modal .unavailible {
+    opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------- 收款紀錄 - 帳單列表 -------------*/
+
+.result_block.company_billing_list .block_content .result_table table tr th:first-child,
+.result_block.company_billing_list .block_content .result_table table tr td:first-child {
+    display: none;
+    width: 50px;
+}
+
+
+.result_block.company_billing_list.setting_modal .block_content .result_table table tr th:first-child,
+.result_block.company_billing_list.setting_modal .block_content .result_table table tr td:first-child {
+    display: table-cell;
+}
+
+
+
+
+
+
+
+/*------------- 收款紀錄 - 公司訂單列表 -------------*/
+
+.result_block.company_order_list .block_content .result_table table tr th:first-child,
+.result_block.company_order_list .block_content .result_table table tr td:first-child {
+    display: none;
+    width: 50px;
+}
+
+.result_block.company_order_list.setting_modal .block_content .result_table table tr th:first-child,
+.result_block.company_order_list.setting_modal .block_content .result_table table tr td:first-child {
+    display: table-cell;
+}
+
+
+
+.result_block.company_order_list .order_info .top_info .info_item {
+    display: inline-block;
+    color: #999;
+    margin-right: 15px;
+}
+
+
+
+.result_block.company_order_list .order_info .order_title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 4px 0 14px 0;
+}
+
+
+
+.result_block.company_order_list .order_info .sub_info>.info_item {
+    display: inline-block;
+    color: #666;
+    padding: 0 12px;
+    border-left: 1px solid #EEE;
+}
+
+.result_block.company_order_list .order_info .sub_info>.info_item:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+
+.result_block.company_order_list .order_info .sub_info>.info_item>span {
+    color: #999;
+}
+
+
+.result_block.company_order_list .order_info .sub_info>.info_item .confirm_status {
+    display: inline-block;
+    color: #56CDA7;
+    font-size: 13px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.result_block.company_order_list .sub_message {
+    color: #999;
+    font-size: 13px;
+    padding: 5px 0;
+    margin-bottom: -27px;
+}
+
+
+.result_block.company_order_list .sub_message.error {
+    color: #fb8988;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************/
+
+
+/*            核覆紀錄列表(核覆者)           */
+
+
+/*********************************************/
+
+.main_content.verify_content .top_block {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0;
+    clear: both;
+}
+
+
+
+
+
+/*------------- 核覆紀錄 - 列表tabs-------------*/
+
+.main_content.verify_content .top_block .links_group {
+    border-bottom: 1px solid #dba0de;
+}
+
+.main_content.verify_content .top_block .links_group.nav-tabs>li>a {
+    color: #dba0de;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom-color: #dba0de;
+    border-radius: 8px 8px 0 0;
+    margin-right: 0;
+    transition: all 0.2s ease-out;
+}
+
+.main_content.verify_content .top_block .links_group.nav>li>a:focus,
+.main_content.verify_content .top_block .links_group.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #dba0de;
+    color: #FFF;
+}
+
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a,
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a:focus,
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a:hover {
+    color: #dba0de;
+    background-color: #FFF;
+    border: 1px solid #dba0de;
+    border-bottom-color: transparent;
+}
+
+.main_content.verify_content .top_block .links_group.nav-tabs>li>a .badge {
+    background-color: #dba0de;
+}
+
+
+
+.main_content.verify_content .top_block .links_group.nav>li>a:focus .badge,
+.main_content.verify_content .top_block .links_group.nav>li>a:hover .badge {
+    background-color: #FFF;
+    color: #dba0de;
+}
+
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a .badge,
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a:focus .badge,
+.main_content.verify_content .top_block .links_group.nav-tabs>li.active>a:hover .badge {
+    background-color: #dba0de;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------- 核覆紀錄 - 列表共通樣式 -------------*/
+
+.main_content.verify_content .result_block .block_top .filter_group {
+    float: left;
+}
+
+.main_content.verify_content .result_block .block_top .filter_group .fill_item {
+    float: left;
+    margin-right: 15px;
+}
+
+.main_content.verify_content .result_block .block_top .filter_group .btn {
+    float: left;
+    margin-right: 15px;
+}
+
+.main_content.verify_content .result_block .block_top .filter_group .btn:last-child {
+    margin-right: 0;
+}
+
+
+
+.main_content.verify_content .result_block .block_content table tr th:first-child {
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************/
+
+
+/*              客服列表               */
+
+
+/***************************************/
+
+.result_block.inquiry_result {
+    overflow: hidden;
+}
+
+.result_block.inquiry_result .result_table {
+    float: left;
+    width: 60%;
+}
+
+.result_block.inquiry_result .result_table .table_head {
+    padding-right: 17px;
+    /*為配合下方table有scroll時的寬度*/
+    position: relative;
+}
+
+.result_block.inquiry_result .result_table .table_body {
+    float: right;
+    width: 100%;
+    background: #FFF;
+    overflow-y: scroll;
+}
+
+.result_block.inquiry_result .result_table .table_bottom {
+    overflow: hidden;
+    clear: both;
+    padding-top: 10px;
+}
+
+.result_block.inquiry_result .result_table table {
+    width: 100%;
+}
+
+.result_block.inquiry_result .result_table .table_body table {
+    margin-top: -50px;
+}
+
+.result_block.inquiry_result .result_table table tr th {
+    border-bottom: 1px solid #CCC;
+    padding: 14px 8px;
+    white-space: nowrap;
+}
+
+.result_block.inquiry_result .result_table table tr td {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 14px 8px;
+    cursor: pointer;
+}
+
+.result_block.inquiry_result .result_table table tr th:first-child {
+    width: 50px;
+}
+
+.result_block.inquiry_result .result_table table tr th:nth-child(2) {
+    width: 130px;
+}
+
+.result_block.inquiry_result .result_table table tr th:nth-child(3) {
+    width: 100px;
+}
+
+
+.result_block.inquiry_result .result_table table tr th:last-child {
+    width: 130px;
+}
+
+
+.result_block.inquiry_result .result_table table tr.active td {
+    background: #ececec;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------- 需求單詳細資料呈現 ----------------*/
+
+.result_block .view_block {
+    float: left;
+    width: 40%;
+    padding-left: 15px;
+    position: relative;
+}
+
+.result_block .view_block .block_top {
+    color: #333;
+    font-weight: bold;
+    padding: 14px 8px;
+    border-bottom: 1px solid #CCC;
+}
+
+.result_block .view_block .block_body {
+    overflow: auto;
+}
+
+.result_block .view_block .block_bottom {
+    margin-bottom: 0;
+}
+
+.quiry_detail .quiry_info {
+    padding: 12px 8px 30px 8px;
+}
+
+.quiry_detail .quiry_info .user_name,
+.quiry_detail .quiry_info .user_sex {
+    display: inline-block;
+}
+
+.quiry_detail .quiry_info .user_name {
+    font-size: 22px;
+}
+
+.quiry_detail .quiry_info ul.user_info li {
+    color: #999;
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.quiry_detail .quiry_info ul.user_info li:nth-child(n+2):before {
+    content: "|";
+    color: #DDD;
+    padding-right: 10px;
+}
+
+.quiry_detail .quiry_content {
+    padding: 0 8px;
+}
+
+.quiry_detail .quiry_content:last-child {
+    margin-bottom: 30px;
+}
+
+.quiry_detail .quiry_content.reply {
+    background: #F2F2F2;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.quiry_detail .quiry_content .info_item {
+    margin-bottom: 8px;
+}
+
+.quiry_detail .quiry_content.reply .info_item {
+    margin-bottom: 0;
+}
+
+.quiry_detail .quiry_content .info_item .item_title,
+.quiry_detail .quiry_content .info_item .item_content {
+    display: table-cell;
+}
+
+
+.quiry_detail .quiry_content .info_item .item_title {
+    color: #999;
+    width: 100px;
+}
+
+.quiry_detail .quiry_content .info_item .item_content {
+    line-height: 22px;
+}
+
+.quiry_detail .quiry_content.reply .reply_info {
+    margin-top: 10px;
+    color: #999;
+}
+
+.quiry_detail .quiry_content.reply .reply_info>div {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.result_block .view_block .reply_box {
+    position: absolute;
+    width: calc(100% - 15px);
+    bottom: -55px;
+}
+
+.result_block .view_block .reply_box textarea {
+    width: calc(100% - 120px);
+    margin-right: 8px;
+    display: inline-block;
+}
+
+
+.result_block .view_block .reply_box .btn {
+    width: 100px;
+    margin-top: -27px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************/
+
+
+/*              產品選擇(飯店)              */
+
+
+/********************************************/
+
+
+/*---------------- 列表分頁 ----------------*/
+
+.pagination {
+    margin: 0;
+}
+
+.pagination>.disabled>a,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover {
+    color: #CCC;
+}
+
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #DBA0DE;
+    border-color: #DBA0DE;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************/
+
+
+/*              建立/編輯modal              */
+
+
+/*******************************************/
+
+
+/*-------------radio option-------------*/
+
+.radio_option ul.option_list {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.radio_option ul.option_list li {
+    line-height: 18px;
+    list-style: none;
+    float: left;
+}
+
+.radio_option ul.option_list li input[type="radio"]+label p {
+    background: #EEE;
+    color: #999;
+    font-size: 15px;
+    border-width: 2px 1px 2px 1px;
+    border-style: solid;
+    border-color: #CCC;
+    padding: 10px 20px;
+    margin-left: -2px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.radio_option ul.option_list li:first-child input[type="radio"]+label p {
+    margin-left: 0;
+    border-width: 2px 1px 2px 2px;
+    border-radius: 6px 0 0 6px;
+}
+
+.radio_option ul.option_list li:last-child input[type="radio"]+label p {
+    border-width: 2px 2px 2px 1px;
+    border-radius: 0 6px 6px 0;
+}
+
+.radio_option ul.option_list li input[type="radio"]:checked+label p {
+    background: #DBA0DE;
+    color: #FFF;
+}
+
+.radio_option ul.option_list li input[type="radio"] {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*------------- Modal - 住宿券 -------------*/
+
+#ViewCoupon .nav-tabs>li>a {
+    color: #999;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+#ViewCoupon .nav-tabs>li.active>a,
+#ViewCoupon .nav-tabs>li.active>a:focus,
+#ViewCoupon .nav-tabs>li.active>a:hover {
+    color: #DBA0DE;
+}
+
+
+
+
+
+
+/*------------- Modal - 修改子訂單內容 -------------*/
+
+#EditOrderBox h3.order_item_title {
+    color: #BD70CD;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+#EditOrderBox h3.order_item_title span {
+    margin-right: 30px;
+}
+
+#EditOrderBox .product_item .product_name {
+    float: left;
+    width: 55.3%;
+}
+
+#EditOrderBox .product_item .product_quanity {
+    margin-right: 0;
+}
+
+
+
+
+#EditOrderBox .original_info .info_item {
+    margin-bottom: 5px;
+}
+
+#EditOrderBox .original_info .info_item .item_title {
+    color: #AAA;
+    /*font-size: 14px;*/
+    display: inline-block;
+}
+
+#EditOrderBox .original_info .info_item .item_content {
+    color: #333;
+    /*font-size: 15px;*/
+    display: inline-block;
+}
+
+#EditOrderBox .original_info .info_item.col_1 {
+    float: left;
+    width: 15%;
+    margin-right: 1.55%;
+}
+
+#EditOrderBox .original_info .info_item.col_2 {
+    float: left;
+    width: 55.3%;
+    margin-right: 1.55%;
+}
+
+#EditOrderBox .original_info .info_item.col_3 {
+    float: left;
+    width: 15%;
+    margin-right: 1.55%;
+}
+
+#EditOrderBox .original_info .info_item.col_4 {
+    float: left;
+    width: 10%;
+}
+
+
+
+#EditOrderBox .other_field .original_info {
+    margin-top: 15px;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    #EditOrderBox h3.order_item_title {
+        font-size: 16px;
+    }
+    #EditOrderBox .product_item .product_name {
+        width: 66.6%;
+    }
+}
+
+
+
+
+
+
+
+
+/*------------- Modal - 回覆訂單備註 -------------*/
+
+#ReplyMessage .fill_item {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/*----Modal - 選擇產品-----*/
+
+#SelectProduct .product_table {
+    float: right;
+    overflow: auto;
+    width: 100%;
+}
+
+#SelectProduct .product_table table {
+    min-width: 100%;
+}
+
+#SelectProduct .product_table table tr th {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    white-space: nowrap;
+    transition: all .2s ease-out;
+}
+
+#SelectProduct .product_table table tr td {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 25px 10px;
+    white-space: nowrap;
+}
+
+#SelectProduct .product_list {
+    float: right;
+    overflow: auto;
+    width: 100%;
+}
+
+#SelectProduct .product_list .list_header {
+    font-weight: bold;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#SelectProduct .product_list .list_content {
+    border-bottom: 1px solid #EFEFEF;
+    white-space: nowrap;
+}
+
+#SelectProduct .product_list .list_content a li.list_item {
+    color: #333;
+    line-height: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .1s ease-out;
+}
+
+#SelectProduct .product_list .list_content a li.list_item:hover {
+    background: #DBA0DE;
+    color: #FFF;
+}
+
+#SelectProduct .product_list .col_1 {
+    width: 20%;
+    float: left;
+}
+
+#SelectProduct .product_list .col_2 {
+    width: 40%;
+    float: left;
+}
+
+#SelectProduct .product_list .col_3 {
+    width: 20%;
+    float: left;
+}
+
+#SelectProduct .product_list .col_4 {
+    width: 20%;
+    float: left;
+}
+
+
+
+
+
+/*------Modal - 選擇客戶-------*/
+
+#SelectClient .option_list {
+    float: right;
+    overflow: auto;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#SelectClient .option_list .list_title {
+    font-size: 24px;
+}
+
+#SelectClient .option_list .list_header {
+    font-weight: bold;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#SelectClient .option_list .list_content {
+    border-bottom: 1px solid #EFEFEF;
+    white-space: nowrap;
+}
+
+#SelectClient .option_list .list_content a li.list_item {
+    color: #333;
+    line-height: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all .1s ease-out;
+}
+
+#SelectClient .option_list .list_content a li.list_item:hover {
+    background: #DBA0DE;
+    color: #FFF;
+}
+
+#SelectClient .option_list .col_1 {
+    width: 20%;
+    float: left;
+}
+
+#SelectClient .option_list .col_2 {
+    width: 30%;
+    float: left;
+}
+
+#SelectClient .option_list .col_3 {
+    width: 40%;
+    float: left;
+}
+
+#SelectClient .option_list .col_4 {
+    width: 20%;
+    float: left;
+}
+
+#SelectClient .add_client {
+    float: right;
+    margin-top: 24px;
+}
+
+#SelectClient .add_fillform {
+    display: none;
+}
+
+#SelectClient .add_fillform .button_group {
+    width: 50%;
+}
+
+#SelectClient .add_fillform .button_group .btn {
+    width: 47%;
+}
+
+@media (max-width: 480px) {
+    #SelectClient .order_search button {
+        width: 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*----------------Modal - 進階搜尋----------------*/
+
+#SearchBox .button_group {
+    width: 50%;
+}
+
+#SearchBox .button_group .btn {
+    width: 47%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/************************************/
+
+
+/*              共用設定                */
+
+
+/************************************/
+
+.main_content {
+    /*padding-bottom: 80px;*/
+}
+
+@media (max-width:480px) {
+    .main_content {
+        /*padding-bottom: 80px;*/
+    }
+}
+
+.block_title {
+    clear: both;
+    color: #666;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.block_content {
+    /*background: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);*/
+}
+
+@media (max-width:480px) {
+    .main_content .container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+
+
+
+
+/*-----------table排序功能按鈕----------*/
+
+.sort_change {
+    color: #CCC;
+    font-size: 13px;
+    background: #FFF;
+    border: 0;
+    outline: none;
+}
+
+.sort_change:before {
+    content: "\e150";
+    color: #DDD;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sort_change.sorting_desc:before {
+    content: "\e156";
+    color: #999;
+}
+
+.sort_change.sorting_asc:before {
+    content: "\e155";
+    color: #999;
+}
+
+
+
+
+
+/*-----------填寫表單----------*/
+
+.form_title {
+    color: #BD70CD;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.fill_form {
+    float: left;
+    width: 100%;
+}
+
+.fill_form:after {
+    content: "";
+    clear: none;
+}
+
+
+
+
+
+/*.fill_form .row:last-child .fill_item {
+    margin-bottom: 0;
+}*/
+
+.fill_form .fill_item {
+    padding: 0 0 5px 0;
+    margin-bottom: 12px;
+    width: 100%;
+    float: left;
+}
+
+.fill_form .fill_item label.item_title {
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.fill_form .fill_item label.item_title span {
+    color: #BD70CD;
+}
+
+.fill_form .fill_item .item_content {
+    overflow: hidden;
+}
+
+.fill_form .fill_item .item_content .text_show {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.fill_form .fill_item .item_content select {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.fill_form .fill_item .item_content .radio_group {
+    padding: 7px 10px;
+}
+
+.fill_form .fill_item .item_content .radio_group label {
+    margin-right: 10px;
+}
+
+.fill_form .alert {
+    float: left;
+    background: none;
+    color: #fb8988;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.form-control {
+    height: 43px;
+    border-radius: 8px;
+    border: 1px solid #dadada;
+}
+
+.form-control.input-sm {
+    height: 34px!important;
+    line-height: 24px;
+}
+
+.form-control.input-sm+span {
+    line-height: 32px!important;
+}
+
+
+
+input[type="text"].error,
+input[type="password"].error,
+select.error,
+textarea.error {
+    border: 1px solid #fb8988;
+    box-shadow: 0 0 0 2px #fb8988 inset;
+}
+
+
+textarea.auto_height {
+    max-height: 70px;
+}
+
+
+
+.fill_item .error_message {
+    display: none;
+    color: #fb8988;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.fill_item .error_message:before {
+    content: "\e101";
+    display: inline-block;
+    color: #fb8988;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    border-radius: 20px;
+
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------- 輸入元件 - 名字 -------------*/
+
+.name_input input {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.name_input input:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+/*------------- 輸入元件 - 日期選擇(年/月) -------------*/
+
+.date_select_box select {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.date_select_box select:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
+/*  輸入元件 - 地址  */
+
+.fill_item .item_content .address_input .country_input,
+.fill_item .item_content .address_input .city_input,
+.fill_item .item_content .address_input .district_input {
+    display: inline-block;
+    width: calc(100%/3 - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fill_item .item_content .address_input .district_input {
+    margin-right: 0;
+}
+
+.fill_item .item_content .address_input .zipcode_input {
+    display: inline-block;
+    width: 80px;
+}
+
+.fill_item .item_content .address_input input:last-child {
+    display: inline-block;
+    width: calc(100% - 95px);
+    margin-left: 10px;
+}
+
+
+
+
+
+/*------------- 輸入元件 - 簡易信用卡輸入(前/後4碼) -------------*/
+
+.simple_credit_input input {
+    width: calc(50% - 7px);
+    display: inline-block;
+}
+
+.simple_credit_input input:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+/*-------- tooltip(輸入元件用) ---------*/
+
+.fill_item .tooltip_box {
+    position: absolute;
+    z-index: 999;
+    width: 250px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #FCFCFD;
+    padding: 5px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.fill_item .tooltip_box ul li {
+    margin-bottom: 8px;
+}
+
+.fill_item .tooltip_box ul li:last-child {
+    margin-bottom: 0;
+}
+
+.fill_item .tooltip_box ul li .btn {
+    color: #333;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/*--------checkbox---------*/
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label>span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+    background: url(../images/check2.png) 0px top no-repeat;
+}
+
+input[type="checkbox"]:checked+label>span {
+    background: url(../images/check2.png) -30px top no-repeat;
+}
+
+input[type="checkbox"]+label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/*--------radio---------*/
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label>span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+    background: url(../images/radio.png) 0px top no-repeat;
+}
+
+input[type="radio"]:checked+label>span {
+    background: url(../images/radio.png) -30px top no-repeat;
+}
+
+input[type="radio"]+label {
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+
+.checkbox,
+.radio {
+    clear: both;
+}
+
+
+.checkbox label,
+.radio label {
+    padding-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------- Checklist ---------*/
+
+.fill_item .item_content .check_list .checkbox {
+    margin: 8px 0;
+}
+
+
+
+
+
+
+
+
+/*-------- Radiolist ---------*/
+
+.fill_item .item_content .radio_list .radio {
+    margin: 8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------radio 選項群組-------------*/
+
+.radio_option_group ul.option_list {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.radio_option_group ul.option_list li {
+    line-height: 18px;
+    list-style: none;
+    float: left;
+    margin-right: 8px;
+}
+
+.radio_option_group ul.option_list li input[type="radio"]+label p {
+    color: #333;
+    font-weight: bold;
+    line-height: 14px;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    border: 1px solid #EEE;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+}
+
+.radio_option_group ul.option_list li input[type="radio"]:checked+label p {
+    border: 1px solid #dba0de;
+    box-shadow: 0 0 0 1px #dba0de inset;
+}
+
+.radio_option_group ul.option_list li input[type="radio"] {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*-------------checkbox 選項群組-------------*/
+
+.checkbox_option_group ul.option_list {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.checkbox_option_group ul.option_list li {
+    line-height: 18px;
+    list-style: none;
+    float: left;
+    margin-right: 8px;
+}
+
+.checkbox_option_group ul.option_list li input[type="checkbox"]+label p {
+    color: #333;
+    font-weight: bold;
+    line-height: 14px;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    margin-bottom: 0;
+    border: 1px solid #EEE;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+}
+
+
+.checkbox_option_group ul.option_list li input[type="checkbox"]:checked+label p {
+    border: 1px solid #dba0de;
+    box-shadow: 0 0 0 1px #dba0de inset;
+}
+
+.checkbox_option_group ul.option_list li input[type="checkbox"] {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------按鈕---------*/
+
+.button_group {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.button_group .btn {
+    float: left;
+    margin: 5px 10px 5px 0;
+}
+
+.button_group .btn:last-child {
+    float: left;
+    margin: 5px 0 5px 0;
+}
+
+.btn {
+    letter-spacing: 1px;
+}
+
+.btn.btn-lg {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn.btn-sm {
+    border-radius: 8px;
+}
+
+.btn_style6 {
+    background-color: #FFFFFF;
+    color: #888;
+    border-radius: 8px;
+    border: 1px solid #888;
+    transition: all .2s ease-out;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn_style6:hover {
+    background: #FFFFFF;
+    color: #888;
+}
+
+.btn_style6:active,
+.btn_style6:focus {
+    background: #FFFFFF;
+    color: #888;
+}
+
+
+.btn_style1 {
+    background: #DBA0DE;
+    color: #FFF;
+    transition: all .2s ease-out;
+    border-radius: 8px;
+}
+
+.btn_style1:hover {
+    background: #E8A9EB;
+    color: #FFF;
+}
+
+.btn_style1:active,
+.btn_style1:focus {
+    background: #C28EC4;
+    color: #FFF;
+}
+
+.btn_style2 {
+    background: #ECDEEF;
+    color: #B368BB;
+    transition: all .2s ease-out;
+    border-radius: 8px;
+}
+
+.btn_style2:hover {
+    background: #F9EAFC;
+    color: #B368BB;
+}
+
+.btn_style2:active,
+.btn_style2:focus {
+    background: #D3C6D5;
+    color: #B368BB;
+}
+
+.btn_style3 {
+    background-color: rgba(255, 255, 255, 0);
+    color: #DBA0DE;
+    transition: all .2s ease-out;
+    outline: none;
+    box-shadow: none;
+    border-radius: 8px;
+    border: 1px solid #DBA0DE;
+}
+
+.btn_style3:hover {
+    background: #E8A9EB;
+    color: #FFF;
+    border: 1px solid #E8A9EB;
+}
+
+.btn_style3:active,
+.btn_style3:focus {
+    background: #C28EC4;
+    color: #FFF;
+    border: 1px solid #C28EC4;
+}
+
+.btn.btn_style3[disabled] {
+    background: rgba(255, 255, 255, 0);
+    color: #CCC;
+}
+
+.btn_style4 {
+    background: #DBA0DE;
+    color: #FFFF66;
+    transition: all .2s ease-out;
+    border-radius: 8px;
+}
+
+.btn_style4:hover {
+    background: #E8A9EB;
+    color: #FFFF66;
+}
+
+.btn_style4:active,
+.btn_style4:focus {
+    background: #C28EC4;
+    color: #FFFF66;
+}
+
+.btn_style5 {
+    background-color: rgba(255, 255, 255, 0);
+    color: #DBA0DE;
+    border-radius: 8px;
+    transition: all .2s ease-out;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn_style5:hover {
+    background: #E8A9EB;
+    color: #FFF;
+}
+
+.btn_style5:active,
+.btn_style5:focus {
+    background: #C28EC4;
+    color: #FFF;
+}
+
+.btn[disabled] {
+    background-color: #ECDEEF;
+}
+
+.btn.btn_disabled[disabled] {
+    background-color: #CCC;
+}
+
+@media (max-width: 480px) {
+    .button_group .btn {
+        min-width: 100%;
+        margin: 5px 0;
+    }
+}
+
+
+
+
+
+/*-----------下拉選單-----------*/
+
+select {
+    height: 25px;
+    padding-right: 19px!important;
+    appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../images/arrow-down.png)!important;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+
+
+
+/*-----------tooltip style-----------*/
+
+.tooltip_style+.tooltip>.tooltip-inner {
+    background-color: #666;
+    color: #FFF;
+    border: 1px solid #666;
+}
+
+.tooltip_style+.tooltip.top>.tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #666;
+}
+
+.tooltip_style+.tooltip.left>.tooltip-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #666;
+}
+
+.tooltip_style+.tooltip.bottom>.tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #666;
+}
+
+.tooltip_style+.tooltip.right>.tooltip-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #666;
+}
+
+
+
+
+
+
+
+
+
+/*---------- 提示訊息 -----------*/
+
+.notice_box {
+    color: #FFF;
+    position: relative;
+}
+
+.notice_box .box_content {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.notice_box .box_content p {
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 30px;
+}
+
+
+
+.notice_box.notice_status1 {
+    background: #56CDA7;
+    border-bottom: 1px solid #6ddab7;
+}
+
+.notice_box.notice_status2 {
+    background: #FF95B8;
+    border-bottom: 1px solid #ffaac6;
+}
+
+
+.notice_box .remove_notice {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -13px;
+    background: rgba(240, 248, 255, 0);
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.notice_box .remove_notice:active {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+/*---------- 填表 modal -----------*/
+
+.modal.form_modal .form_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    clear: both;
+}
+
+
+.modal.form_modal .form_title .sub_title {
+    color: #888;
+    font-size: 14px;
+    margin-left: 5px;
+    letter-spacing: 0;
+}
+
+.modal.form_modal .form_sub_title {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    clear: both;
+}
+
+
+.modal.form_modal .form_title .btn.pull-right {
+    margin-left: 10px;
+}
+
+
+.modal.form_modal .form_title .advance_function_group {
+    display: inline-block;
+}
+
+
+
+
+.modal.form_modal button.close {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+    z-index: 999;
+    color: #DBA0DE;
+    font-size: 60px;
+    text-shadow: 0 0px 0 #fff;
+    opacity: 1;
+    transition: all .2s ease-out;
+}
+
+.modal.form_modal .close:focus,
+.modal.form_modal .close:hover {
+    color: #E8A9EB;
+}
+
+.modal.form_modal .close:active {
+    color: #C28EC4;
+}
+
+.modal.form_modal {
+    /*background: #FDFEFF;*/
+}
+
+.modal.form_modal .modal-dialog {
+    background: #FFF;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal.form_modal .modal-content {
+    background: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: none;
+}
+
+.modal.form_modal .modal-header {
+    border: 0;
+    padding: 15px 15px 0 15px;
+}
+
+
+.modal.form_modal .modal-title {
+    color: #27C2BB;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal.form_modal .modal-footer {
+    clear: both;
+    border: 0;
+    padding: 15px;
+    text-align: left;
+}
+
+.modal.form_modal .modal-footer button {
+    width: 48%;
+}
+
+
+
+
+
+
+.modal.form_modal .modal_bottom {
+    width: 100%;
+    max-width: 1000px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+
+.modal.form_modal .modal_bottom .bottom_content {
+    padding: 10px 15px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.modal.form_modal .modal_bottom .bottom_content>* {
+    float: right;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.modal.form_modal .modal_bottom .bottom_content .btn {
+    min-width: 120px;
+    margin-left: 15px;
+}
+
+
+.modal.form_modal .modal-content,
+.modal.form_modal .modal_bottom .bottom_content {
+    margin: 0 15px;
+}
+
+
+
+.modal.form_modal .modal_bottom .fill_item.horizontal label.item_title {
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
+.modal.form_modal .modal_bottom .fill_item.horizontal .item_content .form-control {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------- 填表 modal - 收款modal -----------*/
+
+.modal.form_modal .payment_detail_block {
+    background: #faf7fb;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.modal.form_modal .payment_detail_block .detail_top {
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+
+.modal.form_modal .payment_detail_block .detail_content {}
+
+.modal.form_modal .payment_detail_block table.billing_list {
+    width: 100%;
+}
+
+
+.modal.form_modal .payment_detail_block table.billing_list tr th {
+    color: #999;
+    letter-spacing: 1px;
+    padding: 3px 15px;
+}
+
+.modal.form_modal .payment_detail_block table.billing_list tr:nth-child(n+2):hover td {
+    background: #EEE;
+}
+
+.modal.form_modal .payment_detail_block table.billing_list tr td {
+    font-size: 15px;
+    padding: 5px 15px;
+    border-top: 1px solid #EEE;
+}
+
+.modal.form_modal .payment_detail_block table.billing_list tr td:first-child {
+    width: calc(100%/4);
+}
+
+
+.modal.form_modal .payment_detail_block table.billing_list .billing_amount {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------- 填表 modal - 核覆收款modal -----------*/
+
+.modal.form_modal .payment_info_group {
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    overflow: hidden;
+}
+
+
+
+.modal.form_modal .payment_info_group .payment_info {
+    float: left;
+    width: 75%;
+    min-height: 147px;
+    padding: 15px 15px 0 15px;
+    border-right: 1px solid #DDD;
+}
+
+.modal.form_modal .payment_info_group .payment_total {
+    float: left;
+    width: 25%;
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- 提示 modal ------------*/
+
+.modal.alert_modal .modal-dialog {
+    width: 350px;
+    margin-top: 10%;
+}
+
+.modal.alert_modal .modal-header {
+    border-bottom: none;
+}
+
+
+.modal.alert_modal .close {
+    color: #DBA0DE;
+    opacity: 1;
+    font-size: 30px;
+}
+
+
+.modal.alert_modal .modal-body {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.modal.alert_modal .modal-body .modal_title {
+    font-size: 24px;
+    margin-bottom: 14px;
+}
+
+
+
+.modal.alert_modal .modal-body .btn {
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+.modal.alert_modal .modal-footer {
+    clear: both;
+    border-top: none;
+    text-align: center;
+}
+
+
+.modal.alert_modal .modal-footer .btn {
+    width: calc(50% - 8px);
+}
+
+
+
+
+
+
+
+/*  modal - 防按遮罩  */
+
+.modal .modal_mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- 原bootstrap modal 調整 ------------*/
+
+.modal.general_modal .modal-title {
+    color: #BD70CD;
+    font-weight: bold;
+}
+
+.modal.general_modal .sub_title {
+    color: #888;
+    font-size: 14px;
+    margin-left: 5px;
+    letter-spacing: 0;
+}
+
+.modal.general_modal .close {
+    color: #DBA0DE;
+    opacity: 1;
+    font-size: 30px;
+}
+
+.modal.general_modal .modal-header {
+    border-bottom: none;
+}
+
+.modal.general_modal .modal-body {
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    clear: both;
+}
+
+.modal.general_modal .modal-footer {
+    border-top: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------- 原modal - 變更詳情/付款明細 -----------*/
+
+.modal.general_modal .payment_info {
+    padding-bottom: 20px;
+}
+
+.modal.general_modal .payment_info .info_item {
+    margin: 5px 0;
+}
+
+.modal.general_modal .payment_info .info_item .item_title {
+    font-size: 14px;
+    color: #999;
+    float: left;
+    width: 20%;
+}
+
+.modal.general_modal .payment_info .info_item .item_content {
+    font-size: 14px;
+    color: #333;
+    float: left;
+    width: 80%;
+}
+
+
+
+.modal.general_modal .payment_info .delimited_line {
+    height: 1px;
+    border-bottom: 1px solid #EEE;
+    margin: 5px 0;
+}
+
+
+
+.modal.general_modal .payment_info .comfirm_status {
+    font-weight: bold;
+}
+
+.modal.general_modal .payment_info .comfirm_status.status1 {
+    color: #2BCABE;
+}
+
+.modal.general_modal .payment_info .comfirm_status.status2 {
+    color: #ef7b7b;
+}
+
+
+
+
+
+
+
+
+
+
+/*---------- 原modal - 收款紀錄modal -----------*/
+
+.modal.general_modal table.payment_history_list {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+
+.modal.general_modal table.payment_history_list tr th {
+    color: #999;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+
+
+.modal.general_modal table.payment_history_list tr td {
+    font-size: 15px;
+    padding: 5px 0;
+    border-top: 1px solid #EEE;
+}
+
+
+
+
+
+
+
+
+/*----------loading-----------*/
+
+.loading_box {
+    text-align: center;
+    margin-top: 15%;
+}
+
+
+
+
+
+/*
+@media (min-width: 992px) and (max-width: 1200px){
+.loading_box img {
+    height: 100px;
+    }    
+}*/
+
+
+/*  
+@media (max-width:768px){
+.loading_box img {
+    height: 120px;
+    }    
+}*/
+
+@media (max-width:480px) {
+    .loading_box img {
+        height: 70px;
+    }
+}
+
+
+
+
+
+/*----------Padding 間距-----------*/
+
+.float_padding {
+    padding-top: 320px;
+}
+
+.pd_t50 {
+    padding-top: 50px;
+}
+
+.pd_t100 {
+    padding-top: 100px;
+}
+
+.pd_b100 {
+    padding-bottom: 100px;
+}
+
+.pd_t320 {
+    padding-top: 320px;
+}
+
+@media (max-width:480px) {
+    .pd_t50 {
+        padding-top: 30px;
+    }
+    .pd_t100 {
+        padding-top: 40px;
+    }
+    .pd_b100 {
+        padding-bottom: 60px;
+    }
+}
+
+
+
+
+
+/*----------文字-----------*/
+
+.link_text {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
+
+
+/*----------背景-----------*/
+
+.bg_1 {
+    background: #FCFCFD;
+}
+
+.bg_2 {
+    background-color: #F0F0F0;
+    /*background-image: url(../images/absurdidad.png);*/
+}
+
+
+
+
+
+/*----------日曆選擇器style-----------*/
+
+.datepicker_input {
+    overflow: hidden;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #dadada;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.datepicker_input input[type="text"] {
+    border: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+    width: 85%;
+    height: 43px;
+    float: left;
+}
+
+.datepicker_input span {
+    color: #CCC;
+    line-height: 38px;
+}
+
+@media (max-width:480px) {
+    .datepicker_input input[type="text"] {
+        width: 90%;
+    }
+}
+
+.ui-datepicker {
+    width: auto;
+    padding: 5px;
+    display: none;
+}
+
+.ui-widget-header {
+    background: #F7F7F7;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    background: #FBFBFB;
+    font-weight: normal;
+    color: #454545;
+    text-align: center;
+    padding: 6px 8px;
+    margin: 1px;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    box-shadow: inset 0 0 0px 1px #dba0de;
+    border: 1px solid #dba0de;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    border: 1px solid #00ADB5;
+    background: #00ADB5;
+    font-weight: normal;
+    color: #fff;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    width: 1.9em;
+    height: 1.9em;
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    top: 2px;
+    left: 2px;
+    border: 0;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+    top: 2px;
+    right: 2px;
+    border: 0;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url("images/ui-icons_E8A9EB_256x240.png");
+}
+
+
+
+
+
+/*----------日期區間選擇-----------*/
+
+.datepicker_range div {
+    float: left;
+}
+
+.datepicker_range div.datepicker_input {
+    width: 47%;
+}
+
+.datepicker_range div.datepicker_input input[readonly] {
+    background:#FFF;
+}
+
+.datepicker_range div.dash {
+    width: 6%;
+    text-align: center;
+    margin: 8px 0;
+}
+
+
+
+
+
+
+/*----------Bootstrap 樣式調整-----------*/
+
+.container-fluid.full_width {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+
+
+
+
+/*-----------HTML標籤初始化------------*/
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+/*-----------輸入元件placeholder------------*/
+
+::-webkit-input-placeholder {
+    /* Chrome */
+    transition: opacity 250ms ease-in-out;
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: 0.3;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    transition: opacity 250ms ease-in-out;
+}
+
+:focus:-ms-input-placeholder {
+    opacity: 0.3;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+:focus::-moz-placeholder {
+    opacity: 0.3;
+}
+
+::-moz-placeholder {
+    /* Firefox 4 - 18 */
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+:focus::-moz-placeholder {
+    opacity: 0.3;
+}
+
+
+.form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #CCC;
+}
+
+.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #CCC;
+}
+
+.form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #CCC;
+}
+
+.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #CCC;
+}
+
+
+
+
+input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #CCC;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #CCC;
+}
+
+input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #CCC;
+}
+
+input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #CCC;
+}
+
+
+
+
+
+
+
+
+/****** 字體 ******/
+
+@font-face {
+    font-family: NotoSansCJKtc;
+    src: url(../fonts/NotoSansCJKtc-Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NotoSansCJKtc;
+    src: url(../fonts/NotoSansCJKtc-Light.otf);
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: NotoSansCJKtc;
+    src: url(../fonts/NotoSansCJKtc-Medium.otf);
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: NotoSans;
+    src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(../fonts/NotoSans-Bold.ttf);
+    font-weight: bold;
+}

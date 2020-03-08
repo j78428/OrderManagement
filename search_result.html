@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>訂單管理系統</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/main.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand visible-xs" href="order_list_all.html">全部訂單</a>
+                    <div class="page_list hidden-xs">
+                        <!-- Web use - page nav -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn_style1 dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="icon_menu">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </div>
+                            </button>
+                            <a href="" class="btn btn_style1">
+                                訂單列表
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="order_list_all.html">訂單列表</a></li>
+                                <li><a href="company_credit_history.html">收款紀錄</a></li>
+                                <li><a href="verify_list.html">核覆列表</a></li>
+                                <li><a href="customer_inquiry.html">客服列表</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- page_list : END -->
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!-- Mobile use - page nav -->
+                    <ul class="nav navbar-nav visible-xs">
+                        <li class="active"><a href="order_list_all.html">全部訂單</a></li>
+                        <li><a href="company_credit_history.html">收款紀錄</a></li>
+                        <li><a href="customer_inquiry.html">客服列表</a></li>
+                        <li><a href="verify_list.html">核覆列表</a></li>
+                    </ul>
+                    <div class="hidden-xs">
+                        <!-- Web use - 搜尋訂單編號&登出 -->
+                        <div class="member_function pull-right">
+                            <a href="" class="logout">登出</a>
+                            <div class="member_name hidden-xs"><span class="glyphicon glyphicon-user"></span> 帳號10101 /</div>
+                        </div>
+                        <div class="col-sm-8 col-md-3 col-md-offset-3 order_search">
+                            <input type="text" placeholder="搜尋訂單編號">
+                            <button class="btn btn_style5"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                    <!-- Mobile use - 搜尋訂單編號&登出 -->
+                    <div class="visible-xs">
+                        <div class="order_search">
+                            <input type="text" placeholder="搜尋訂單編號">
+                            <button class="btn btn_style5"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                        <div class="member_function">
+                            <a href="" class="logout">登出</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </header>
+    <div class="main_content">
+        <div class="container-fluid">
+            <div class="loading_box" style="display:none;"><img src="images/loding.gif"></div>
+            <div class="notice_message" style="display:none;">
+                <p>尚未搜尋，沒有資料可以顯示。</p>
+                <p style="display:none;">很抱歉，沒有搜到任何資料。</p>
+            </div>
+            <div class="result_block">
+                <div class="block_top">
+                    <div class="search_bar row">
+                        <div class="fill_item col-md-3">
+                            <label class="item_title">訂單日期範圍：</label>
+                            <div class="item_content">
+                                <div class="datepicker_range">
+                                    <div class="datepicker_input">
+                                        <input type="text" class="form-control input-sm" id="StartDate1" placeholder="起始日期"><span class="glyphicon glyphicon-calendar"></span>
+                                    </div>
+                                    <div class="dash">-</div>
+                                    <div class="datepicker_input">
+                                        <input type="text" class="form-control input-sm" id="EndDate1" placeholder="最後日期"><span class="glyphicon glyphicon-calendar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fill_item col-md-2">
+                            <label class="item_title">訂單類型：</label>
+                            <div class="item_content">
+                                <select class="form-control input-sm">
+                                    <option>全部</option>
+                                    <option>飯店</option>
+                                    <option>機票</option>
+                                    <option>自由行</option>
+                                    <option>票券</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fill_item col-md-2">
+                            <label class="item_title">訂單狀態：</label>
+                            <div class="item_content">
+                                <select class="form-control input-sm">
+                                    <option>全部</option>
+                                    <option>待處理</option>
+                                    <option>處理中</option>
+                                    <option>已完成</option>
+                                    <option>訂單取消</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fill_item col-md-2">
+                            <label class="item_title">建立者(訂購人)：</label>
+                            <div class="item_content">
+                                <input type="text" class="form-control input-sm" placeholder="請輸入全名" value="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="button_group">
+                                <button type="button" class="btn btn_style1" id="">查詢</button>
+                                <button type="button" class="btn btn_style2" id="">清除條件</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .search_box : END -->
+                </div>
+                <!-- .block_top : END -->
+                <div class="block_content">
+                    <div class="result_table">
+                        <table>
+                            <tr>
+                                <th>項次</th>
+                                <th>訂單編號
+                                    <button class="sort_change sorting_asc" value="1"></button>
+                                </th>
+                                <th>商品名稱</th>
+                                <th>訂購人(建立者)</th>
+                                <th>客戶</th>
+                                <th>訂單狀態</th>
+                                <th>請款狀態
+                                    <select name="" id="" class="status_show">
+                                        <option value="">全部</option>
+                                        <option value="">未請款</option>
+                                        <option value="">已請款</option>
+                                    </select>
+                                </th>
+                                <th>請款通知日期
+                                    <button class="sort_change" value="0"></button>
+                                </th>
+                                <th>訂單類型</th>
+                                <th>操作</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <div class="order_date">2016/6/8 10:53</div>
+                                    <div class="sub_order_number">130100000034-1</div>
+                                </td>
+                                <td>
+                                    Han She Business Hotel - 函舍商務旅店(GTA)
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status1" title="訂單狀態" alt="訂房狀態">
+                                            <div>待處理</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status1" title="請款狀態" alt="請款狀態">
+                                            <div>未請款</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016/06/20</td>
+                                <td>
+                                    <div class="order_types">
+                                        <div class="type_hotel">飯店</div>
+                                    </div>
+                                    <!-- order_types : END -->
+                                </td>
+                                <td><a role="button" href="sub_order_detail_hotel.html" class="btn btn-sm btn_style3" target="_blank">明細</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <div class="order_date">2016/6/8 10:53</div>
+                                    <div class="sub_order_number">130100000034-1</div>
+                                </td>
+                                <td>
+                                    Han She Business Hotel - 函舍商務旅店(GTA)
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status2" title="訂單狀態" alt="訂房狀態">
+                                            <div>處理中</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status3" title="請款狀態" alt="請款狀態">
+                                            <div>已請款</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016/06/20</td>
+                                <td>
+                                    <div class="order_types">
+                                        <div class="type_flight">機票</div>
+                                    </div>
+                                    <!-- order_types : END -->
+                                </td>
+                                <td><a role="button" href="sub_order_detail_air.html" class="btn btn-sm btn_style3" target="_blank">明細</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <div class="order_date">2016/6/8 10:53</div>
+                                    <div class="sub_order_number">130100000034-1</div>
+                                </td>
+                                <td>
+                                    Han She Business Hotel - 函舍商務旅店(GTA)
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status3" title="訂單狀態" alt="訂房狀態">
+                                            <div>已完成</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status3" title="請款狀態" alt="請款狀態">
+                                            <div>已請款</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016/06/20</td>
+                                <td>
+                                    <div class="order_types">
+                                        <div class="type_package">自由行</div>
+                                    </div>
+                                    <!-- order_types : END -->
+                                </td>
+                                <td><a role="button" href="sub_order_detail_travel.html" class="btn btn-sm btn_style3" target="_blank">明細</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <div class="order_date">2016/6/8 10:53</div>
+                                    <div class="sub_order_number">130100000034-1</div>
+                                </td>
+                                <td>
+                                    Han She Business Hotel - 函舍商務旅店(GTA)
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status5" title="訂單狀態" alt="訂房狀態">
+                                            <div>訂單取消</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status1" title="請款狀態" alt="請款狀態">
+                                            <div>未請款</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016/06/20</td>
+                                <td>
+                                    <div class="order_types">
+                                        <div class="type_ticket">票券</div>
+                                    </div>
+                                    <!-- order_types : END -->
+                                </td>
+                                <td><a role="button" href="sub_order_detail_hotel.html" class="btn btn-sm btn_style3" target="_blank">明細</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <div class="order_date">2016/6/8 10:53</div>
+                                    <div class="sub_order_number">130100000034-1</div>
+                                </td>
+                                <td>
+                                    Han She Business Hotel - 函舍商務旅店(GTA)
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    康康舞
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status5" title="訂單狀態" alt="訂房狀態">
+                                            <div>訂單取消</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="status_group">
+                                        <div class="label process_status1" title="請款狀態" alt="請款狀態">
+                                            <div>未請款</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>2016/06/20</td>
+                                <td>
+                                    <div class="order_types">
+                                        <div class="type_other">其他</div>
+                                    </div>
+                                    <!-- order_types : END -->
+                                </td>
+                                <td><a role="button" href="sub_order_detail_hotel.html" class="btn btn-sm btn_style3" target="_blank">明細</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- .result_table : END -->
+                </div>
+                <!-- .block_content : END -->
+                <div class="block_bottom">
+                    <nav class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="result_total pull-right">
+                        第1-10筆，共450筆
+                    </div> 
+                </div>
+                <!-- .block_bottom : END -->
+            </div>
+            <!-- .result_block : END -->
+        </div>
+        <!-- container-fluid : END -->
+    </div>
+    <!-- .main_content : END -->
+</body>
+
+</html>
